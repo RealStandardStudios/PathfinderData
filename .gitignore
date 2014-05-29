@@ -1,2 +1,4 @@
 /bin
-/PathfinderData/nbproject/private/
+/nbproject/private/
+build.xml
+manifest.mf
