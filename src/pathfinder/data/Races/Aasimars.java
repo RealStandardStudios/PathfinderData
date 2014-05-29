@@ -7,6 +7,4 @@ package pathfinder.data.Races;
  */
 
 public class Aasimars extends Race {
-	private Trait traits[];
-	//array of traits the char can have
 }

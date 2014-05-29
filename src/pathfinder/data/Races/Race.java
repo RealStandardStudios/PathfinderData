@@ -4,6 +4,10 @@ import pathfinder.data.Attributes.Ability;
 import pathfinder.data.Items.Weapon;
 
 public abstract class Race {
+        private Trait traits[];
+	/*
+        *Array of traits the char can have
+        */
 	private String name;
 	/**
 	 * The size of the race
