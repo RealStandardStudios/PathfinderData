@@ -12,4 +12,7 @@ public class SkillTrait extends Trait {
 	private Skill skill[];
 	private String bonusType;
 	//shows if its like a racial trait or curumstance bonus
+        private String bonusAgainst;
+        //for if the bonus is for certian events.
+        //E.G. idenifying lawful good outsiders
 }
