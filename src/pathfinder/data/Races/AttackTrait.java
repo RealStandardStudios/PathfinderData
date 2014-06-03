@@ -4,7 +4,7 @@ import pathfinder.data.Skills.Skill;
 
 /**
  * 
- * @author Joshua Boyd
+ * @author Real Standard Studios - Joshua Boyd
  * Used to show if a race gets an attack bonus and if it's vs a particular race, class alignment, ect...
  */
 public class AttackTrait extends Trait{
