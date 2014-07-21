@@ -1,4 +1,4 @@
-package pathfinder.data.Feats;
+package pathfinder.data;
 
 public abstract class Effect {
 	private int value;

@@ -1,5 +1,7 @@
 package pathfinder.data.Classes.Objects;
 
+import pathfinder.data.Effect;
+
 /**
  * 
  * @author Matthew Meehan
@@ -9,6 +11,16 @@ public abstract class Feature {
 	private String name;
 	
 	private String description;
+	
+	private Effect effect;
+
+	public Effect getEffect() {
+		return effect;
+	}
+
+	public void setEffect(Effect effect) {
+		this.effect = effect;
+	}
 
 	/**
 	 * @return the description

@@ -1,5 +1,7 @@
 package pathfinder.data.Feats;
 
+import pathfinder.data.Effect;
+
 /**
  * 
  * @author Real Standard Studios - Matthew Meehan

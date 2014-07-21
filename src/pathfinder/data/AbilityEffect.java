@@ -1,4 +1,4 @@
-package pathfinder.data.Feats;
+package pathfinder.data;
 
 import pathfinder.data.Attributes.AbilityName;
 
