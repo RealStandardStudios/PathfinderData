@@ -2,6 +2,10 @@ package pathfinder.data.Races;
 
 import pathfinder.data.Attributes.Ability;
 import pathfinder.data.Items.Weapon;
+import pathfinder.data.Races.Objects.Language;
+import pathfinder.data.Races.Objects.Size;
+import pathfinder.data.Races.Objects.VisionType;
+import pathfinder.data.Races.Traits.Trait;
 
 public abstract class Race {
         private Trait traits[];

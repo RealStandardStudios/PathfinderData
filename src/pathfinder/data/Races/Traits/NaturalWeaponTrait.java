@@ -1,4 +1,5 @@
-package pathfinder.data.Races;
+package pathfinder.data.Races.Traits;
+
 
 /**
  *

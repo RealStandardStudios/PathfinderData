@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 
-package pathfinder.data.Races;
+package pathfinder.data.Races.Traits;
+
 
 /**
  *

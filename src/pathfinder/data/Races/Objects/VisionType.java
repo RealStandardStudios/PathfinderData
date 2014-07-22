@@ -1,4 +1,4 @@
-package pathfinder.data.Races;
+package pathfinder.data.Races.Objects;
 
 public class VisionType {
 	private int distance;
