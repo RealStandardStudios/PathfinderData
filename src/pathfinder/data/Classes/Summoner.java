@@ -14,7 +14,9 @@ import pathfinder.data.Spells.Spell;
 /**
  * 
  * @author Matthew
- * @description The Summoner Class http://paizo.com/pathfinderRPG/prd/advanced/baseClasses/summoner.html
+ * @description The Summoner Class
+ *              http://paizo.com/pathfinderRPG/prd/advanced/baseClasses
+ *              /summoner.html
  */
 public class Summoner extends Class {
 	/**
@@ -37,6 +39,9 @@ public class Summoner extends Class {
 	 */
 	public SpellLevelTableRow[] getLevelTable() {
 		return levelTable;
+	}
+
+	public Summoner() {
 	}
 
 	/**

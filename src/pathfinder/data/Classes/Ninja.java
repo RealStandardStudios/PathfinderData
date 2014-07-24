@@ -24,6 +24,9 @@ public class Ninja extends Class {
 	public LevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Ninja() {
+	}
 
 	/**
 	 * @param name

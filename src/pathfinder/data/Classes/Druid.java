@@ -37,6 +37,9 @@ public class Druid extends Class {
 	public SpellLevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Druid() {
+	}
 
 	/**
 	 * @param name

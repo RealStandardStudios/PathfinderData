@@ -34,7 +34,7 @@ public class Feat {
 	public String getBenefit() {
 		return benefit;
 	}
-	
+
 	public Effect getEffect() {
 		return effect;
 	}

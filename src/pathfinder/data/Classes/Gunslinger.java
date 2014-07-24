@@ -24,6 +24,9 @@ public class Gunslinger extends Class {
 	public LevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Gunslinger() {
+	}
 
 	/**
 	 * @param name

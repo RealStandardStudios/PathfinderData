@@ -4,8 +4,8 @@ import pathfinder.data.Attributes.SaveAttribute;
 
 /**
  * 
- * @author Matthew Meehan
- * A row of the table of benefits gained each level from a specific class
+ * @author Matthew Meehan A row of the table of benefits gained each level from
+ *         a specific class
  */
 public class LevelTableRow {
 	private int[] baseAttackBonus;
@@ -13,7 +13,7 @@ public class LevelTableRow {
 	private SaveAttribute reflexSave;
 	private SaveAttribute willSave;
 	private Feature[] specialFeatures;
-	
+
 	/**
 	 * @return the baseAttackBonus
 	 */
@@ -48,12 +48,13 @@ public class LevelTableRow {
 	public Feature[] getSpecialFeatures() {
 		return specialFeatures;
 	}
-		
+
 	/**
 	 * the empty Constructor for Kryo
 	 */
-	public LevelTableRow() { }
-	
+	public LevelTableRow() {
+	}
+
 	/**
 	 * @param baseAttackBonus
 	 * @param fortitudeSave
@@ -62,7 +63,8 @@ public class LevelTableRow {
 	 * @param specialFeatures
 	 */
 	public LevelTableRow(int[] baseAttackBonus, SaveAttribute fortitudeSave,
-			SaveAttribute reflexSave, SaveAttribute willSave, Feature[] specialFeatures) {
+			SaveAttribute reflexSave, SaveAttribute willSave,
+			Feature[] specialFeatures) {
 		super();
 		this.baseAttackBonus = baseAttackBonus;
 		this.fortitudeSave = fortitudeSave;
@@ -70,6 +72,5 @@ public class LevelTableRow {
 		this.willSave = willSave;
 		this.specialFeatures = specialFeatures;
 	}
-	
-	
+
 }

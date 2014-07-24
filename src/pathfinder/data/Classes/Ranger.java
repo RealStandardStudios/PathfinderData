@@ -39,6 +39,9 @@ public class Ranger extends Class {
 	public SpellLevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Ranger() {
+	}
 
 	/**
 	 * @param name

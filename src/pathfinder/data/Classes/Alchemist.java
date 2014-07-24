@@ -33,6 +33,9 @@ public class Alchemist extends Class {
 	public SpellLevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Alchemist() {
+	}
     
 	/**
 	 * @param name

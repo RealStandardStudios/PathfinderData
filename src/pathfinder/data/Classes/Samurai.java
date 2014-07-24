@@ -23,6 +23,9 @@ public class Samurai extends Class {
 	public LevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Samurai() {
+	}
 
 	/**
 	 * @param name

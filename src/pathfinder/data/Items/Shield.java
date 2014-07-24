@@ -29,8 +29,9 @@ public class Shield extends Armor {
 	public Shield(String name, ArmorType armorType, int cost, int armorBonus,
 			int maxDexBonus, int armorCheckPenalty, int arcaneSpellFailiure,
 			int speed30feet, int speed20feet, int weight) {
-		super(name, armorType, cost, armorBonus, maxDexBonus, armorCheckPenalty,
-				arcaneSpellFailiure, speed30feet, speed20feet, weight);
+		super(name, armorType, cost, armorBonus, maxDexBonus,
+				armorCheckPenalty, arcaneSpellFailiure, speed30feet,
+				speed20feet, weight);
 	}
 
 }

@@ -38,6 +38,9 @@ public class Wizard extends Class {
 	public SpellLevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Wizard(){
+	}
 
 	/**
 	 * @param name

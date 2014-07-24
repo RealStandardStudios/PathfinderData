@@ -24,6 +24,9 @@ public class Fighter extends Class {
 	public LevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Fighter() {
+	}
 
 	/**
 	 * @param name

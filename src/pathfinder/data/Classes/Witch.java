@@ -14,7 +14,9 @@ import pathfinder.data.Spells.Spell;
 /**
  * 
  * @author Matthew
- * @description The Witch Class http://paizo.com/pathfinderRPG/prd/advanced/baseClasses/witch.html
+ * @description The Witch Class
+ *              http://paizo.com/pathfinderRPG/prd/advanced/baseClasses
+ *              /witch.html
  */
 public class Witch extends Class {
 	/**
@@ -37,6 +39,9 @@ public class Witch extends Class {
 	 */
 	public SpellLevelTableRow[] getLevelTable() {
 		return levelTable;
+	}
+
+	public Witch() {
 	}
 
 	/**

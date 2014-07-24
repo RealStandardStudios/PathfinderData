@@ -22,6 +22,9 @@ public class Barbarian extends Class {
 	public LevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Barbarian() {
+	}
 
 	/**
 	 * @param name

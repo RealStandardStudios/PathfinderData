@@ -67,6 +67,9 @@ public class Monk extends Class {
 	public int[] getFastMovement() {
 		return fastMovement;
 	}
+	
+	public Monk() {
+	}
 
 	/**
 	 * @param name
