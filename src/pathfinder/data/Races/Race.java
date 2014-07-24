@@ -1,6 +1,7 @@
 package pathfinder.data.Races;
 
-import pathfinder.data.Attributes.Ability;
+import java.util.ArrayList;
+import pathfinder.data.AbilityEffect;
 import pathfinder.data.Items.Weapon;
 import pathfinder.data.Races.Objects.Language;
 import pathfinder.data.Races.Objects.Size;
@@ -8,49 +9,201 @@ import pathfinder.data.Races.Objects.VisionType;
 import pathfinder.data.Races.Traits.Trait;
 
 public abstract class Race {
-        private Trait traits[];
-	/*
-        *Array of traits the char can have
-        */
+	/**
+	 * The Name of the Race
+	 */
 	private String name;
+	/**
+	 * The description of the Race
+	 */
+	private String description;
+	/**
+	 * The physical description of the race
+	 */
+	private String physicalDescription;
+	/**
+	 * The description of the races society
+	 */
+	private String society;
+	/**
+	 * The relations of the race with other races
+	 */
+	private String relations;
+	/**
+	 * The alignment and religions available to the race
+	 */
+	private String alignmentAndReligion;
+	/**
+	 * The kinds of adventures the race would get up to
+	 */
+	private String adventures;
+
+	/**
+	 * The racial effects to the players Ability Data;
+	 */
+	private AbilityEffect[] racialModifiers;
 	/**
 	 * The size of the race
 	 */
 	private Size size;
 	/**
-	 * The defalut speed of the race
+	 * The default speed of the race in feet
 	 */
 	private int speed;
+	/**
+	 * An array of Vision types applicable to the race
+	 */
+	private VisionType[] visionTypes;
+	/**
+	 * The variable number of racial traits
+	 */
+	private ArrayList<Trait> racialTraits;
+	/**
+	 * An array of the Weapons the race can use
+	 */
+	private Weapon[] weaponFamiliarity;
 	/**
 	 * An array of the languages the race can speak
 	 */
 	private Language[] languages;
 	/**
-	 * An array of the Weapons the race can use
-	 */
-	private Weapon[] weapons;
-	/**
-	 * An array of the attribute bonus' the race gets
-	 */
-	private Ability[] attributeBonus;
-	/**
 	 * indicates whether the race's speed is effected by armor or encumberance
 	 */
 	private boolean speedLoss;
-	/**
-	 * An array of Vision types applicable to the race
-	 */
-	private VisionType[] visionTypes;
-
-	public Size getSize() {
-		return this.size;
-	}
 
 	/**
 	 * @return the name
 	 */
 	public String getName() {
 		return name;
+	}
+
+	/**
+	 * @param name
+	 *            the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return the description
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * @param description
+	 *            the description to set
+	 */
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	/**
+	 * @return the physicalDescription
+	 */
+	public String getPhysicalDescription() {
+		return physicalDescription;
+	}
+
+	/**
+	 * @param physicalDescription
+	 *            the physicalDescription to set
+	 */
+	public void setPhysicalDescription(String physicalDescription) {
+		this.physicalDescription = physicalDescription;
+	}
+
+	/**
+	 * @return the society
+	 */
+	public String getSociety() {
+		return society;
+	}
+
+	/**
+	 * @param society
+	 *            the society to set
+	 */
+	public void setSociety(String society) {
+		this.society = society;
+	}
+
+	/**
+	 * @return the relations
+	 */
+	public String getRelations() {
+		return relations;
+	}
+
+	/**
+	 * @param relations
+	 *            the relations to set
+	 */
+	public void setRelations(String relations) {
+		this.relations = relations;
+	}
+
+	/**
+	 * @return the alignmentAndReligion
+	 */
+	public String getAlignmentAndReligion() {
+		return alignmentAndReligion;
+	}
+
+	/**
+	 * @param alignmentAndReligion
+	 *            the alignmentAndReligion to set
+	 */
+	public void setAlignmentAndReligion(String alignmentAndReligion) {
+		this.alignmentAndReligion = alignmentAndReligion;
+	}
+
+	/**
+	 * @return the adventures
+	 */
+	public String getAdventures() {
+		return adventures;
+	}
+
+	/**
+	 * @param adventures
+	 *            the adventures to set
+	 */
+	public void setAdventures(String adventures) {
+		this.adventures = adventures;
+	}
+
+	/**
+	 * @return the racialModifiers
+	 */
+	public AbilityEffect[] getRacialModifiers() {
+		return racialModifiers;
+	}
+
+	/**
+	 * @param racialModifiers
+	 *            the racialModifiers to set
+	 */
+	public void setRacialModifiers(AbilityEffect[] racialModifiers) {
+		this.racialModifiers = racialModifiers;
+	}
+
+	/**
+	 * @return the size
+	 */
+	public Size getSize() {
+		return size;
+	}
+
+	/**
+	 * @param size
+	 *            the size to set
+	 */
+	public void setSize(Size size) {
+		this.size = size;
 	}
 
 	/**
@@ -61,6 +214,59 @@ public abstract class Race {
 	}
 
 	/**
+	 * @param speed
+	 *            the speed to set
+	 */
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+
+	/**
+	 * @return the visionTypes
+	 */
+	public VisionType[] getVisionTypes() {
+		return visionTypes;
+	}
+
+	/**
+	 * @param visionTypes
+	 *            the visionTypes to set
+	 */
+	public void setVisionTypes(VisionType[] visionTypes) {
+		this.visionTypes = visionTypes;
+	}
+
+	/**
+	 * @return the racialTraits
+	 */
+	public ArrayList<Trait> getRacialTraits() {
+		return racialTraits;
+	}
+
+	/**
+	 * @param racialTraits
+	 *            the racialTraits to set
+	 */
+	public void setRacialTraits(ArrayList<Trait> racialTraits) {
+		this.racialTraits = racialTraits;
+	}
+
+	/**
+	 * @return the weaponFamiliarity
+	 */
+	public Weapon[] getWeaponFamiliarity() {
+		return weaponFamiliarity;
+	}
+
+	/**
+	 * @param weaponFamiliarity
+	 *            the weaponFamiliarity to set
+	 */
+	public void setWeaponFamiliarity(Weapon[] weaponFamiliarity) {
+		this.weaponFamiliarity = weaponFamiliarity;
+	}
+
+	/**
 	 * @return the languages
 	 */
 	public Language[] getLanguages() {
@@ -68,17 +274,11 @@ public abstract class Race {
 	}
 
 	/**
-	 * @return the weapons
+	 * @param languages
+	 *            the languages to set
 	 */
-	public Weapon[] getWeapons() {
-		return weapons;
-	}
-
-	/**
-	 * @return the attributeBonus
-	 */
-	public Ability[] getAttributeBonus() {
-		return attributeBonus;
+	public void setLanguages(Language[] languages) {
+		this.languages = languages;
 	}
 
 	/**
@@ -89,14 +289,17 @@ public abstract class Race {
 	}
 
 	/**
-	 * @return the visionTypes
+	 * @param speedLoss
+	 *            the speedLoss to set
 	 */
-	public VisionType[] getVisionTypes() {
-		return visionTypes;
+	public void setSpeedLoss(boolean speedLoss) {
+		this.speedLoss = speedLoss;
 	}
 
+	/**
+	 * @description The empty Construstor for Kryo
+	 */
 	public Race() {
-
 	}
 
 	/**
@@ -110,15 +313,15 @@ public abstract class Race {
 	 * @param visionTypes
 	 */
 	public Race(String name, Size size, int speed, Language[] languages,
-			Weapon[] weapons, Ability[] attributeBonus, boolean speedLoss,
-			VisionType[] visionTypes) {
+			Weapon[] weapons, ArrayList<AbilityEffect> racialModifiers,
+			boolean speedLoss, VisionType[] visionTypes) {
 		super();
 		this.name = name;
 		this.size = size;
 		this.speed = speed;
 		this.languages = languages;
-		this.weapons = weapons;
-		this.attributeBonus = attributeBonus;
+		this.weaponFamiliarity = weapons;
+		this.racialModifiers = (AbilityEffect[]) racialModifiers.toArray();
 		this.speedLoss = speedLoss;
 		this.visionTypes = visionTypes;
 	}

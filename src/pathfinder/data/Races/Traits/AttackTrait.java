@@ -1,15 +1,14 @@
 package pathfinder.data.Races.Traits;
 
-import pathfinder.data.Skills.Skill;
-
 /**
  * 
  * @author Real Standard Studios - Joshua Boyd
- * Used to show if a race gets an attack bonus and if it's vs a particular race, class alignment, ect...
+ * @description Used to show if a race gets an attack bonus and if it's vs a
+ *              particular race, class alignment, ect...
  */
-public class AttackTrait extends Trait{
+public class AttackTrait extends Trait {
 	private String bonusVs;
-	private int attackBonus;	
+	private int attackBonus;
 	private String bonusType;
-	//shows if its like a racial trait or curumstance bonus
+	// shows if its like a racial trait or curumstance bonus
 }
