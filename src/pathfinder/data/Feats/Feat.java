@@ -1,6 +1,6 @@
 package pathfinder.data.Feats;
 
-import pathfinder.data.Effect;
+import pathfinder.data.Effects.Effect;
 
 /**
  * 

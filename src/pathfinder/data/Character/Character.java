@@ -1,15 +1,18 @@
 package pathfinder.data.Character;
 
-import pathfinder.data.Races.Race;
+import java.util.ArrayList;
+
 import pathfinder.data.Attributes.Ability;
 import pathfinder.data.Attributes.SaveAttribute;
 import pathfinder.data.Classes.Class;
 import pathfinder.data.Classes.Objects.AdvancmentTable;
 import pathfinder.data.Classes.Objects.LevelOption;
-import pathfinder.data.Skills.Skill;
+import pathfinder.data.Effects.Effect;
 import pathfinder.data.Feats.Feat;
 import pathfinder.data.Items.Armor;
 import pathfinder.data.Items.Shield;
+import pathfinder.data.Races.Race;
+import pathfinder.data.Skills.Skill;
 
 /**
  * 
@@ -28,7 +31,12 @@ public class Character {
 	private Skill[] skills;
 	private Feat[] feats;
 	private Inventory inventory;
-        private Alignment alignment;
+    private Alignment alignment;
+    /**
+     * The effects that have been applied to the character through
+     * Class features, Feats or racial traits
+     */
+    private ArrayList<Effect> effects;
 
 	/**
 	 * get and set for this will need to take into account all of the 

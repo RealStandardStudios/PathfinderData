@@ -16,13 +16,12 @@ public class Skill {
 	private boolean trained = false;
 	/**
 	 * this table is for when you get a bonus vs a certain event e.g- +2
-	 * perception bonus for identifying evil hats, the string key 
-         * identifies what the bonus applies against. as you display the result 
-         * of your skill check, it also prints out the result against 
-         * certain criteria. it's up to the player if that criteria applies.
+	 * perception bonus for identifying evil hats, the string key identifies
+	 * what the bonus applies against. as you display the result of your skill
+	 * check, it also prints out the result against certain criteria. it's up to
+	 * the player if that criteria applies.
 	 */
-	private HashMap<String, Integer> situationalMod 
-                = new HashMap<String, Integer>();
+	private HashMap<String, Integer> situationalMod = new HashMap<String, Integer>();
 
 	/**
 	 * @return the rank
@@ -59,9 +58,9 @@ public class Skill {
 		return situationalMod;
 	}
 
-        /**
-         * Empty constructor for Kryo
-         */
+	/**
+	 * Empty constructor for Kryo
+	 */
 	public Skill() {
 	}
 
@@ -71,11 +70,11 @@ public class Skill {
 	 * @param name
 	 * @param trained
 	 * @param situationalMod
-         * 
-         * Constructor for Skill
+	 * 
+	 *            Constructor for Skill
 	 */
-	public Skill(int rank, AbilityName attrToUse, String name,
-                     boolean trained, HashMap<String, Integer> situationalMod) {
+	public Skill(int rank, AbilityName attrToUse, String name, boolean trained,
+			HashMap<String, Integer> situationalMod) {
 		this.rank = rank;
 		this.attrToUse = attrToUse;
 		this.name = name;

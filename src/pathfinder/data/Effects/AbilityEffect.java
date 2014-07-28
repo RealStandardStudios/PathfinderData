@@ -1,7 +1,11 @@
-package pathfinder.data;
+package pathfinder.data.Effects;
 
 import pathfinder.data.Attributes.AbilityName;
 
+/**
+ * @Author Real Standard Studios - Matthew Meehan
+ * @description An {@link Effect} that modifies an ability
+ */
 public class AbilityEffect extends Effect {
 	private AbilityName abilityName;
 
@@ -13,8 +17,12 @@ public class AbilityEffect extends Effect {
 		this.abilityName = abilityName;
 	}
 	
-	public AbilityEffect(int val,AbilityName abilityName) {
-		super(val);
+	public AbilityEffect() {
+		super();
+	}
+	
+	public AbilityEffect(int val, String name, AbilityName abilityName) {
+		super(val, name);
 		this.abilityName = abilityName;
 	}
 }
