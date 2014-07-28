@@ -23,6 +23,9 @@ public class Cavalier extends Class {
 	public LevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Cavalier() {
+	}
 
 	/**
 	 * @param name

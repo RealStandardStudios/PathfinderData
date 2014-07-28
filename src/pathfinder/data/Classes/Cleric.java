@@ -38,6 +38,9 @@ public class Cleric extends Class {
 	public SpellLevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Cleric() {
+	}
 
 	/**
 	 * @param name

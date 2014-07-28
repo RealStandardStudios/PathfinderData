@@ -4,14 +4,13 @@ import pathfinder.data.Effects.Effect;
 
 /**
  * 
- * @author Matthew Meehan
- * the generic Class Feature
+ * @author Matthew Meehan the generic Class Feature
  */
 public abstract class Feature {
 	private String name;
-	
+
 	private String description;
-	
+
 	private Effect effect;
 
 	public Effect getEffect() {
@@ -36,11 +35,12 @@ public abstract class Feature {
 		return name;
 	}
 
-	public Feature() { }
-	
+	public Feature() {
+	}
+
 	/**
 	 * @param name
-         * @param description
+	 * @param description
 	 */
 	public Feature(String name, String description) {
 		this.name = name;

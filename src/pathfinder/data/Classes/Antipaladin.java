@@ -38,6 +38,9 @@ public class Antipaladin extends Class {
 	public SpellLevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Antipaladin() {
+	}
 
 	/**
 	 * @param name

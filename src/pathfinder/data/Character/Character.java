@@ -44,8 +44,7 @@ public class Character {
 	 */
 	private int armorClass;
 	/**
-	 * int between 0 and 2; 0 is slow track, 1 is medium track, 
-         * 2 is fast track
+	 * int between 0 and 2; 0 is slow track, 1 is medium track, 2 is fast track
 	 */
 	private int experienceTrack;
 	private int experienceValue;
@@ -354,13 +353,15 @@ public class Character {
 	public void setArmorClass(int deflectionMod, int miscMod) {
 		int armorBonus=0, shieldBonus = 0;
 		for (Armor a : inventory.getArmorWorn()) {
-			if(a instanceof Shield) shieldBonus += a.getArmorBonus();
-			else armorBonus +=a.getArmorBonus();
+			if (a instanceof Shield)
+				shieldBonus += a.getArmorBonus();
+			else
+				armorBonus += a.getArmorBonus();
 		}
 		this.armorClass = 10 + armorBonus + shieldBonus
 				+ this.getDexterity().getModifier()
 				+ this.race.getSize().getSizeModifier() 
-                                + deflectionMod
+				+ deflectionMod
 				+ miscMod;
 	}
 

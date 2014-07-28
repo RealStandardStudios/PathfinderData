@@ -38,6 +38,9 @@ public class Oracle extends Class {
 	public SpellLevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Oracle() {
+	}
 
 	/**
 	 * @param name

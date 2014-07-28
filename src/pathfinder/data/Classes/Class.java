@@ -160,6 +160,9 @@ public abstract class Class {
 		return armorProficiencies;
 	}
 
+	public Class() {
+	}
+
 	/**
 	 * @param name
 	 * @param description
@@ -192,6 +195,5 @@ public abstract class Class {
 		this.weaponProficiencies = weaponProficiencies;
 		this.armorProficiencies = armorProficiencies;
 	}
-	
-	
+
 }

@@ -37,6 +37,9 @@ public class Inquisitor extends Class {
 	public SpellLevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Inquisitor() {
+	}
 
 	/**
 	 * @param name

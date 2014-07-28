@@ -14,7 +14,9 @@ import pathfinder.data.Spells.Spell;
 /**
  * 
  * @author Matthew
- * @description The Sorcerer Class http://paizo.com/pathfinderRPG/prd/classes/sorcerer.html#_sorcerer
+ * @description The Sorcerer Class
+ *              http://paizo.com/pathfinderRPG/prd/classes/sorcerer
+ *              .html#_sorcerer
  */
 public class Sorcerer extends Class {
 	/**
@@ -37,6 +39,9 @@ public class Sorcerer extends Class {
 	 */
 	public SpellLevelTableRow[] getLevelTable() {
 		return levelTable;
+	}
+
+	public Sorcerer() {
 	}
 
 	/**
