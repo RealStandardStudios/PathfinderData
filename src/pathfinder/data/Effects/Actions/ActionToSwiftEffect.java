@@ -5,8 +5,8 @@ package pathfinder.data.Effects.Actions;
 
 
 /**
- * @Author Real Standard Studios - Matthew Meehan
- * @description An {@link ActionEffect} that lets you complete the specified action as a Swift action
+ * An {@link ActionEffect} that lets you complete the specified action as a Swift action
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class ActionToSwiftEffect extends ActionEffect {
 	private String specifiedAction;
