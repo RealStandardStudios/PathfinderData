@@ -2,7 +2,7 @@ package pathfinder.data;
 
 /**
  * 
- * @author Real Standard Studios - Matthew Meehan
+ * @author Real Standard Studios - Matthew Meehan, Ian Larsen
  * 
  * holds the enumerator information for the
  * Die Types
