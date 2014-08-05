@@ -6,8 +6,8 @@ package pathfinder.data.Effects.Actions;
 import pathfinder.data.Effects.Effect;
 
 /**
- * @Author Real Standard Studios - Matthew Meehan
- * @description An {@link Effect} that occurs with a specific Action
+ * An {@link Effect} that occurs with a specific Action
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class ActionEffect extends Effect {
 	// The action that this bonus occurs for

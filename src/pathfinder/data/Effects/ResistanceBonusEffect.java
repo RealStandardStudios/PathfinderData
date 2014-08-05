@@ -6,8 +6,8 @@ package pathfinder.data.Effects;
 import pathfinder.data.Character.Resistance;
 
 /**
- * @Author Real Standard Studios - Matthew Meehan
- * @description An {@link Effect} that adds a bonus to a {@link Resistance} type
+ * An {@link Effect} that adds a bonus to a {@link Resistance} type
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class ResistanceBonusEffect extends Effect {
 	private String resistanceName;
@@ -26,10 +26,18 @@ public class ResistanceBonusEffect extends Effect {
 		this.resistanceName = resistanceName;
 	}
 
+	/**
+	 * Default Constructor for Kryo
+	 */
 	public ResistanceBonusEffect() {
 		super();
 	}
 
+	/**
+	 * @param val The Value of the {@link Effect}
+	 * @param name The Name of the {@link Effect}
+	 * @param resistanceName The name of the Applicable Resistance
+	 */
 	public ResistanceBonusEffect(int val, String name, String resistanceName) {
 		super(val, name);
 		this.resistanceName = resistanceName;

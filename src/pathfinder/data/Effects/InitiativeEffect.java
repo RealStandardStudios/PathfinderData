@@ -4,8 +4,8 @@
 package pathfinder.data.Effects;
 
 /**
- * @Author Real Standard Studios - Matthew Meehan
- * @description An {@link Effect} that gives a bonus to Initiative
+ * An {@link Effect} that gives a bonus to Initiative
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class InitiativeEffect extends Effect {
 
@@ -17,8 +17,8 @@ public class InitiativeEffect extends Effect {
 	}
 
 	/**
-	 * @param val
-	 * @param name
+	 * @param val The Value of the {@link Effect}
+	 * @param name The Name of the {@link Effect} 
 	 */
 	public InitiativeEffect(int val, String name) {
 		super(val, name);

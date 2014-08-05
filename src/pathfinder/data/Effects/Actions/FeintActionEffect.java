@@ -4,8 +4,8 @@
 package pathfinder.data.Effects.Actions;
 
 /**
- * @Author Real Standard Studios - Matthew Meehan
- * @description An {@link ActionEffect} that occurs when a Feint is successful
+ * An {@link ActionEffect} that occurs when a Feint is successful
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class FeintActionEffect extends ActionEffect {
 	private String description;
