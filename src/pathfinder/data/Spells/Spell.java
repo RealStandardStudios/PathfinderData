@@ -1,24 +1,32 @@
 package pathfinder.data.Spells;
 
-import pathfinder.data.Attributes.SaveAttribute;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 /**
- * @author Real Standard Studios - Matthew Meehan
+ * @author Real Standard Studios - Matthew Meehan, Kenneth Cooper
  * @description A data class for the varied Spells available
  */
 
 public class Spell {
     private School school;
     private int castingTime;
-    private int range;
-    private int rangePerLevel;
+    private String range;
+    //private Ranges range;  // change to Ranges from int
+    //private int rangePerLevel;  // may have to remove entirely
     private String effect;
-    private int duration;
-    private boolean dismissable;
-    private SaveAttribute savingThrow;
-    private boolean spellResistance;
+    private String duration;
+    private String dismissable;
+    private String savingThrow;  // needs looked at, data functions differently than this does
+    private String spellResistance;  // needs looked at, data functions differently than this does
     private String description;
-    private String name;
+    private StringProperty name;
+    private String[] className;
+    private int[] spellLevel;
+    private String components;
+    private String target;
+    private String area;
+    private String[] tablePicture;
 
 
     /**
@@ -37,15 +45,19 @@ public class Spell {
      * @return the range
      * @param level
      */
-    public int getRange(int level) {
-        return this.range+(this.rangePerLevel*level);
+//    public int getRange(int level) {
+//        return this.range+(this.rangePerLevel*level);
+//    }
+    
+    public String getRange() {
+    	return this.range;
     }
     /**
      * @return the rangePerLevel
      */
-    public int getRangePerLevel() {
-        return rangePerLevel;
-    }
+//    public int getRangePerLevel() {
+//        return rangePerLevel;
+//    }
     /**
      * @return the effect
      */
@@ -55,19 +67,19 @@ public class Spell {
     /**
      * @return the duration
      */
-    public int getDuration() {
+    public String getDuration() {
         return duration;
     }
     /**
      * @return the savingThrow
      */
-    public SaveAttribute getSavingThrow() {
+    public String getSavingThrow() {
         return savingThrow;
     }
     /**
      * @return the spellResistance
      */
-    public boolean isSpellResistance() {
+    public String isSpellResistance() {
         return spellResistance;
     }
     /**
@@ -80,14 +92,38 @@ public class Spell {
      * @return the name
      */
     public String getName() {
-        return name;
+        return name.getValue();
     }
 
     /**
      * @return the dismissable
      */
-    public boolean isDismissable() {
+    public String isDismissable() {
         return dismissable;
+    }
+    
+    public String[] getClassName() {
+    	return className;
+    }
+    
+    public int[] getSpellLevel() {
+    	return spellLevel;
+    }
+    
+    public String getComponents() {
+    	return components;
+    }
+    
+    public String getTarget() {
+    	return target;
+    }
+    
+    public String getArea() {
+    	return area;
+    }
+    
+    public String[] getTablePicture() {
+    	return tablePicture;
     }
     
     /**
@@ -97,10 +133,14 @@ public class Spell {
 
     /**
      * @param school
+     * @param className
+     * @param spellLevel
      * @param castingTime
+     * @param components
      * @param range
-     * @param rangePerLevel
+     * @param target
      * @param effect
+     * @param area
      * @param duration
      * @param savingThrow
      * @param spellResistance
@@ -110,19 +150,19 @@ public class Spell {
      * 
      * Constructor for Spell
      */
-    public Spell(School school, int castingTime, int range, int rangePerLevel,
-                    String effect, int duration, SaveAttribute savingThrow,
-                    boolean spellResistance, String description, String name, boolean dismissable) {
+    public Spell(School school, String[] className, int[] spellLevel, int castingTime, String components, String range,
+                    String target, String effect, String area, String duration, String savingThrow,
+                    String spellResistance, String description, String name, String dismissable) {
         this.school = school;
         this.castingTime = castingTime;
         this.range = range;
-        this.rangePerLevel = rangePerLevel;
+       // this.rangePerLevel = rangePerLevel;
         this.effect = effect;
         this.duration = duration;
         this.savingThrow = savingThrow;
         this.spellResistance = spellResistance;
         this.description = description;
-        this.name = name;
+        this.name = new SimpleStringProperty(name);
         this.dismissable = dismissable;
     }
 }
