@@ -4,8 +4,8 @@
 package pathfinder.data.Effects;
 
 /**
+ * An {@link Effect} that gives a bonus of some kind to AC
  * @Author Real Standard Studios - Matthew Meehan
- * @description An {@link Effect} that gives a bonus of some kind to AC
  */
 public class ArmorClassEffect extends Effect {
 	// as in dodge bonus
@@ -26,15 +26,15 @@ public class ArmorClassEffect extends Effect {
 	}
 
 	/**
-	 * 
+	 * Default Constructor for Kryo
 	 */
 	public ArmorClassEffect() {
 		super();
 	}
 
 	/**
-	 * @param val
-	 * @param name
+	 * @param val The Value of the {@link Effect}
+	 * @param name The Name of the {@link Effect}
 	 */
 	public ArmorClassEffect(int val, String name, String bonusType) {
 		super(val, name);

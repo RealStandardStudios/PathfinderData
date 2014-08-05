@@ -3,8 +3,8 @@ package pathfinder.data.Effects;
 import pathfinder.data.Attributes.AbilityName;
 
 /**
- * @Author Real Standard Studios - Matthew Meehan
- * @description An {@link Effect} that modifies an ability
+ * An {@link Effect} that modifies an ability
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class AbilityEffect extends Effect {
 	private AbilityName abilityName;
@@ -17,6 +17,9 @@ public class AbilityEffect extends Effect {
 		this.abilityName = abilityName;
 	}
 	
+	/**
+	 * Default Constructor for Kryo
+	 */
 	public AbilityEffect() {
 		super();
 	}

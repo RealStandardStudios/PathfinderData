@@ -4,8 +4,8 @@
 package pathfinder.data.Effects;
 
 /**
- * @Author Real Standard Studios - Matthew Meehan
- * @description An {@link Effect} that adds a bonus to a {@link Skill}
+ * An {@link Effect} that adds a bonus to a {@link Skill}
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class SpellResistanceEffect extends Effect {
 	private String bonusVs;

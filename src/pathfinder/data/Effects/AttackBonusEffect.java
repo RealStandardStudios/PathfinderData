@@ -1,8 +1,8 @@
 package pathfinder.data.Effects;
 
 /**
+ * An {@link Effect} that gives an attack bonus vs something
  * @Author Real Standard Studios - Matthew Meehan
- * @description An {@link Effect} that gives an attack bonus vs something
  */
 public class AttackBonusEffect extends Effect{
 	private String bonusVs;
@@ -36,10 +36,20 @@ public class AttackBonusEffect extends Effect{
 		this.bonusType = bonusType;
 	}
 
+	/**
+	 * Default Constructor for Kryo
+	 */
 	public AttackBonusEffect() { 
 		super();
 	}
 	
+	/**
+	 * 
+	 * @param bonusVs
+	 * @param bonusType
+	 * @param val The Value of the {@link Effect}
+	 * @param name The Name of the {@link Effect}
+	 */
 	public AttackBonusEffect(String bonusVs, String bonusType, int val, String name) {
 		super(val, name);
 		this.bonusVs = bonusVs;

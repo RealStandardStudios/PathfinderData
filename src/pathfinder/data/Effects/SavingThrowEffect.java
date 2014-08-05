@@ -4,8 +4,8 @@
 package pathfinder.data.Effects;
 
 /**
+ * An {@link Effect} that adds a bonus to A Saving Throw
  * @Author Real Standard Studios - Matthew Meehan
- * @description An {@link Effect} that adds a bonus to A Saving Throw
  */
 public class SavingThrowEffect extends Effect {
 	// What the bonus is applied against
@@ -46,7 +46,7 @@ public class SavingThrowEffect extends Effect {
 	 * @param val the value of the {@link Effect}
 	 * @param name the name of the {@link Effect}
 	 * @param bonusVs What the bonus is Against/to
-	 * @param bonusType When the bonus is appied
+	 * @param bonusType When the bonus is applied
 	 */
 	public SavingThrowEffect(int val, String name, String bonusVs, String bonusType) {
 		super(val, name);

@@ -4,8 +4,8 @@
 package pathfinder.data.Effects;
 
 /**
+ * An {@link Effect} that adds a bonus for caster level in a given situation
  * @Author Real Standard Studios - Matthew Meehan
- * @description An {@link Effect} that adds a bonus for caster level in a given situation
  */
 public class CasterLevelModifierEffect extends Effect {
 	private String bonusFor;
@@ -24,10 +24,18 @@ public class CasterLevelModifierEffect extends Effect {
 		this.bonusFor = bonusFor;
 	}
 
+	/**
+	 * Default Constructor for Kryo
+	 */
 	public CasterLevelModifierEffect() {
 		super();
 	}
 
+	/**
+	 * @param val The Value of the {@link Effect}
+	 * @param name The Name of the {@link Effect}
+	 * @param bonusFor What the bonus is applied for
+	 */
 	public CasterLevelModifierEffect(int val, String name, String bonusFor) {
 		super(val, name);
 		this.bonusFor = bonusFor;
