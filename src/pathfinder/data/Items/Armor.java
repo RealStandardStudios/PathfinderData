@@ -1,36 +1,19 @@
 package pathfinder.data.Items;
 
-public class Armor {
+public class Armor extends Item {
 	private ArmorType armorType;
-	private String name;
-	private int cost;
 	private int armorBonus;
 	private int maxDexBonus;
 	private int armorCheckPenalty;
 	private int arcaneSpellFailiure;
 	private int speed30feet;
 	private int speed20feet;
-	private int weight;
-
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
 
 	/**
 	 * @return the armorType
 	 */
 	public ArmorType getArmorType() {
 		return armorType;
-	}
-
-	/**
-	 * @return the cost
-	 */
-	public int getCost() {
-		return cost;
 	}
 
 	/**
@@ -75,12 +58,6 @@ public class Armor {
 		return speed20feet;
 	}
 
-	/**
-	 * @return the weight
-	 */
-	public int getWeight() {
-		return weight;
-	}
 
 	public Armor() {
 	}
@@ -99,15 +76,13 @@ public class Armor {
 	public Armor(String name, ArmorType armorType, int cost, int armorBonus,
 			int maxDexBonus, int armorCheckPenalty, int arcaneSpellFailiure,
 			int speed30feet, int speed20feet, int weight) {
+		super(name,cost,weight);
 		this.armorType = armorType;
-		this.cost = cost;
 		this.armorBonus = armorBonus;
 		this.maxDexBonus = maxDexBonus;
 		this.armorCheckPenalty = armorCheckPenalty;
 		this.arcaneSpellFailiure = arcaneSpellFailiure;
 		this.speed30feet = speed30feet;
 		this.speed20feet = speed20feet;
-		this.weight = weight;
-		this.name = name;
 	}
 }
