@@ -1,19 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package pathfinder.data.Races.Traits;
+
+import pathfinder.data.Items.WeaponType;
 
 
 /**
- *
- * @author Real Standard Studios - Joshua Boyd
+ * @Author Real Standard Studios - Joshua Boyd
+ * @description A {@link Trait} that gives the user another/new weapon familiarity
  */
 public class WeaponFamiliarityTrait  extends Trait{
+    //Familiarity with a weapon by name, if any.	
     private String weaponName;
-    //Familiarity with a weapon by name, if any.
-    private String weaponType;
     //Familiarity with a weapon by type or subtype, if any.
+    private WeaponType weaponType;
+
 }

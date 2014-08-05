@@ -1,5 +1,7 @@
 package pathfinder.data.Classes;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import pathfinder.data.DiceType;
 import pathfinder.data.Character.Alignment;
 import pathfinder.data.Classes.Objects.Feature;
@@ -15,7 +17,7 @@ public abstract class Class {
 	/**
 	 * The name of the class
 	 */
-	private String name;
+	private StringProperty name;
 
 	/**
 	 * Some flavor Text about the Class from the SRD
@@ -72,6 +74,10 @@ public abstract class Class {
 	 * @return the name
 	 */
 	public String getName() {
+		return name.getValue();
+	}
+	
+	public StringProperty getNameProperty() {
 		return name;
 	}
 
@@ -110,6 +116,19 @@ public abstract class Class {
 	public Alignment[] getRequireAlignments() {
 		return requireAlignments;
 	}
+	
+	/**
+	 * Iterate through array of Alignment
+	 * Return alignment value as string
+	 * @return
+	 */
+	public String getAlignments() {
+		String s = "";
+		for (Alignment a : requireAlignments) {
+			s += a.toString()+ ", ";
+		}
+		return s;
+	}
 
 	/**
 	 * @return the hitDice
@@ -124,6 +143,10 @@ public abstract class Class {
 	public int getStartingWealthD6() {
 		return startingWealthD6;
 	}
+	
+	public String getStartingWealthToString() {
+		return Integer.toString(startingWealthD6);
+	}
 
 	/**
 	 * @return the skillRanksPerLevel
@@ -131,12 +154,24 @@ public abstract class Class {
 	public int getSkillRanksPerLevel() {
 		return skillRanksPerLevel;
 	}
+	
+	public String getSkillRanksToString() {
+		return Integer.toString(skillRanksPerLevel);
+	}
 
 	/**
 	 * @return the classSkills
 	 */
 	public Skill[] getClassSkills() {
 		return classSkills;
+	}
+	
+	public String getClassSkillsToString() {
+		String str = "";
+		for (Skill s : classSkills) {
+			str += s.toString();
+		}
+		return str;
 	}
 
 	/**
@@ -152,12 +187,31 @@ public abstract class Class {
 	public WeaponType[] getWeaponProficiencies() {
 		return weaponProficiencies;
 	}
+	
+	public String getArmorProfsToString() {
+		String s = "";
+		for (WeaponType	w : weaponProficiencies) {
+			s += w.toString();
+		}
+		return s;
+	}
 
 	/**
 	 * @return the armorProficiencies
 	 */
 	public ArmorType[] getArmorProficiencies() {
 		return armorProficiencies;
+	}
+	
+	public String getWeaponProfsToString() {
+		String s = "";
+		for (ArmorType	a : armorProficiencies) {
+			s += a.toString();
+		}
+		return s;
+	}
+
+	public Class() {
 	}
 
 	/**
@@ -179,7 +233,7 @@ public abstract class Class {
 			int startingWealthD6, int skillRanksPerLevel, Skill[] classSkills,
 			Feature[] features, WeaponType[] weaponProficiencies,
 			ArmorType[] armorProficiencies) {
-		this.name = name;
+		this.name = new SimpleStringProperty(name);
 		this.description = description;
 		this.role = role;
 		this.level = level;
@@ -192,6 +246,5 @@ public abstract class Class {
 		this.weaponProficiencies = weaponProficiencies;
 		this.armorProficiencies = armorProficiencies;
 	}
-	
-	
+
 }

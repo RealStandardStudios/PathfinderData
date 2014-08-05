@@ -37,6 +37,9 @@ public class Paladin extends Class {
 	public SpellLevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Paladin() {
+	}
 
 	/**
 	 * @param name

@@ -11,70 +11,80 @@ public class Armor {
 	private int speed30feet;
 	private int speed20feet;
 	private int weight;
-	
+
 	/**
 	 * @return the name
 	 */
 	public String getName() {
 		return name;
 	}
-	
+
 	/**
 	 * @return the armorType
 	 */
 	public ArmorType getArmorType() {
 		return armorType;
 	}
+
 	/**
 	 * @return the cost
 	 */
 	public int getCost() {
 		return cost;
 	}
+
 	/**
 	 * @return the armorBonus
 	 */
 	public int getArmorBonus() {
 		return armorBonus;
 	}
+
 	/**
 	 * @return the maxDexBonus
 	 */
 	public int getMaxDexBonus() {
 		return maxDexBonus;
 	}
+
 	/**
 	 * @return the armorCheckPenalty
 	 */
 	public int getArmorCheckPenalty() {
 		return armorCheckPenalty;
 	}
+
 	/**
 	 * @return the arcaneSpellFailiure
 	 */
 	public int getArcaneSpellFailiure() {
 		return arcaneSpellFailiure;
 	}
+
 	/**
 	 * @return the speed30feet
 	 */
 	public int getSpeed30feet() {
 		return speed30feet;
 	}
+
 	/**
 	 * @return the speed20feet
 	 */
 	public int getSpeed20feet() {
 		return speed20feet;
 	}
+
 	/**
 	 * @return the weight
 	 */
 	public int getWeight() {
 		return weight;
 	}
-	
-	public Armor() {}
+
+	public Armor() {
+	}
+
 	/**
 	 * @param armorType
 	 * @param cost

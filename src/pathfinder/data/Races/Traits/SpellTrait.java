@@ -3,18 +3,17 @@ package pathfinder.data.Races.Traits;
 import pathfinder.data.Spells.Spell;
 
 /**
- * 
- * @author Joshua Boyd
- * 
- * Please explain this to me also josh - Matthew
+ * @Author Real Standard Studios - Joshua Boyd
+ * @description A {@link Trait} that gives the user a new spell
  */
-public class SpellTrait extends Trait{
+public class SpellTrait extends Trait {
+	// which spell they have
 	private Spell spell;
-        //which spell they have
+	// how many times they can cast it per day.
 	private int amount;
-        //how many times they can cast it per day.
-        private boolean spellEdit;
-        //if true, there will be modifications to the spell
-        private String condutionModifier;
-        //tells you what needs to be modified        
+	// if true, there will be modifications to the spell
+	private boolean spellEdit;
+	// tells you what needs to be modified
+	private String condutionModifier;
+
 }

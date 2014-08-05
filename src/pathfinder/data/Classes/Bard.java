@@ -24,6 +24,9 @@ public class Bard extends Class {
 	public LevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Bard() {
+	}
 
 	/**
 	 * @param name

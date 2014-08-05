@@ -38,6 +38,9 @@ public class Magus extends Class {
 	public SpellLevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Magus() {
+	}
 
 	/**
 	 * @param name

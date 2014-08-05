@@ -1,7 +1,8 @@
 package pathfinder.data.Races;
 
 import java.util.ArrayList;
-import pathfinder.data.AbilityEffect;
+
+import pathfinder.data.Effects.AbilityEffect;
 import pathfinder.data.Items.Weapon;
 import pathfinder.data.Races.Objects.Language;
 import pathfinder.data.Races.Objects.Size;

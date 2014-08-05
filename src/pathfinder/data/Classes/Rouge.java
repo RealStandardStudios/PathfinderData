@@ -22,6 +22,9 @@ public class Rouge extends Class {
 	public LevelTableRow[] getLevelTable() {
 		return levelTable;
 	}
+	
+	public Rouge() {
+	}
 
 	/**
 	 * @param name
