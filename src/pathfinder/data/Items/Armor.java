@@ -9,6 +9,34 @@ public class Armor extends Item {
 	private int speed30feet;
 	private int speed20feet;
 
+	public void setArmorType(ArmorType armorType) {
+		this.armorType = armorType;
+	}
+
+	public void setArmorBonus(int armorBonus) {
+		this.armorBonus = armorBonus;
+	}
+
+	public void setMaxDexBonus(int maxDexBonus) {
+		this.maxDexBonus = maxDexBonus;
+	}
+
+	public void setArmorCheckPenalty(int armorCheckPenalty) {
+		this.armorCheckPenalty = armorCheckPenalty;
+	}
+
+	public void setArcaneSpellFailiure(int arcaneSpellFailiure) {
+		this.arcaneSpellFailiure = arcaneSpellFailiure;
+	}
+
+	public void setSpeed30feet(int speed30feet) {
+		this.speed30feet = speed30feet;
+	}
+
+	public void setSpeed20feet(int speed20feet) {
+		this.speed20feet = speed20feet;
+	}
+
 	/**
 	 * @return the armorType
 	 */
