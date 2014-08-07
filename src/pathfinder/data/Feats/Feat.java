@@ -5,29 +5,31 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import pathfinder.data.Effects.Effect;
+import pathfinder.data.Effects.NonValued.MiscEffect;
 
-/** 
+/**
  * A data class for character Feats
- * @author Real Standard Studios - Matthew Meehan 
+ * 
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Feat {
 	private StringProperty name;
 	private ObjectProperty<Feat> prerequisite;
 	private StringProperty benefit;
 	private ObjectProperty<Effect> effect;
-	
+
 	public StringProperty nameProperty() {
 		return name;
 	}
-	
+
 	public ObjectProperty<Feat> prerequisitePropety() {
 		return prerequisite;
 	}
-	
+
 	public StringProperty benifitProperty() {
 		return benefit;
 	}
-	
+
 	public ObjectProperty<Effect> effectProperty() {
 		return effect;
 	}
@@ -62,11 +64,16 @@ public class Feat {
 	}
 
 	public Feat() {
+		this.name = new SimpleStringProperty("Feat Name");
+		this.prerequisite = new SimpleObjectProperty<Feat>();
+		this.benefit = new SimpleStringProperty("Benifit");
+		this.effect = new SimpleObjectProperty<Effect>(new MiscEffect("Misc Effect", "Tests the data"));
 	}
 
 	public Feat(String name, Feat prerequisite, String benefit) {
 		this.name = new SimpleStringProperty(name);
 		this.prerequisite = new SimpleObjectProperty<Feat>(prerequisite);
 		this.benefit = new SimpleStringProperty(benefit);
+		this.effect = new SimpleObjectProperty<Effect>(new MiscEffect());
 	}
 }
