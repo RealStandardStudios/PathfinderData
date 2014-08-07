@@ -6,7 +6,7 @@ import pathfinder.data.Effects.Effect;
  * 
  * @author Matthew Meehan the generic Class Feature
  */
-public abstract class Feature {
+public class Feature {
 	private String name;
 
 	private String description;
