@@ -1,25 +1,32 @@
 package pathfinder.data.Effects;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 /**
  * An effect of some kind with a definable value to the character
  * @author Real Standard Studios - Matthew Meehan
  */
 public abstract class Effect {
 	private int value;
-	private String name;
+	private StringProperty name;
+	
+	public StringProperty NameProperty() {
+		return name;
+	}
 
 	/**
 	 * @return the name
 	 */
 	public String getName() {
-		return name;
+		return name.getValue();
 	}
 
 	/**
 	 * @param name the name to set
 	 */
 	public void setName(String name) {
-		this.name = name;
+		this.name.set(name);
 	}
 
 	public int getValue() {
@@ -42,6 +49,6 @@ public abstract class Effect {
 	 */
 	public Effect(int val, String name) {
 		this.value = val;
-		this.name = name;
+		this.name = new SimpleStringProperty(name);
 	}
 }

@@ -64,7 +64,7 @@ public class Feat {
 	}
 
 	public Feat() {
-		this.name = new SimpleStringProperty("Feat Name");
+		this.name = new SimpleStringProperty("There's no feat here");
 		this.prerequisite = new SimpleObjectProperty<Feat>();
 		this.benefit = new SimpleStringProperty("Benifit");
 		this.effect = new SimpleObjectProperty<Effect>(new MiscEffect("Misc Effect", "Tests the data"));
@@ -74,6 +74,6 @@ public class Feat {
 		this.name = new SimpleStringProperty(name);
 		this.prerequisite = new SimpleObjectProperty<Feat>(prerequisite);
 		this.benefit = new SimpleStringProperty(benefit);
-		this.effect = new SimpleObjectProperty<Effect>(new MiscEffect());
+		this.effect = new SimpleObjectProperty<Effect>(new MiscEffect("Misc Effect", "Tests the data"));
 	}
 }
