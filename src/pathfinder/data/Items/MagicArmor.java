@@ -42,9 +42,10 @@ public class MagicArmor extends Armor
 	}
 	
 	
-	public MagicArmor(Armor baseArmor, String name, String slot, String strength, String caster, int price, int weight, String description, String construction)
+	public MagicArmor(String baseArmor, String name, String slot,
+			String strength, String caster, String price, String weight, String description, String construction)
 	{
-		setValuesFromArmor(baseArmor);
+		Armor armor = new Armor();//Fix this when you know how to josh
 		this.setName(name);
 		this.setSlot(slot);
 		this.setAuraStrength(strength);

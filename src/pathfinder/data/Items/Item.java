@@ -10,8 +10,8 @@ package pathfinder.data.Items;
  */
 public abstract class Item {
 	private String name;
-	private int cost;
-	private int weight;
+	private String cost;
+	private String weight;
 	
 	public String getName() {
 		return name;
@@ -19,16 +19,16 @@ public abstract class Item {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getCost() {
+	public String getCost() {
 		return cost;
 	}
-	public void setCost(int cost) {
+	public void setCost(String cost) {
 		this.cost = cost;
 	}
-	public int getWeight() {
+	public String getWeight() {
 		return weight;
 	}
-	public void setWeight(int weight) {
+	public void setWeight(String weight) {
 		this.weight = weight;
 	}
 	
@@ -45,7 +45,7 @@ public abstract class Item {
 	 * @param cost The cost of the item
 	 * @param weight The Weight of the item
 	 */
-	public Item(String name, int cost, int weight) {
+	public Item(String name, String cost, String weight) {
 		this.name = name;
 		this.cost = cost;
 		this.weight = weight;

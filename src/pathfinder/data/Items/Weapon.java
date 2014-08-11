@@ -89,7 +89,7 @@ public class Weapon extends Item{
 		
 	}
 		
-	public Weapon(String name, int cost, String dmgS, String dmgM, String critical, String range, int weight, String type, String special)
+	public Weapon(String name, String cost, String dmgS, String dmgM, String critical, String range, String weight, String type, String special)
 	{
 		this.setName(name);
 		this.setCost(cost);
