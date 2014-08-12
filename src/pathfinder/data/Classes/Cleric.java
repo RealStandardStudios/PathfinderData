@@ -60,7 +60,7 @@ public class Cleric extends Class {
 	 */
 	public Cleric(String name, String description, String role, int level,
 			Alignment[] requireAlignments, DiceType hitDice,
-			int startingWealthD6, int skillRanksPerLevel, Skill[] classSkills,
+			int startingWealthD6, int skillRanksPerLevel, String[] classSkills,
 			Feature[] features, WeaponType[] weaponProficiencies,
 			ArmorType[] armorProficiencies, HashMap<String, Spell>[] spells,
 			SpellLevelTableRow[] levelTable) {

@@ -58,7 +58,7 @@ public abstract class Class {
 	/**
 	 * The list of skills a class is trained in
 	 */
-	private Skill[] classSkills;
+	private String[] classSkills;
 
 	/**
 	 * A list of the Features the class has, Features is a generic type, I might
@@ -124,9 +124,17 @@ public abstract class Class {
 	 */
 	public String getAlignments() {
 		String s = "";
+		/*
 		for (Alignment a : requireAlignments) {
 			s += a.toString()+ ", ";
 		}
+		*/
+		
+		for (int i = 0; i < requireAlignments.length -1; i++) {
+			s += requireAlignments[i].toString() + ", ";
+		}
+		s += requireAlignments[requireAlignments.length-1].toString();
+		
 		return s;
 	}
 
@@ -162,16 +170,16 @@ public abstract class Class {
 	/**
 	 * @return the classSkills
 	 */
-	public Skill[] getClassSkills() {
+	public String[] getClassSkills() {
 		return classSkills;
 	}
 	
 	public String getClassSkillsToString() {
 		String str = "";
-		for (Skill s : classSkills) {
-			str += s.toString();
+		for (String s : classSkills) {
+			str += s.trim() + ", ";
 		}
-		return str;
+		return str.substring(0,str.length()-2);
 	}
 
 	/**
@@ -188,7 +196,7 @@ public abstract class Class {
 		return weaponProficiencies;
 	}
 	
-	public String getArmorProfsToString() {
+	public String getWeaponProfsToString() {
 		String s = "";
 		for (WeaponType	w : weaponProficiencies) {
 			s += w.toString();
@@ -203,7 +211,7 @@ public abstract class Class {
 		return armorProficiencies;
 	}
 	
-	public String getWeaponProfsToString() {
+	public String getArmorProfsToString() {
 		String s = "";
 		for (ArmorType	a : armorProficiencies) {
 			s += a.toString();
@@ -230,7 +238,7 @@ public abstract class Class {
 	 */
 	public Class(String name, String description, String role, int level,
 			Alignment[] requireAlignments, DiceType hitDice,
-			int startingWealthD6, int skillRanksPerLevel, Skill[] classSkills,
+			int startingWealthD6, int skillRanksPerLevel, String[] classSkills,
 			Feature[] features, WeaponType[] weaponProficiencies,
 			ArmorType[] armorProficiencies) {
 		this.name = new SimpleStringProperty(name);
