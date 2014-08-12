@@ -27,7 +27,69 @@ public class Spell {
     private String area;
     private String[] tablePicture;
     
-    /**
+         
+    public void setSchool(String school) {
+		this.school = school;
+	}
+
+	public void setCastingTime(String castingTime) {
+		this.castingTime = castingTime;
+	}
+
+	public void setRange(String range) {
+		this.range = range;
+	}
+
+	public void setEffect(String effect) {
+		this.effect = effect;
+	}
+
+	public void setDuration(String duration) {
+		this.duration = duration;
+	}
+
+	public void setSavingThrow(String savingThrow) {
+		this.savingThrow = savingThrow;
+	}
+
+	public void setSpellResistance(String spellResistance) {
+		this.spellResistance = spellResistance;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public void setName(String name) {
+		this.name.setValue(name);
+	}
+
+	public void setClassName(String[] className) {
+		this.className = className;
+	}
+
+	public void setSpellLevel(int[] spellLevel) {
+		this.spellLevel = spellLevel;
+	}
+
+	public void setComponents(String components) {
+		this.components = components;
+	}
+
+	public void setTarget(String target) {
+		this.target = target;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
+
+	public void setTablePicture(String tablePicture) {
+		String[] parts = tablePicture.split(",");
+		this.tablePicture = parts;
+	}
+
+	/**
      * @return a combined string made up of className and spellLevel
      */
     public String getClassAndSpellLevel() {
@@ -148,7 +210,21 @@ public class Spell {
     /**
      * @return an array of tablePicture
      */
-    public String[] getTablePicture() {
+    public String getTablePicture() {
+    	String tablePictures = "";
+    	
+    	if (tablePicture != null) {
+    		tablePictures += tablePicture[0];
+        	
+        	for (int i = 1; i < tablePicture.length; i++) {
+        		tablePictures += ", " + tablePicture[i];
+        	}
+    	}
+    	
+    	return tablePictures;
+    }
+    
+    public String[] getTablePictures() {
     	return tablePicture;
     }
     
