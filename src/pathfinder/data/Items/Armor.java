@@ -101,9 +101,9 @@ public class Armor extends Item {
 	 * @param speed20feet
 	 * @param weight
 	 */
-	public Armor(String name, ArmorType armorType, int cost, int armorBonus,
+	public Armor(String name, ArmorType armorType, String cost, int armorBonus,
 			int maxDexBonus, int armorCheckPenalty, int arcaneSpellFailiure,
-			int speed30feet, int speed20feet, int weight) {
+			int speed30feet, int speed20feet, String weight) {
 		super(name,cost,weight);
 		this.armorType = armorType;
 		this.armorBonus = armorBonus;
