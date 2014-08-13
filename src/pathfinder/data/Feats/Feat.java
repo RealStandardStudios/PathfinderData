@@ -4,6 +4,7 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import pathfinder.data.FeatPrerequisite;
 import pathfinder.data.Classes.Objects.Feature;
 import pathfinder.data.Effects.Effect;
 import pathfinder.data.Effects.NonValued.MiscEffect;
@@ -13,10 +14,8 @@ import pathfinder.data.Effects.NonValued.MiscEffect;
  * 
  * @author Real Standard Studios - Matthew Meehan
  */
-public class Feat {
+public class Feat extends FeatPrerequisite{
 	public static final Feat NullFeat = new Feat();
-	
-	private StringProperty name;
 	private ObjectProperty<Object> prerequisite;
 	private StringProperty benefit;
 	private ObjectProperty<Effect> effect;
@@ -67,21 +66,21 @@ public class Feat {
 	}
 
 	public Feat() {
-		this.name = new SimpleStringProperty("-");
+		this.name.set("-");
 		this.prerequisite = new SimpleObjectProperty<Object>();
 		this.benefit = new SimpleStringProperty("-");
 		this.effect = new SimpleObjectProperty<Effect>(new MiscEffect("-", "-"));
 	}
 
 	public Feat(String name, Feat prerequisite, String benefit, Effect effect) {
-		this.name = new SimpleStringProperty(name);
+		this.name.set(name);
 		this.prerequisite = new SimpleObjectProperty<Object>(prerequisite);
 		this.benefit = new SimpleStringProperty(benefit);
 		this.effect = new SimpleObjectProperty<Effect>(effect);
 	}
 	
 	public Feat(String name, Feature prerequisite, String benefit) {
-		this.name = new SimpleStringProperty(name);
+		this.name.set(name);
 		this.prerequisite = new SimpleObjectProperty<Object>(prerequisite);
 		this.benefit = new SimpleStringProperty(benefit);
 		this.effect = new SimpleObjectProperty<Effect>(new MiscEffect("Misc Effect", "Tests the data"));

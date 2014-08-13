@@ -30,6 +30,7 @@ public class ActionToFreeEffect extends ActionEffect {
 	 */
 	public ActionToFreeEffect() {
 		super();
+		this.NameProperty().set("Action To Free Effect");
 	}
 
 	/**

@@ -29,6 +29,7 @@ public class FeintActionEffect extends ActionEffect {
 	 */
 	public FeintActionEffect() {
 		super();
+		this.NameProperty().set("Feint Action Effect");
 	}
 
 	/**

@@ -28,7 +28,8 @@ public class TripActionEffect extends ActionEffect{
 	 * The default Constructor for Kyro
 	 */
 	public TripActionEffect() {
-		
+		super();
+		this.NameProperty().set("Trip Action Effect");
 	}
 	
 	/**

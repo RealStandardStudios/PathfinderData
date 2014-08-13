@@ -1,31 +1,16 @@
 package pathfinder.data.Races.Traits;
 
+import pathfinder.data.FeatPrerequisite;
 import pathfinder.data.Effects.Effect;
 
 /**
  * 
- * @author Joshua Boyd
+ * @author Real Standard Studios - Joshua Boyd, Matthew Meehan
  * A generic type for extending all the traits from
  */
-public abstract class Trait {
-	private String name;
-	private Effect effect;
+public abstract class Trait extends FeatPrerequisite {
+	private Effect effect;	
 	
-	
-	
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	/**
 	 * @return the effect
@@ -52,7 +37,7 @@ public abstract class Trait {
 	 * @param effect The effect of the trait
 	 */
 	public Trait(String name, Effect effect) {
-		this.name = name;
+		this.name.set(name);
 		this.effect = effect;
 	}
 	

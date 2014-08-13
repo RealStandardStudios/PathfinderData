@@ -40,7 +40,9 @@ public abstract class Effect {
 	/**
 	 * The default Constructor for Kryo
 	 */
-	public Effect() { }
+	public Effect() {
+		this.name = new SimpleStringProperty();
+	}
 	
 	/**
 	 * 

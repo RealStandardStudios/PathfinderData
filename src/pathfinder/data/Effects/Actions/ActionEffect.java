@@ -32,6 +32,7 @@ public class ActionEffect extends Effect {
 	 */
 	public ActionEffect() {
 		super();
+		this.NameProperty().set("Action Effect");
 	}
 
 	/**
