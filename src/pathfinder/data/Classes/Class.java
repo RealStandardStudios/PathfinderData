@@ -66,9 +66,9 @@ public abstract class Class {
 	 */
 	private Feature[] features;
 
-	private WeaponType[] weaponProficiencies;
+	private String[] weaponProficiencies;
 
-	private ArmorType[] armorProficiencies;
+	private String[] armorProficiencies;
 
 	/**
 	 * @return the Name
@@ -151,10 +151,6 @@ public abstract class Class {
 	public int getStartingWealthD6() {
 		return startingWealthD6;
 	}
-	
-	public String getStartingWealthToString() {
-		return Integer.toString(startingWealthD6);
-	}
 
 	/**
 	 * @return the skillRanksPerLevel
@@ -192,13 +188,13 @@ public abstract class Class {
 	/**
 	 * @return the weaponProficiencies
 	 */
-	public WeaponType[] getWeaponProficiencies() {
+	public String[] getWeaponProficiencies() {
 		return weaponProficiencies;
 	}
 	
 	public String getWeaponProfsToString() {
 		String s = "";
-		for (WeaponType	w : weaponProficiencies) {
+		for (String	w : weaponProficiencies) {
 			s += w.toString();
 		}
 		return s;
@@ -207,13 +203,13 @@ public abstract class Class {
 	/**
 	 * @return the armorProficiencies
 	 */
-	public ArmorType[] getArmorProficiencies() {
+	public String[] getArmorProficiencies() {
 		return armorProficiencies;
 	}
 	
 	public String getArmorProfsToString() {
 		String s = "";
-		for (ArmorType	a : armorProficiencies) {
+		for (String	a : armorProficiencies) {
 			s += a.toString();
 		}
 		return s;
@@ -239,8 +235,8 @@ public abstract class Class {
 	public Class(String name, String description, String role, int level,
 			Alignment[] requireAlignments, DiceType hitDice,
 			int startingWealthD6, int skillRanksPerLevel, String[] classSkills,
-			Feature[] features, WeaponType[] weaponProficiencies,
-			ArmorType[] armorProficiencies) {
+			Feature[] features, String[] weaponProficiencies,
+			String[] armorProficiencies) {
 		this.name = new SimpleStringProperty(name);
 		this.description = description;
 		this.role = role;

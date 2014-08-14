@@ -13,7 +13,7 @@ import pathfinder.data.Skills.Skill;
  * @author Matthew
  * @description The Rouge Class http://paizo.com/pathfinderRPG/prd/classes/rogue.html#_rogue
  */
-public class Rouge extends Class {
+public class Rogue extends Class {
 	private LevelTableRow[] levelTable;
 
 	/**
@@ -23,11 +23,11 @@ public class Rouge extends Class {
 		return levelTable;
 	}
 	
-	public Rouge() {
+	public Rogue() {
 	}
 
 	/**
-	 * @param Name
+	 * @param name
 	 * @param description
 	 * @param role
 	 * @param level
@@ -41,11 +41,11 @@ public class Rouge extends Class {
 	 * @param armorProficiencies
 	 * @param levelTable
 	 */
-	public Rouge(String name, String description, String role, int level,
+	public Rogue(String name, String description, String role, int level,
 			Alignment[] requireAlignments, DiceType hitDice,
 			int startingWealthD6, int skillRanksPerLevel, String[] classSkills,
-			Feature[] features, WeaponType[] weaponProficiencies,
-			ArmorType[] armorProficiencies, LevelTableRow[] levelTable) {
+			Feature[] features, String[] weaponProficiencies,
+			String[] armorProficiencies, LevelTableRow[] levelTable) {
 		super(name, description, role, level, requireAlignments, hitDice,
 				startingWealthD6, skillRanksPerLevel, classSkills, features,
 				weaponProficiencies, armorProficiencies);

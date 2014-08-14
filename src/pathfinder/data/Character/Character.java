@@ -15,10 +15,10 @@ import pathfinder.data.Races.Race;
 import pathfinder.data.Skills.Skill;
 
 /**
- * 
- * @author Real Standard Studios - Matthew Meehan
  * A class that represents the character as a whole, emulates the data from a 
  * character sheet
+ * 
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Character {
 	private String name;
@@ -32,6 +32,7 @@ public class Character {
 	private Feat[] feats;
 	private Inventory inventory;
     private Alignment alignment;
+    
     /**
      * The effects that have been applied to the character through
      * Class features, Feats or racial traits
@@ -43,6 +44,7 @@ public class Character {
          * relevant bonus
 	 */
 	private int armorClass;
+	
 	/**
 	 * int between 0 and 2; 0 is slow track, 1 is medium track, 2 is fast track
 	 */
@@ -291,8 +293,7 @@ public class Character {
 	}
 
 	/**
-	 * @param classes
-	 *            the classes to set
+	 * @param classes the classes to set        
 	 */
 	public void setClasses(Class[] classes) {
 		this.classes = classes;
@@ -306,8 +307,7 @@ public class Character {
 	}
 
 	/**
-	 * @param skills
-	 *            the skills to set
+	 * @param skills the skills to set
 	 */
 	public void setSkills(Skill[] skills) {
 		this.skills = skills;
@@ -321,8 +321,7 @@ public class Character {
 	}
 
 	/**
-	 * @param feats
-	 *            the feats to set
+	 * @param feats the feats to set
 	 */
 	public void setFeats(Feat[] feats) {
 		this.feats = feats;
@@ -347,8 +346,8 @@ public class Character {
 	/**
 	 * sets armorClass with all of the components to add together
 	 * 
-         * @param deflectionMod
-         * @param miscMod
+     * @param deflectionMod
+     * @param miscMod
 	 */
 	public void setArmorClass(int deflectionMod, int miscMod) {
 		int armorBonus=0, shieldBonus = 0;
@@ -373,8 +372,7 @@ public class Character {
 	}
 
 	/**
-	 * @param experienceTrack
-	 *            the experienceTrack to set
+	 * @param experienceTrack the experienceTrack to set
 	 */
 	public void setExperienceTrack(int experienceTrack) {
 		this.experienceTrack = experienceTrack;
@@ -388,8 +386,7 @@ public class Character {
 	}
 
 	/**
-	 * @param experienceValue
-	 *            the experienceValue to set
+	 * @param experienceValue the experienceValue to set
 	 * @description every time experience is updated, check to see if leveled
 	 */
 	public void setExp(int experienceValue) {
@@ -442,9 +439,8 @@ public class Character {
 		return resistances[4];
 	}
 
-	/**
-	 * @param resistances
-	 *            the resistances to set
+	/** 
+	 * @param resistances the resistances to set
 	 */
 	public void setResistances(Resistance[] resistances) {
 		this.resistances = resistances;

@@ -46,8 +46,8 @@ public class Gunslinger extends Class {
 	public Gunslinger(String name, String description, String role, int level,
 			Alignment[] requireAlignments, DiceType hitDice,
 			int startingWealthD6, int skillRanksPerLevel, String[] classSkills,
-			Feature[] features, WeaponType[] weaponProficiencies,
-			ArmorType[] armorProficiencies, LevelTableRow[] levelTable) {
+			Feature[] features, String[] weaponProficiencies,
+			String[] armorProficiencies, LevelTableRow[] levelTable) {
 		super(name, description, role, level, requireAlignments, hitDice,
 				startingWealthD6, skillRanksPerLevel, classSkills, features,
 				weaponProficiencies, armorProficiencies);
