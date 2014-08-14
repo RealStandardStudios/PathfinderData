@@ -1,5 +1,7 @@
 package pathfinder.data.Spells;
 
+import java.util.HashMap;
+
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -20,8 +22,9 @@ public class Spell {
     private String spellResistance;  // needs looked at, data functions differently than this does
     private String description;
     private StringProperty name;
-    private String[] className;
-    private int[] spellLevel;
+//    private String[] className;
+//    private int[] spellLevel;
+    private HashMap<String, Integer> spellLevel;
     private String components;
     private String target;
     private String area;
@@ -64,12 +67,12 @@ public class Spell {
 		this.name.setValue(name);
 	}
 
-	public void setClassName(String[] className) {
-		this.className = className;
-	}
-
-	public void setSpellLevel(int[] spellLevel) {
-		this.spellLevel = spellLevel;
+//	public void setClassName(String[] className) {
+//		this.className = className;
+//	}
+//
+	public void setSpellLevel(HashMap<String, Integer> spellLevels) {
+		this.spellLevel = spellLevels;
 	}
 
 	public void setComponents(String components) {
@@ -95,10 +98,10 @@ public class Spell {
     public String getClassAndSpellLevel() {
     	String classAndSpellLevel = "";
     	
-    	classAndSpellLevel += className[0] + " " + spellLevel[0];
+    	classAndSpellLevel += spellLevel.keySet().toArray()[0] + " " + spellLevel.values().toArray()[0];
     	
-    	for (int i = 1; i < className.length; i++) {
-    		classAndSpellLevel += ", " + className[i] + " " + spellLevel[i];
+    	for (int i = 1; i < spellLevel.size(); i++) {
+    		classAndSpellLevel += ", " + spellLevel.keySet().toArray()[i] + " " + spellLevel.values().toArray()[i];
     	}
     	
     	return classAndSpellLevel;
@@ -178,18 +181,6 @@ public class Spell {
     	return name;
     }
     /**
-     * @return className
-     */
-    public String[] getClassName() {
-    	return className;
-    }
-    /**
-     * @return spellLevel
-     */
-    public int[] getSpellLevel() {
-    	return spellLevel;
-    }
-    /**
      * @return components
      */
     public String getComponents() {
@@ -252,12 +243,11 @@ public class Spell {
      * 
      * Constructor for Spell
      */
-    public Spell(String name, String school, String[] className, int[] spellLevel, String castingTime, String components, String range,
+    public Spell(String name, String school, HashMap<String,Integer> spellLevel, String castingTime, String components, String range,
                     String target, String effect, String area, String duration, String savingThrow,
                     String spellResistance, String description, String[] tablePicture) {
     	this.name = new SimpleStringProperty(name);
     	this.school = school;
-        this.className = className;
         this.spellLevel = spellLevel;
         this.castingTime = castingTime;
         this.components = components;

@@ -17,4 +17,12 @@ public class Alignments {
 	public static Alignment[] AnyLawful = new Alignment[] {
 		Alignment.LawfulGood, Alignment.LawfulNeutral, Alignment.LawfulEvil
 	};
+	
+	public static Alignment[] AnyNeutral = new Alignment[] {
+		Alignment.NeutralGood, Alignment.Neutral, Alignment.NeutralEvil, Alignment.LawfulNeutral, Alignment.ChaoticNeutral
+	};
+	
+	public static Alignment[] LawfulGood = new Alignment[] {
+		Alignment.LawfulGood
+	};
 }

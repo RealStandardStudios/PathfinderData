@@ -94,8 +94,8 @@ public class Monk extends Class {
 	public Monk(String name, String description, String role, int level,
 			Alignment[] requireAlignments, DiceType hitDice,
 			int startingWealthD6, int skillRanksPerLevel, String[] classSkills,
-			Feature[] features, WeaponType[] weaponProficiencies,
-			ArmorType[] armorProficiencies, LevelTableRow[] levelTable,
+			Feature[] features, String[] weaponProficiencies,
+			String[] armorProficiencies, LevelTableRow[] levelTable,
 			int[] flurryOfBlowsBAB, int[] unarmedDamageMultiplier,
 			DiceType[] unarmedDamage, int[] acBonus, int[] fastMovement) {
 		super(name, description, role, level, requireAlignments, hitDice,

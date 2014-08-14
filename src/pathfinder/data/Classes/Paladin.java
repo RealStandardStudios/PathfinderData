@@ -20,14 +20,14 @@ public class Paladin extends Class {
 	/**
 	 * An array of a HashMaps containing spells, an index of the array equals a level
 	 */
-	private HashMap<String,Spell>[] spells;
+	private HashMap<String,Spell> spells;
 	
 	private SpellLevelTableRow[] levelTable;
 
 	/**
 	 * @return the spells
 	 */
-	public HashMap<String, Spell>[] getSpells() {
+	public HashMap<String, Spell> getSpells() {
 		return spells;
 	}
 
@@ -54,19 +54,19 @@ public class Paladin extends Class {
 	 * @param features
 	 * @param weaponProficiencies
 	 * @param armorProficiencies
-	 * @param spells
+	 * @param spellLevel
 	 * @param levelTable
 	 */
 	public Paladin(String name, String description, String role, int level,
 			Alignment[] requireAlignments, DiceType hitDice,
 			int startingWealthD6, int skillRanksPerLevel, String[] classSkills,
-			Feature[] features, WeaponType[] weaponProficiencies,
-			ArmorType[] armorProficiencies, HashMap<String, Spell>[] spells,
+			Feature[] features, String[] weaponProficiencies,
+			String[] armorProficiencies, HashMap<String, Spell> spellLevel,
 			SpellLevelTableRow[] levelTable) {
 		super(name, description, role, level, requireAlignments, hitDice,
 				startingWealthD6, skillRanksPerLevel, classSkills, features,
 				weaponProficiencies, armorProficiencies);
-		this.spells = spells;
+		this.spells = spellLevel;
 		this.levelTable = levelTable;
 	}
 	
