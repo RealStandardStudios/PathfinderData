@@ -38,17 +38,15 @@ public class MagicWeapon extends Weapon{
 		
 	}
 	
-	public MagicWeapon(String weaponType, String name, String auraStr, 
+	public MagicWeapon(Weapon weapon, String name, String auraStr, 
 			String cl, String price, String weight, String description, 
 			String construction) 
-	{
-		super();
-		Weapon weapon = new Weapon();//to be fixed once you know how josh...
-		this.setName(name);
+	{ 
+		super(name, price, weapon.getDmgS(), weapon.getDmgM(), weapon.getCritical(),
+				weapon.getRange(), weight, weapon.getType(), weapon.getSpecial());
+		
 		this.setAuraStrength(auraStr);
 		this.setCasterLevel(cl);
-		this.setCost(price);
-		this.setWeight(weight);
 		this.setDescription(description);
 		this.setConstruction(construction);
 		
