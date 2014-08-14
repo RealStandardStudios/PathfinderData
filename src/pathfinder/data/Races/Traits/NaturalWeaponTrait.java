@@ -73,7 +73,7 @@ public class NaturalWeaponTrait  extends Trait{
 		super();
 	}
 	/**
-	 * @param name
+	 * @param Name
 	 * @param effect
 	 */
 	public NaturalWeaponTrait(String name, Effect effect, String weaponDescription, WeaponType weaponType, int numberOfWeapons, int diceType) {

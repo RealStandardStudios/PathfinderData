@@ -35,7 +35,7 @@ public class MiscEffect extends Effect {
 	}
 
 	/**
-	 * @param name The name of the effect
+	 * @param Name The Name of the effect
 	 * @param effect The effect as a string
 	 */
 	public MiscEffect(String name, String effect) {

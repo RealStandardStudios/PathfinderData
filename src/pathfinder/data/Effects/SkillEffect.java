@@ -8,7 +8,7 @@ package pathfinder.data.Effects;
  * @author Real Standard Studios - Matthew Meehan
  */
 public class SkillEffect extends Effect {
-	// The name of the skill that is effected
+	// The Name of the skill that is effected
 	String skillName;
 	// The type of bonus this is
 	String bonusType;
@@ -70,8 +70,8 @@ public class SkillEffect extends Effect {
 
 	/**
 	 * @param val The value of the bonus
-	 * @param name The name of the effect
-	 * @param skillName The name of the skill effected
+	 * @param Name The Name of the effect
+	 * @param skillName The Name of the skill effected
 	 * @param bonusType The type of bonus
 	 * @param bonusVs What the bonus is Against/to
 	 */

@@ -37,7 +37,7 @@ public class ActionEffect extends Effect {
 
 	/**
 	 * @param val
-	 * @param name
+	 * @param Name
 	 */
 	public ActionEffect(int val, String name, String action) {
 		super(val, name);

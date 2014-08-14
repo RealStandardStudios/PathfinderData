@@ -33,7 +33,7 @@ public class SpellResistanceEffect extends Effect {
 
 	/**
 	 * @param val The value of the bonus
-	 * @param name The name of the Effect
+	 * @param Name The Name of the Effect
 	 * @param bonusVs What the bonus is Against/For
 	 */
 	public SpellResistanceEffect(int val, String name, String bonusVs) {

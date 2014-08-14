@@ -38,7 +38,7 @@ public class Skill {
 	}
 
 	/**
-	 * @return the name
+	 * @return the Name
 	 */
 	public String getName() {
 		return name;
@@ -67,7 +67,7 @@ public class Skill {
 	/**
 	 * @param rank
 	 * @param attrToUse
-	 * @param name
+	 * @param Name
 	 * @param trained
 	 * @param situationalMod
 	 * 

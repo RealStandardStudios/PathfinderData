@@ -18,7 +18,7 @@ public class CombatManeuverDefenseEffect extends Effect {
 
 	/**
 	 * @param val The Value of the {@link Effect}
-	 * @param name The Name of the {@link Effect}
+	 * @param Name The Name of the {@link Effect}
 	 */
 	public CombatManeuverDefenseEffect(int val, String name) {
 		super(val, name);

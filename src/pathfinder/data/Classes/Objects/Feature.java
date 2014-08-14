@@ -29,7 +29,7 @@ public class Feature {
 	}
 
 	/**
-	 * @return the name
+	 * @return the Name
 	 */
 	public String getName() {
 		return name;
@@ -39,7 +39,7 @@ public class Feature {
 	}
 
 	/**
-	 * @param name
+	 * @param Name
 	 * @param description
 	 */
 	public Feature(String name, String description) {

@@ -34,7 +34,7 @@ public class ActionToSwiftEffect extends ActionEffect {
 	}
 
 	/**
-	 * @param name The name of the Effect
+	 * @param Name The Name of the Effect
 	 * @param specifiedAction The Action that can be completed as a move action
 	 */
 	public ActionToSwiftEffect(String name, String specifiedAction) {

@@ -34,7 +34,7 @@ public class FeintActionEffect extends ActionEffect {
 
 	/**
 	 * @param val
-	 * @param name
+	 * @param Name
 	 */
 	public FeintActionEffect(int val, String name, String description) {
 		super(val, name, "Feint");

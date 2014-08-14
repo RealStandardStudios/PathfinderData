@@ -34,8 +34,8 @@ public class SaveAttributeEffect extends Effect {
 
 	/**
 	 * @param val The Value of the {@link Effect}
-	 * @param name The Name of the {@link Effect}
-	 * @param attributeName The name of the Save Attribute that is effected by this
+	 * @param Name The Name of the {@link Effect}
+	 * @param attributeName The Name of the Save Attribute that is effected by this
 	 */
 	public SaveAttributeEffect(int val, String name, String attributeName) {
 		super(val, name);

@@ -11,7 +11,7 @@ public class DamageEffect extends Effect {
 
 	/**
 	 * @param val The Value of the {@link Effect}
-	 * @param name The Name of the {@link Effect}
+	 * @param Name The Name of the {@link Effect}
 	 */
 	public DamageEffect(int val, String name) {
 		super(val, name);

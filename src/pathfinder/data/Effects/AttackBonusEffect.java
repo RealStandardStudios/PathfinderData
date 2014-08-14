@@ -49,7 +49,7 @@ public class AttackBonusEffect extends Effect{
 	 * @param bonusVs
 	 * @param bonusType
 	 * @param val The Value of the {@link Effect}
-	 * @param name The Name of the {@link Effect}
+	 * @param Name The Name of the {@link Effect}
 	 */
 	public AttackBonusEffect(String bonusVs, String bonusType, int val, String name) {
 		super(val, name);

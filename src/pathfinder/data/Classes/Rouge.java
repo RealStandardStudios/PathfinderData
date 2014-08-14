@@ -27,7 +27,7 @@ public class Rouge extends Class {
 	}
 
 	/**
-	 * @param name
+	 * @param Name
 	 * @param description
 	 * @param role
 	 * @param level

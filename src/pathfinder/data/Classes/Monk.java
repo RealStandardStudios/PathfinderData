@@ -72,7 +72,7 @@ public class Monk extends Class {
 	}
 
 	/**
-	 * @param name
+	 * @param Name
 	 * @param description
 	 * @param role
 	 * @param level

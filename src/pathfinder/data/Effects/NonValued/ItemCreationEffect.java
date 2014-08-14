@@ -13,7 +13,7 @@ public class ItemCreationEffect extends Effect {
 
 	/**
 	 * @param val The Value of the {@link Effect}
-	 * @param name The Name of the {@link Effect}
+	 * @param Name The Name of the {@link Effect}
 	 */
 	public ItemCreationEffect(int val, String name) {
 		super(val, name);

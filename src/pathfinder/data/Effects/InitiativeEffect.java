@@ -19,7 +19,7 @@ public class InitiativeEffect extends Effect {
 
 	/**
 	 * @param val The Value of the {@link Effect}
-	 * @param name The Name of the {@link Effect} 
+	 * @param Name The Name of the {@link Effect} 
 	 */
 	public InitiativeEffect(int val, String name) {
 		super(val, name);

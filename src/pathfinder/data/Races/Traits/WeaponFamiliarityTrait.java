@@ -8,7 +8,7 @@ import pathfinder.data.Items.WeaponType;
  * @description A {@link Trait} that gives the user another/new weapon familiarity
  */
 public class WeaponFamiliarityTrait  extends Trait{
-    //Familiarity with a weapon by name, if any.	
+    //Familiarity with a weapon by Name, if any.	
     private String weaponName;
     //Familiarity with a weapon by type or subtype, if any.
     private WeaponType weaponType;

@@ -35,8 +35,8 @@ public class ResistanceBonusEffect extends Effect {
 
 	/**
 	 * @param val The Value of the {@link Effect}
-	 * @param name The Name of the {@link Effect}
-	 * @param resistanceName The name of the Applicable Resistance
+	 * @param Name The Name of the {@link Effect}
+	 * @param resistanceName The Name of the Applicable Resistance
 	 */
 	public ResistanceBonusEffect(int val, String name, String resistanceName) {
 		super(val, name);

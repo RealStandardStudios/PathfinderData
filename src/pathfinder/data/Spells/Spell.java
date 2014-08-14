@@ -166,13 +166,13 @@ public class Spell {
         return description;
     }
     /**
-     * @return the name
+     * @return the Name
      */
     public String getName() {
         return name.getValue();
     }
     /**
-     * @return name as a StringProperty
+     * @return Name as a StringProperty
      */
     public StringProperty getNameProperty() {
     	return name;
@@ -247,7 +247,7 @@ public class Spell {
      * @param savingThrow
      * @param spellResistance
      * @param description
-     * @param name
+     * @param Name
      * @param tablePicture
      * 
      * Constructor for Spell

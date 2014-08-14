@@ -65,15 +65,15 @@ public class Character {
 	}
 
 	/**
-	 * @return the name
+	 * @return the Name
 	 */
 	public String getName() {
 		return name;
 	}
 
 	/**
-	 * @param name
-	 *            the name to set
+	 * @param Name
+	 *            the Name to set
 	 */
 	public void setName(String name) {
 		this.name = name;

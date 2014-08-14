@@ -44,7 +44,7 @@ public class SavingThrowEffect extends Effect {
 	}
 	/**
 	 * @param val the value of the {@link Effect}
-	 * @param name the name of the {@link Effect}
+	 * @param Name the Name of the {@link Effect}
 	 * @param bonusVs What the bonus is Against/to
 	 * @param bonusType When the bonus is applied
 	 */

@@ -42,7 +42,7 @@ public class Paladin extends Class {
 	}
 
 	/**
-	 * @param name
+	 * @param Name
 	 * @param description
 	 * @param role
 	 * @param level

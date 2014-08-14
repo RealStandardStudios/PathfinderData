@@ -41,7 +41,7 @@ public abstract class Item {
 	
 	/**
 	 * An Item
-	 * @param name The name of the item
+	 * @param Name The Name of the item
 	 * @param cost The cost of the item
 	 * @param weight The Weight of the item
 	 */

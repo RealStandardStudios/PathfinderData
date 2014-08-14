@@ -33,11 +33,11 @@ public abstract class Trait extends FeatPrerequisite {
 	}
 
 	/**
-	 * @param name The name of the trait
+	 * @param Name The Name of the trait
 	 * @param effect The effect of the trait
 	 */
 	public Trait(String name, Effect effect) {
-		this.name.set(name);
+		this.Name.set(name);
 		this.effect = effect;
 	}
 	

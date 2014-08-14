@@ -5,7 +5,6 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import pathfinder.data.FeatPrerequisite;
-import pathfinder.data.Classes.Objects.Feature;
 import pathfinder.data.Effects.Effect;
 import pathfinder.data.Effects.NonValued.MiscEffect;
 
@@ -16,15 +15,15 @@ import pathfinder.data.Effects.NonValued.MiscEffect;
  */
 public class Feat extends FeatPrerequisite{
 	public static final Feat NullFeat = new Feat();
-	private ObjectProperty<Object> prerequisite;
+	private ObjectProperty<FeatPrerequisite> prerequisite;
 	private StringProperty benefit;
 	private ObjectProperty<Effect> effect;
 
 	public StringProperty nameProperty() {
-		return name;
+		return Name;
 	}
 
-	public ObjectProperty<Object> prerequisitePropety() {
+	public ObjectProperty<FeatPrerequisite> prerequisitePropety() {
 		return prerequisite;
 	}
 
@@ -37,16 +36,16 @@ public class Feat extends FeatPrerequisite{
 	}
 
 	/**
-	 * @return the name
+	 * @return the Name
 	 */
 	public String getName() {
-		return name.get();
+		return Name.get();
 	}
 
 	/**
 	 * @return the prerequisite
 	 */
-	public Object getPrerequisite() {
+	public FeatPrerequisite getPrerequisite() {
 		return prerequisite.get();
 	}
 
@@ -66,24 +65,17 @@ public class Feat extends FeatPrerequisite{
 	}
 
 	public Feat() {
-		this.name.set("-");
-		this.prerequisite = new SimpleObjectProperty<Object>();
+		this.Name.set("-");
+		this.prerequisite = new SimpleObjectProperty<FeatPrerequisite>();
 		this.benefit = new SimpleStringProperty("-");
 		this.effect = new SimpleObjectProperty<Effect>(new MiscEffect("-", "-"));
 	}
 
-	public Feat(String name, Feat prerequisite, String benefit, Effect effect) {
-		this.name.set(name);
-		this.prerequisite = new SimpleObjectProperty<Object>(prerequisite);
+	public Feat(String name, FeatPrerequisite prerequisite, String benefit, Effect effect) {
+		this.Name.set(name);
+		this.prerequisite = new SimpleObjectProperty<FeatPrerequisite>(prerequisite);
 		this.benefit = new SimpleStringProperty(benefit);
 		this.effect = new SimpleObjectProperty<Effect>(effect);
-	}
-	
-	public Feat(String name, Feature prerequisite, String benefit) {
-		this.name.set(name);
-		this.prerequisite = new SimpleObjectProperty<Object>(prerequisite);
-		this.benefit = new SimpleStringProperty(benefit);
-		this.effect = new SimpleObjectProperty<Effect>(new MiscEffect("Misc Effect", "Tests the data"));
 	}
 	
 	public String toString() {

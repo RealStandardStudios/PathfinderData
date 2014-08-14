@@ -16,14 +16,14 @@ public abstract class Effect {
 	}
 
 	/**
-	 * @return the name
+	 * @return the Name
 	 */
 	public String getName() {
 		return name.getValue();
 	}
 
 	/**
-	 * @param name the name to set
+	 * @param Name the Name to set
 	 */
 	public void setName(String name) {
 		this.name.set(name);
@@ -47,7 +47,7 @@ public abstract class Effect {
 	/**
 	 * 
 	 * @param val The Value of the {@link Effect}
-	 * @param name The Name of the {@link Effect}
+	 * @param Name The Name of the {@link Effect}
 	 */
 	public Effect(int val, String name) {
 		this.value = val;

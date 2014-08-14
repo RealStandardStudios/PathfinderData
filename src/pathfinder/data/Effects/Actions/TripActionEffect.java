@@ -34,7 +34,7 @@ public class TripActionEffect extends ActionEffect{
 	
 	/**
 	 * @param val
-	 * @param name
+	 * @param Name
 	 */
 	public TripActionEffect(int val, String name, String description) {
 		super(val, name, "Trip");

@@ -35,7 +35,7 @@ public class ArmorClassEffect extends Effect {
 
 	/**
 	 * @param val The Value of the {@link Effect}
-	 * @param name The Name of the {@link Effect}
+	 * @param Name The Name of the {@link Effect}
 	 */
 	public ArmorClassEffect(int val, String name, String bonusType) {
 		super(val, name);

@@ -38,7 +38,7 @@ public class Alchemist extends Class {
 	}
     
 	/**
-	 * @param name
+	 * @param Name
 	 * @param description
 	 * @param role
 	 * @param level

@@ -34,7 +34,7 @@ public class ActionToMoveEffect extends ActionEffect {
 	}
 
 	/**
-	 * @param name The name of the Effect
+	 * @param Name The Name of the Effect
 	 * @param specifiedAction The Action that can be completed as a move action
 	 */
 	public ActionToMoveEffect(String name, String specifiedAction) {

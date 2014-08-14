@@ -33,7 +33,7 @@ public class CasterLevelModifierEffect extends Effect {
 
 	/**
 	 * @param val The Value of the {@link Effect}
-	 * @param name The Name of the {@link Effect}
+	 * @param Name The Name of the {@link Effect}
 	 * @param bonusFor What the bonus is applied for
 	 */
 	public CasterLevelModifierEffect(int val, String name, String bonusFor) {

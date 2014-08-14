@@ -15,7 +15,7 @@ import pathfinder.data.Skills.Skill;
  */
 public abstract class Class {
 	/**
-	 * The name of the class
+	 * The Name of the class
 	 */
 	private StringProperty name;
 
@@ -71,7 +71,7 @@ public abstract class Class {
 	private ArmorType[] armorProficiencies;
 
 	/**
-	 * @return the name
+	 * @return the Name
 	 */
 	public String getName() {
 		return name.getValue();
@@ -223,7 +223,7 @@ public abstract class Class {
 	}
 
 	/**
-	 * @param name
+	 * @param Name
 	 * @param description
 	 * @param role
 	 * @param level
