@@ -1,10 +1,9 @@
 package pathfinder.data.Character;
 
 /**
+ * A data class that stores information about energy resistances
  * 
  * @author Real Standard Studios - Joshua Boyd
- * 
- *         A data class that stores information about energy resistances
  */
 public class Resistance {
 	private String resistanceType;
@@ -25,8 +24,7 @@ public class Resistance {
 	}
 
 	/**
-	 * @param resistanceAmmount
-	 *            the resistanceAmmount to set
+	 * @param resistanceAmmount the resistanceAmmount to set
 	 */
 	public void setResistanceAmmount(int resistanceAmmount) {
 		this.resistanceAmmount = resistanceAmmount;
@@ -39,10 +37,10 @@ public class Resistance {
 	}
 
 	/**
+	 * Constructor for ResistanceS
+	 * 
 	 * @param resistanceType
 	 * @param resistanceAmmount
-	 * 
-	 *            Constructor for ResistanceS
 	 */
 	public Resistance(String resistanceType, int resistanceAmmount) {
 		super();

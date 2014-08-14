@@ -54,19 +54,5 @@ public class MagicArmor extends Armor
 		this.setWeight(weight);
 		this.setDescription(description);
 		this.setConstruction(construction);
-	}
-	
-	private void setValuesFromArmor(Armor baseArmor)
-	{
-		this.setArmorBonus(baseArmor.getArmorBonus());
-		this.setArcaneSpellFailiure(baseArmor.getArcaneSpellFailiure());
-		this.setArmorCheckPenalty(baseArmor.getArmorCheckPenalty());
-		this.setArmorType(baseArmor.getArmorType());
-		this.setMaxDexBonus(baseArmor.getMaxDexBonus());
-		this.setSpeed20feet(baseArmor.getSpeed20feet());
-		this.setSpeed30feet(baseArmor.getSpeed30feet());
-		this.setWeight(baseArmor.getWeight());
-	}
-	
-	
+	}	
 }
