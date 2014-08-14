@@ -22,8 +22,7 @@ public class SaveAttribute {
 	}
 
 	/**
-	 * @param attributeName
-	 *            the attributeName to set
+	 * @param attributeName the attributeName to set
 	 */
 	public void setAttributeName(String attributeName) {
 		this.attributeName = attributeName;
@@ -37,8 +36,7 @@ public class SaveAttribute {
 	}
 
 	/**
-	 * @param baseValue
-	 *            the baseValue to set
+	 * @param baseValue the baseValue to set
 	 */
 	public void setBaseValue(int baseValue) {
 		this.baseValue = baseValue;
@@ -68,8 +66,7 @@ public class SaveAttribute {
 	}
 
 	/**
-	 * @param magicMod
-	 *            the magicMod to set
+	 * @param magicMod the magicMod to set
 	 */
 	public void setMagicMod(int magicMod) {
 		this.magicMod = magicMod;
@@ -83,8 +80,7 @@ public class SaveAttribute {
 	}
 
 	/**
-	 * @param miscMod
-	 *            the miscMod to set
+	 * @param miscMod the miscMod to set
 	 */
 	public void setMiscMod(int miscMod) {
 		this.miscMod = miscMod;
@@ -98,6 +94,7 @@ public class SaveAttribute {
 
 	/**
 	 * Constructor for SaveAttribute
+	 * 
 	 * @param pAbility the ability relevant to the Save Attribute 
 	 * @param baseValue the base value of the Save Attribute
 	 * @param magicMod the magical modifier of the Save Attribute

@@ -1,5 +1,10 @@
 package pathfinder.data.Character;
 
+/**
+ * Creating a set of alignments to facilitate faster programming
+ * 
+ * @author Real Standard Studios - Ian Larsen
+ */
 public class Alignments {
 	public static Alignment[] Any = new Alignment[] { 
 		Alignment.LawfulGood, Alignment.NeutralGood, Alignment.ChaoticGood,
