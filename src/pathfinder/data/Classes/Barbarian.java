@@ -43,7 +43,7 @@ public class Barbarian extends Class {
 	 */
 	public Barbarian(String name, String description, String role, int level,
 			Alignment[] requireAlignments, DiceType hitDice,
-			int startingWealthD6, int skillRanksPerLevel, Skill[] classSkills,
+			int startingWealthD6, int skillRanksPerLevel, String[] classSkills,
 			Feature[] features, WeaponType[] weaponProficiencies,
 			ArmorType[] armorProficiencies, LevelTableRow[] levelTable) {
 		super(name, description, role, level, requireAlignments, hitDice,

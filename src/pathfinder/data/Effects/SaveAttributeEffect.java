@@ -29,6 +29,7 @@ public class SaveAttributeEffect extends Effect {
 	 */
 	public SaveAttributeEffect() {
 		super();
+		this.NameProperty().set("Save Attribute Effect");
 	}
 
 	/**

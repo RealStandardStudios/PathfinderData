@@ -31,6 +31,7 @@ public class OnCritEffect extends Effect {
 	 */
 	public OnCritEffect() {
 		super();
+		this.NameProperty().set("On Crit Effect");
 	}
 
 	/**

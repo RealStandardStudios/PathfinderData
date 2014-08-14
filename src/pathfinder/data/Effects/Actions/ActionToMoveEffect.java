@@ -30,6 +30,7 @@ public class ActionToMoveEffect extends ActionEffect {
 	 */
 	public ActionToMoveEffect() {
 		super();
+		this.NameProperty().set("Action to Move Effect");
 	}
 
 	/**

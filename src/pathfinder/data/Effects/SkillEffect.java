@@ -65,6 +65,7 @@ public class SkillEffect extends Effect {
 	 */
 	public SkillEffect() {
 		super();
+		this.NameProperty().set("Skill Effect");
 	}
 
 	/**
