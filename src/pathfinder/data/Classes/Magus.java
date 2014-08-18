@@ -10,9 +10,9 @@ import pathfinder.data.Classes.Objects.SpellLevelTableRow;
 import pathfinder.data.Spells.Spell;
 
 /**
+ * The Magus Class http://paizo.com/pathfinderRPG/prd/ultimateMagic/spellcasters/magus.html
  * 
- * @author Matthew
- * http://paizo.com/pathfinderRPG/prd/ultimateMagic/spellcasters/magus.html
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Magus extends Class {
 	/**
@@ -36,6 +36,9 @@ public class Magus extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Magus() {
 	}
 

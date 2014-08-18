@@ -9,11 +9,9 @@ import pathfinder.data.Classes.Objects.SpellLevelTableRow;
 import pathfinder.data.Spells.Spell;
 
 /**
+ * The Witch Class http://paizo.com/pathfinderRPG/prd/advanced/baseClasses/witch.html
  * 
- * @author Matthew
- * @description The Witch Class
- *              http://paizo.com/pathfinderRPG/prd/advanced/baseClasses
- *              /witch.html
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Witch extends Class {
 	/**
@@ -38,6 +36,9 @@ public class Witch extends Class {
 		return levelTable;
 	}
 
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Witch() {
 	}
 

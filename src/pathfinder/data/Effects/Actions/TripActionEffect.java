@@ -5,6 +5,7 @@ package pathfinder.data.Effects.Actions;
 
 /**
  * An {@link ActionEffect} that gives a bonus to trips
+ * 
  * @author Real Standard Studios - Matthew Meehan
  */
 public class TripActionEffect extends ActionEffect{

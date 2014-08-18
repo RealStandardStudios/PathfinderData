@@ -10,9 +10,9 @@ import pathfinder.data.Spells.Spell;
 
 
 /**
+ * The Oracle Class http://paizo.com/pathfinderRPG/prd/advanced/baseClasses/oracle.html
  * 
- * @author Matthew
- * @description The Oracle Class http://paizo.com/pathfinderRPG/prd/advanced/baseClasses/oracle.html
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Oracle extends Class {
 	/**
@@ -36,6 +36,9 @@ public class Oracle extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Oracle() {
 	}
 

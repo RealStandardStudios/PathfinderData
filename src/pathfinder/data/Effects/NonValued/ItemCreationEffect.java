@@ -2,6 +2,11 @@ package pathfinder.data.Effects.NonValued;
 
 import pathfinder.data.Effects.Effect;
 
+/**
+ * A {@link Effect} that is applied to Item Creation
+ * 
+ * @author Real Standard Studio - Matthew meehan
+ */
 public class ItemCreationEffect extends Effect {
 	/**
 	 * The default constructor for Kryo

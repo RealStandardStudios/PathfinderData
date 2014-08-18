@@ -1,5 +1,10 @@
 package pathfinder.data.Items;
 
+/**
+ * An {@link Item} that is considered a cursed item
+ * 
+ * @author Real Standard Studios - Joshua Boyd
+ */
 public class CursedItem extends Item {
 	
 	private String auraStrength;
@@ -7,60 +12,70 @@ public class CursedItem extends Item {
 	private String slot;
 	private String description;
 	private String construction;
+	
 	/**
 	 * @return the auraStrength
 	 */
 	public String getAuraStrength() {
 		return auraStrength;
 	}
+	
 	/**
 	 * @param auraStrength the auraStrength to set
 	 */
 	public void setAuraStrength(String auraStrength) {
 		this.auraStrength = auraStrength;
 	}
+	
 	/**
 	 * @return the casterLevel
 	 */
 	public String getCasterLevel() {
 		return casterLevel;
 	}
+	
 	/**
 	 * @param casterLevel the casterLevel to set
 	 */
 	public void setCasterLevel(String casterLevel) {
 		this.casterLevel = casterLevel;
 	}
+	
 	/**
 	 * @return the slot
 	 */
 	public String getSlot() {
 		return slot;
 	}
+	
 	/**
 	 * @param slot the slot to set
 	 */
 	public void setSlot(String slot) {
 		this.slot = slot;
 	}
+	
 	/**
 	 * @return the description
 	 */
 	public String getDescription() {
 		return description;
 	}
+	
 	/**
 	 * @param description the description to set
 	 */
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
 	/**
 	 * @return the construction
 	 */
 	public String getConstruction() {
 		return construction;
 	}
+	
 	/**
 	 * @param construction the construction to set
 	 */
@@ -68,10 +83,23 @@ public class CursedItem extends Item {
 		this.construction = construction;
 	}
 	
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public CursedItem()
 	{
 		
 	}
+	
+	/**
+	 * @param name
+	 * @param aura
+	 * @param casterLevel
+	 * @param slot
+	 * @param weight
+	 * @param description
+	 * @param construction
+	 */
 	public CursedItem(String name,String aura, String casterLevel, String slot, String weight,
 			String description, String construction)
 	{

@@ -13,9 +13,9 @@ import pathfinder.data.Spells.Spell;
 
 
 /**
+ * The Cleric Class http://paizo.com/pathfinderRPG/prd/classes/cleric.html#_cleric
  * 
- * @author Matthew
- * http://paizo.com/pathfinderRPG/prd/classes/cleric.html#_cleric
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Cleric extends Class {
 	/**
@@ -39,6 +39,9 @@ public class Cleric extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Cleric() {
 	}
 

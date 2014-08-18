@@ -12,9 +12,9 @@ import pathfinder.data.Skills.Skill;
 import pathfinder.data.Spells.Spell;
 
 /**
+ * The Paladin Class http://paizo.com/pathfinderRPG/prd/classes/paladin.html#_paladin
  * 
- * @author Matthew
- * @description http://paizo.com/pathfinderRPG/prd/classes/paladin.html#_paladin
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Paladin extends Class {
 	/**
@@ -38,6 +38,9 @@ public class Paladin extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Paladin() {
 	}
 

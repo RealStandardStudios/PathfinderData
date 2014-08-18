@@ -9,31 +9,43 @@ import pathfinder.data.Races.Objects.Size;
 import pathfinder.data.Races.Objects.VisionType;
 import pathfinder.data.Races.Traits.Trait;
 
+/**
+ * An abstract class for the many races of Pathfinder
+ * 
+ * @author Real Standard Studios - Matthew Meehan
+ */
 public abstract class Race {
+	
 	/**
 	 * The Name of the Race
 	 */
 	private String name;
+	
 	/**
 	 * The description of the Race
 	 */
 	private String description;
+	
 	/**
 	 * The physical description of the race
 	 */
 	private String physicalDescription;
+	
 	/**
 	 * The description of the races society
 	 */
 	private String society;
+	
 	/**
 	 * The relations of the race with other races
 	 */
 	private String relations;
+	
 	/**
 	 * The alignment and religions available to the race
 	 */
 	private String alignmentAndReligion;
+	
 	/**
 	 * The kinds of adventures the race would get up to
 	 */
@@ -43,30 +55,37 @@ public abstract class Race {
 	 * The racial effects to the players Ability Data;
 	 */
 	private AbilityEffect[] racialModifiers;
+	
 	/**
 	 * The size of the race
 	 */
 	private Size size;
+	
 	/**
 	 * The default speed of the race in feet
 	 */
 	private int speed;
+	
 	/**
 	 * An array of Vision types applicable to the race
 	 */
 	private VisionType[] visionTypes;
+	
 	/**
 	 * The variable number of racial traits
 	 */
 	private ArrayList<Trait> racialTraits;
+	
 	/**
 	 * An array of the Weapons the race can use
 	 */
 	private Weapon[] weaponFamiliarity;
+	
 	/**
 	 * An array of the languages the race can speak
 	 */
 	private Language[] languages;
+	
 	/**
 	 * indicates whether the race's speed is effected by armor or encumberance
 	 */
@@ -80,8 +99,9 @@ public abstract class Race {
 	}
 
 	/**
+	 * the Name to set
+	 * 
 	 * @param Name
-	 *            the Name to set
 	 */
 	public void setName(String name) {
 		this.name = name;
@@ -95,8 +115,9 @@ public abstract class Race {
 	}
 
 	/**
+	 * the description to set
+	 * 
 	 * @param description
-	 *            the description to set
 	 */
 	public void setDescription(String description) {
 		this.description = description;
@@ -110,8 +131,9 @@ public abstract class Race {
 	}
 
 	/**
+	 * the physicalDescription to set
+	 * 
 	 * @param physicalDescription
-	 *            the physicalDescription to set
 	 */
 	public void setPhysicalDescription(String physicalDescription) {
 		this.physicalDescription = physicalDescription;
@@ -125,8 +147,9 @@ public abstract class Race {
 	}
 
 	/**
+	 * the society to set
+	 * 
 	 * @param society
-	 *            the society to set
 	 */
 	public void setSociety(String society) {
 		this.society = society;
@@ -140,8 +163,9 @@ public abstract class Race {
 	}
 
 	/**
+	 * the relations to set
+	 * 
 	 * @param relations
-	 *            the relations to set
 	 */
 	public void setRelations(String relations) {
 		this.relations = relations;
@@ -155,8 +179,9 @@ public abstract class Race {
 	}
 
 	/**
+	 * the alignmentAndReligion to set
+	 * 
 	 * @param alignmentAndReligion
-	 *            the alignmentAndReligion to set
 	 */
 	public void setAlignmentAndReligion(String alignmentAndReligion) {
 		this.alignmentAndReligion = alignmentAndReligion;
@@ -170,8 +195,9 @@ public abstract class Race {
 	}
 
 	/**
+	 * the adventures to set
+	 * 
 	 * @param adventures
-	 *            the adventures to set
 	 */
 	public void setAdventures(String adventures) {
 		this.adventures = adventures;
@@ -185,8 +211,9 @@ public abstract class Race {
 	}
 
 	/**
+	 * the racialModifiers to set
+	 * 
 	 * @param racialModifiers
-	 *            the racialModifiers to set
 	 */
 	public void setRacialModifiers(AbilityEffect[] racialModifiers) {
 		this.racialModifiers = racialModifiers;
@@ -200,8 +227,9 @@ public abstract class Race {
 	}
 
 	/**
+	 * the size to set
+	 * 
 	 * @param size
-	 *            the size to set
 	 */
 	public void setSize(Size size) {
 		this.size = size;
@@ -215,8 +243,9 @@ public abstract class Race {
 	}
 
 	/**
+	 * the speed to set
+	 * 
 	 * @param speed
-	 *            the speed to set
 	 */
 	public void setSpeed(int speed) {
 		this.speed = speed;
@@ -230,8 +259,9 @@ public abstract class Race {
 	}
 
 	/**
+	 * the visionTypes to set
+	 * 
 	 * @param visionTypes
-	 *            the visionTypes to set
 	 */
 	public void setVisionTypes(VisionType[] visionTypes) {
 		this.visionTypes = visionTypes;
@@ -245,8 +275,9 @@ public abstract class Race {
 	}
 
 	/**
+	 * the racialTraits to set
+	 * 
 	 * @param racialTraits
-	 *            the racialTraits to set
 	 */
 	public void setRacialTraits(ArrayList<Trait> racialTraits) {
 		this.racialTraits = racialTraits;
@@ -260,8 +291,9 @@ public abstract class Race {
 	}
 
 	/**
+	 * the weaponFamiliarity to set
+	 * 
 	 * @param weaponFamiliarity
-	 *            the weaponFamiliarity to set
 	 */
 	public void setWeaponFamiliarity(Weapon[] weaponFamiliarity) {
 		this.weaponFamiliarity = weaponFamiliarity;
@@ -275,8 +307,9 @@ public abstract class Race {
 	}
 
 	/**
+	 * the languages to set
+	 * 
 	 * @param languages
-	 *            the languages to set
 	 */
 	public void setLanguages(Language[] languages) {
 		this.languages = languages;
@@ -290,15 +323,16 @@ public abstract class Race {
 	}
 
 	/**
+	 * the speedLoss to set
+	 * 
 	 * @param speedLoss
-	 *            the speedLoss to set
 	 */
 	public void setSpeedLoss(boolean speedLoss) {
 		this.speedLoss = speedLoss;
 	}
 
 	/**
-	 * @description The empty Construstor for Kryo
+	 * @description The empty Constructor for Kryo
 	 */
 	public Race() {
 	}

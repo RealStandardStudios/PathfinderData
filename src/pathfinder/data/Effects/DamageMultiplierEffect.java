@@ -1,5 +1,10 @@
 package pathfinder.data.Effects;
 
+/**
+ * A {@link Effect} that gives the multiplier for damage
+ * 
+ * @author Real Standard Studios - Matthew Meehan
+ */
 public class DamageMultiplierEffect extends Effect {
 	/**
 	 * The default constructor for Kryo

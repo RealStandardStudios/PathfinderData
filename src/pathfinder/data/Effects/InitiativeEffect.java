@@ -5,6 +5,7 @@ package pathfinder.data.Effects;
 
 /**
  * An {@link Effect} that gives a bonus to Initiative
+ * 
  * @author Real Standard Studios - Matthew Meehan
  */
 public class InitiativeEffect extends Effect {

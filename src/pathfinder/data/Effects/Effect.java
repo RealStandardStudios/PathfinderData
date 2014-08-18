@@ -5,12 +5,16 @@ import javafx.beans.property.StringProperty;
 
 /**
  * An effect of some kind with a definable value to the character
+ * 
  * @author Real Standard Studios - Matthew Meehan
  */
 public abstract class Effect {
 	private int value;
 	private StringProperty name;
 	
+	/**
+	 * @return a StringProperty
+	 */
 	public StringProperty NameProperty() {
 		return name;
 	}
@@ -29,10 +33,16 @@ public abstract class Effect {
 		this.name.set(name);
 	}
 
+	/**
+	 * @return an int
+	 */
 	public int getValue() {
 		return value;
 	}
 
+	/**
+	 * @param value
+	 */
 	public void setValue(int value) {
 		this.value = value;
 	}
@@ -45,7 +55,6 @@ public abstract class Effect {
 	}
 	
 	/**
-	 * 
 	 * @param val The Value of the {@link Effect}
 	 * @param Name The Name of the {@link Effect}
 	 */

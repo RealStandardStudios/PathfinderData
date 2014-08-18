@@ -12,9 +12,9 @@ import pathfinder.data.Skills.Skill;
 import pathfinder.data.Spells.Spell;
 
 /**
+ * The Ranger Class http://paizo.com/pathfinderRPG/prd/classes/ranger.html#_ranger
  * 
  * @author Matthew
- * @description The Ranger Class http://paizo.com/pathfinderRPG/prd/classes/ranger.html#_ranger
  */
 public class Ranger extends Class {
 	
@@ -40,6 +40,9 @@ public class Ranger extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Ranger() {
 	}
 

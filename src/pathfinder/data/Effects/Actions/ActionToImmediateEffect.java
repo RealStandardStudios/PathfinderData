@@ -6,6 +6,7 @@ package pathfinder.data.Effects.Actions;
 
 /**
  * An {@link ActionEffect} that lets you complete the specified action as an Immediate action
+ * 
  * @author Real Standard Studios - Matthew Meehan
  */
 public class ActionToImmediateEffect extends ActionEffect {

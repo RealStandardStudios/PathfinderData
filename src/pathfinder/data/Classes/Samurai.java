@@ -24,6 +24,9 @@ public class Samurai extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Samurai() {
 	}
 

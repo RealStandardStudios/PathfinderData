@@ -12,9 +12,9 @@ import pathfinder.data.Skills.Skill;
 import pathfinder.data.Spells.Spell;
 
 /**
+ * The Wizard Class http://paizo.com/pathfinderRPG/prd/classes/wizard.html#_wizard
  * 
  * @author Matthew
- * @description The Wizard Class http://paizo.com/pathfinderRPG/prd/classes/wizard.html#_wizard
  */
 public class Wizard extends Class {
 	/**
@@ -39,6 +39,9 @@ public class Wizard extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Wizard(){
 	}
 

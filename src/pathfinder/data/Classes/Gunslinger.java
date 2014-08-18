@@ -10,9 +10,9 @@ import pathfinder.data.Skills.Skill;
 
 
 /**
- * 
- * @author Matthew
  * The Gunslinger Class http://paizo.com/pathfinderRPG/prd/ultimateCombat/classes/gunslinger.html
+ * 
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Gunslinger extends Class {
 	
@@ -25,6 +25,9 @@ public class Gunslinger extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Gunslinger() {
 	}
 

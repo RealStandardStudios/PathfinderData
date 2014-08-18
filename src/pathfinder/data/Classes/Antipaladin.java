@@ -12,13 +12,13 @@ import pathfinder.data.Skills.Skill;
 import pathfinder.data.Spells.Spell;
 
 /**
- * 
- * @author Matthew Meehan
  * The AntiPaladin Class http://paizo.com/pathfinderRPG/prd/advanced/coreClasses/paladin.html#antipaladin-(alternate-class)
+ * 
+ * @author Real standard Studios - Matthew Meehan
  */
 public class Antipaladin extends Class {
 	/**
-	 * An array of a HashMaps containing spells, an index of the array equals a
+	 * An array of HashMaps containing spells, an index of the array equals a
 	 * level
 	 */
 	private HashMap<String, Spell>[] spells;
@@ -39,6 +39,9 @@ public class Antipaladin extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * An empty constructor for Kryo
+	 */
 	public Antipaladin() {
 	}
 

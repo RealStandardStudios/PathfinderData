@@ -5,6 +5,7 @@ package pathfinder.data.Effects;
 
 /**
  * An {@link Effect} that gives a bonus of some kind to AC
+ * 
  * @Author Real Standard Studios - Matthew Meehan
  */
 public class ArmorClassEffect extends Effect {
@@ -36,6 +37,7 @@ public class ArmorClassEffect extends Effect {
 	/**
 	 * @param val The Value of the {@link Effect}
 	 * @param Name The Name of the {@link Effect}
+	 * @param bonusType The Bonus Type of the {@link Effect}
 	 */
 	public ArmorClassEffect(int val, String name, String bonusType) {
 		super(val, name);

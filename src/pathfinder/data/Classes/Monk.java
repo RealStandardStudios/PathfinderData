@@ -9,9 +9,9 @@ import pathfinder.data.Items.WeaponType;
 import pathfinder.data.Skills.Skill;
 
 /**
+ * The Monk Class http://paizo.com/pathfinderRPG/prd/classes/monk.html#_monk
  * 
- * @author Matthew
- * http://paizo.com/pathfinderRPG/prd/classes/monk.html#_monk
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Monk extends Class {
 	private LevelTableRow[] levelTable;
@@ -68,6 +68,9 @@ public class Monk extends Class {
 		return fastMovement;
 	}
 	
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Monk() {
 	}
 

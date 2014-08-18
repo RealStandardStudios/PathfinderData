@@ -6,8 +6,9 @@ package pathfinder.data.Effects.NonValued;
 import pathfinder.data.Effects.Effect;
 
 /**
+ * An {@link Effect} of some kind with an uncategorizable value
+ * 
  * @Author Real Standard Studios - Matthew Meehan
- * @description An {@link Effect} of some kind with an uncategorizable value
  */
 public class MiscEffect extends Effect {
 	private String effect;
@@ -27,7 +28,7 @@ public class MiscEffect extends Effect {
 	}
 
 	/**
-	 * 
+	 * Constructor for Kryo
 	 */
 	public MiscEffect() {
 		super();

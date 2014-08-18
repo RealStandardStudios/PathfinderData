@@ -9,9 +9,9 @@ import pathfinder.data.Items.WeaponType;
 import pathfinder.data.Skills.Skill;
 
 /**
+ * The barbarian class http://paizo.com/pathfinderRPG/prd/classes/barbarian.html#_barbarian
  * 
- * @author Matthew Meehan
- * @description The barbarian class http://paizo.com/pathfinderRPG/prd/classes/barbarian.html#_barbarian
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Barbarian extends Class {
 	private LevelTableRow[] levelTable;
@@ -23,6 +23,9 @@ public class Barbarian extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * An empty constructor for Kryo
+	 */
 	public Barbarian() {
 	}
 

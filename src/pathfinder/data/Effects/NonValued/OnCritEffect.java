@@ -6,8 +6,9 @@ package pathfinder.data.Effects.NonValued;
 import pathfinder.data.Effects.Effect;
 
 /**
+ * An {@link Effect} That occurs when the player scores a Crit
+ * 
  * @Author Real Standard Studios - Matthew Meehan
- * @description An {@link Effect} That occurs when the player scores a Crit
  */
 public class OnCritEffect extends Effect {
 	private String effect;
@@ -27,7 +28,7 @@ public class OnCritEffect extends Effect {
 	}
 
 	/**
-	 * 
+	 * constructor for Kryo
 	 */
 	public OnCritEffect() {
 		super();

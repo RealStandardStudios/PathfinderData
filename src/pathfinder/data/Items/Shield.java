@@ -4,8 +4,9 @@
 package pathfinder.data.Items;
 
 /**
- * @author Matthew Meehan
- *
+ * An {@link Armor} that is considered a Shield
+ * 
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Shield extends Armor {
 

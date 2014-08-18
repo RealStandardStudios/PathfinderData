@@ -9,11 +9,9 @@ import pathfinder.data.Classes.Objects.SpellLevelTableRow;
 import pathfinder.data.Spells.Spell;
 
 /**
+ * The Summoner Class http://paizo.com/pathfinderRPG/prd/advanced/baseClasses/summoner.html
  * 
  * @author Matthew
- * @description The Summoner Class
- *              http://paizo.com/pathfinderRPG/prd/advanced/baseClasses
- *              /summoner.html
  */
 public class Summoner extends Class {
 	/**
@@ -38,6 +36,9 @@ public class Summoner extends Class {
 		return levelTable;
 	}
 
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Summoner() {
 	}
 

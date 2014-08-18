@@ -19,18 +19,30 @@ public class Feat extends FeatPrerequisite{
 	private StringProperty benefit;
 	private ObjectProperty<Effect> effect;
 
+	/**
+	 * @returns a StringProperty
+	 */
 	public StringProperty nameProperty() {
 		return Name;
 	}
 
+	/**
+	 * @returns an ObjectProperty of prerequistite
+	 */
 	public ObjectProperty<FeatPrerequisite> prerequisitePropety() {
 		return prerequisite;
 	}
 
+	/**
+	 * @returns a StringProperty
+	 */
 	public StringProperty benifitProperty() {
 		return benefit;
 	}
 
+	/**
+	 * @returns an ObjectProperty of Effect
+	 */
 	public ObjectProperty<Effect> effectProperty() {
 		return effect;
 	}
@@ -56,14 +68,23 @@ public class Feat extends FeatPrerequisite{
 		return benefit.get();
 	}
 
+	/**
+	 * @return the effect
+	 */
 	public Effect getEffect() {
 		return effect.get();
 	}
 
+	/**
+	 * @param effect
+	 */
 	public void setEffect(Effect effect) {
 		this.effect.set(effect);
 	}
 
+	/**
+	 * constructor for Kryo
+	 */
 	public Feat() {
 		this.Name.set("-");
 		this.prerequisite = new SimpleObjectProperty<FeatPrerequisite>();
@@ -71,6 +92,12 @@ public class Feat extends FeatPrerequisite{
 		this.effect = new SimpleObjectProperty<Effect>(new MiscEffect("-", "-"));
 	}
 
+	/**
+	 * @param name
+	 * @param prerequisite
+	 * @param benefit
+	 * @param effect
+	 */
 	public Feat(String name, FeatPrerequisite prerequisite, String benefit, Effect effect) {
 		this.Name.set(name);
 		this.prerequisite = new SimpleObjectProperty<FeatPrerequisite>(prerequisite);
@@ -78,6 +105,9 @@ public class Feat extends FeatPrerequisite{
 		this.effect = new SimpleObjectProperty<Effect>(effect);
 	}
 	
+	/**
+	 * a toString method
+	 */
 	public String toString() {
 		return this.getName();
 	}

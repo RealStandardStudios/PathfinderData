@@ -3,8 +3,9 @@ package pathfinder.data.Classes.Objects;
 import pathfinder.data.Effects.Effect;
 
 /**
+ * The generic class for Features
  * 
- * @author Matthew Meehan the generic Class Feature
+ * @author Matthew Meehan
  */
 public class Feature {
 	private String name;
@@ -13,10 +14,16 @@ public class Feature {
 
 	private Effect effect;
 
+	/**
+	 * @return an effect
+	 */
 	public Effect getEffect() {
 		return effect;
 	}
 
+	/**
+	 * @param effect
+	 */
 	public void setEffect(Effect effect) {
 		this.effect = effect;
 	}
@@ -35,6 +42,9 @@ public class Feature {
 		return name;
 	}
 
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Feature() {
 	}
 

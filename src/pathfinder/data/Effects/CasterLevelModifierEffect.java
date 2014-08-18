@@ -5,6 +5,7 @@ package pathfinder.data.Effects;
 
 /**
  * An {@link Effect} that adds a bonus for caster level in a given situation
+ * 
  * @Author Real Standard Studios - Matthew Meehan
  */
 public class CasterLevelModifierEffect extends Effect {
