@@ -3,6 +3,37 @@ package pathfinder.data.Effects.NonValued;
 import pathfinder.data.Effects.Effect;
 
 public class MetaMagicEffect extends Effect {
+	String spellName;
+	String Effect;
+	
+	/**
+	 * @return the spellName
+	 */
+	public String getSpellName() {
+		return spellName;
+	}
+
+	/**
+	 * @param spellName the spellName to set
+	 */
+	public void setSpellName(String spellName) {
+		this.spellName = spellName;
+	}
+
+	/**
+	 * @return the effect
+	 */
+	public String getEffect() {
+		return Effect;
+	}
+
+	/**
+	 * @param effect the effect to set
+	 */
+	public void setEffect(String effect) {
+		Effect = effect;
+	}
+
 	/**
 	 * The default constructor for Kryo
 	 */

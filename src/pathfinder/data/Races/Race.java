@@ -298,7 +298,7 @@ public abstract class Race {
 	}
 
 	/**
-	 * @description The empty Construstor for Kryo
+	 * @description The empty Constructor for Kryo
 	 */
 	public Race() {
 	}
