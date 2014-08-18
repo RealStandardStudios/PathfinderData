@@ -5,6 +5,7 @@ package pathfinder.data.Effects;
 
 /**
  * An {@link Effect} that adds a bonus to a Movement Speed
+ * 
  * @author Real Standard Studios - Matthew Meehan
  */
 public class SpeedEffect extends Effect {

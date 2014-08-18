@@ -9,9 +9,9 @@ import pathfinder.data.Classes.Objects.SpellLevelTableRow;
 import pathfinder.data.Spells.Spell;
 
 /**
+ * The Inquisitor Class http://paizo.com/pathfinderRPG/prd/advanced/baseClasses/inquisitor.html
  * 
- * @author Matthew
- * http://paizo.com/pathfinderRPG/prd/advanced/baseClasses/inquisitor.html
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Inquisitor extends Class {
 	/**
@@ -35,6 +35,9 @@ public class Inquisitor extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Inquisitor() {
 	}
 

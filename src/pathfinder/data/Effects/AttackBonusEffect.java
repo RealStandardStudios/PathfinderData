@@ -2,6 +2,7 @@ package pathfinder.data.Effects;
 
 /**
  * An {@link Effect} that gives an attack bonus vs something
+ * 
  * @Author Real Standard Studios - Matthew Meehan
  */
 public class AttackBonusEffect extends Effect{
@@ -45,7 +46,6 @@ public class AttackBonusEffect extends Effect{
 	}
 	
 	/**
-	 * 
 	 * @param bonusVs
 	 * @param bonusType
 	 * @param val The Value of the {@link Effect}

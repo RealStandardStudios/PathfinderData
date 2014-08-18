@@ -10,9 +10,9 @@ import pathfinder.data.Skills.Skill;
 
 
 /**
- * 
- * @author Matthew
  * The Bard Class http://paizo.com/pathfinderRPG/prd/classes/bard.html#_bard
+ * 
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Bard extends Class {
 
@@ -25,6 +25,9 @@ public class Bard extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * An empty constructor for Kryo
+	 */
 	public Bard() {
 	}
 

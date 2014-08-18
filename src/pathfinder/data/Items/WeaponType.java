@@ -1,5 +1,10 @@
 package pathfinder.data.Items;
 
+/**
+ * An enumerator of differing weapon types
+ * 
+ * @author Real Standard Studios - Joshua Boyd
+ */
 public enum WeaponType {
 	Simple(true, true, true, true, true, true), Martial(false, true, true,
 			true, true, true), Exotic(false, true, true, true, true, true);

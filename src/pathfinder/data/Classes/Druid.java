@@ -12,9 +12,9 @@ import pathfinder.data.Skills.Skill;
 import pathfinder.data.Spells.Spell;
 
 /**
- * 
- * @author Matthew
  * The Druid Class http://paizo.com/pathfinderRPG/prd/classes/druid.html#_druid
+ * 
+ * @author Real Standard Studio - Matthew Meehan
  */
 public class Druid extends Class {
 	/**
@@ -38,6 +38,9 @@ public class Druid extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Druid() {
 	}
 

@@ -4,8 +4,12 @@
 package pathfinder.data.Effects.Actions;
 
 /**
+<<<<<<< HEAD
  * An {@link ActionEffect} that lets you complete the specified action as a Free
  * action
+=======
+ * An {@link ActionEffect} that lets you complete the specified action as a Free action
+>>>>>>> branch 'master' of https://github.com/RealStandardStudios/PathfinderData.git
  * 
  * @author Real Standard Studios - Matthew Meehan
  */

@@ -2,6 +2,11 @@ package pathfinder.data.Effects.NonValued;
 
 import pathfinder.data.Effects.Effect;
 
+/**
+ * A {@link Effect} that is applied spells
+ * 
+ * @author Real Standard Studios - Matthew Meehan
+ */
 public class MetaMagicEffect extends Effect {
 	String spellName;
 	String Effect;

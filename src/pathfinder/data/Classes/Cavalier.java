@@ -9,9 +9,9 @@ import pathfinder.data.Items.WeaponType;
 import pathfinder.data.Skills.Skill;
 
 /**
- * 
- * @author Matthew 
  * The Cavalier Class http://paizo.com/pathfinderRPG/prd/advanced/baseClasses/cavalier.html
+ * 
+ * @author Real Standard Studio - Matthew Meehan 
  */
 public class Cavalier extends Class {
 
@@ -24,6 +24,9 @@ public class Cavalier extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * An empty constructor for Kryo
+	 */
 	public Cavalier() {
 	}
 

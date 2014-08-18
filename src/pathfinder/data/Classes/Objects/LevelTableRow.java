@@ -3,9 +3,10 @@ package pathfinder.data.Classes.Objects;
 import pathfinder.data.Attributes.SaveAttribute;
 
 /**
+ * A row of the table of benefits gained each level from
+ * a specific class
  * 
- * @author Matthew Meehan A row of the table of benefits gained each level from
- *         a specific class
+ * @author Real Standard Studios - Matthew Meehan 
  */
 public class LevelTableRow {
 	private int[] baseAttackBonus;

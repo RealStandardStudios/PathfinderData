@@ -7,6 +7,7 @@ import pathfinder.data.Character.Resistance;
 
 /**
  * An {@link Effect} that adds a bonus to a {@link Resistance} type
+ * 
  * @author Real Standard Studios - Matthew Meehan
  */
 public class ResistanceBonusEffect extends Effect {

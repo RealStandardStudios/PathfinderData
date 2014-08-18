@@ -1,5 +1,10 @@
 package pathfinder.data.Items;
 
+/**
+ * An {@link Item} that is considered a magical staff
+ * 
+ * @author Real Standard Studios - Joshua Boyd
+ */
 public class Staves extends Item{
 	
 	private String auraStrength;
@@ -13,42 +18,49 @@ public class Staves extends Item{
 	public String getAuraStrength() {
 		return auraStrength;
 	}
+	
 	/**
 	 * @param auraStrength the auraStrength to set
 	 */
 	public void setAuraStrength(String auraStrength) {
 		this.auraStrength = auraStrength;
 	}
+	
 	/**
 	 * @return the casterLevel
 	 */
 	public String getCasterLevel() {
 		return casterLevel;
 	}
+	
 	/**
 	 * @param casterLevel the casterLevel to set
 	 */
 	public void setCasterLevel(String casterLevel) {
 		this.casterLevel = casterLevel;
 	}
+	
 	/**
 	 * @return the description
 	 */
 	public String getDescription() {
 		return description;
 	}
+	
 	/**
 	 * @param description the description to set
 	 */
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
 	/**
 	 * @return the construction
 	 */
 	public String getConstruction() {
 		return construction;
 	}
+	
 	/**
 	 * @param construction the construction to set
 	 */
@@ -56,10 +68,23 @@ public class Staves extends Item{
 		this.construction = construction;
 	}
 	
+	/**
+	 * a constructor for Kryo
+	 */
 	public Staves()
 	{
 		
 	}
+	
+	/**
+	 * @param name
+	 * @param aura
+	 * @param cl
+	 * @param price
+	 * @param weight
+	 * @param description
+	 * @param construction
+	 */
 	public Staves(String name, String aura, String cl, String price, String weight,
 			String description ,String construction)
 	{

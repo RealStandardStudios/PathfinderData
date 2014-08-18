@@ -5,6 +5,7 @@ package pathfinder.data.Effects;
 
 /**
  * An {@link Effect} that adds a bonus to a {@link Skill}
+ * 
  * @author Real Standard Studios - Matthew Meehan
  */
 public class SkillEffect extends Effect {

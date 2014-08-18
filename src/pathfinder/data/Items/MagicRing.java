@@ -1,5 +1,10 @@
 package pathfinder.data.Items;
 
+/**
+ * An {@link Item} that is considered a magic ring
+ * 
+ * @author Real Standard Studios
+ */
 public class MagicRing extends Item {
 
 	private String auraStrength;
@@ -59,16 +64,26 @@ public class MagicRing extends Item {
 	/**
 	 * @param construction the construction to set
 	 */
-	
 	public void setConstruction(String construction) {
 		this.construction = construction;
 	}
 
+	/**
+	 * a constructor for Kryo
+	 */
 	public MagicRing()
 	{
 		
 	}
 	
+	/**
+	 * @param name
+	 * @param aura
+	 * @param cl
+	 * @param price
+	 * @param description
+	 * @param construction
+	 */
 	public MagicRing(String name, String aura, String cl, String price,
 			String description, String construction)
 	{

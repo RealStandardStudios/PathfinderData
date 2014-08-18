@@ -10,8 +10,9 @@ import pathfinder.data.Items.WeaponType;
 import pathfinder.data.Skills.Skill;
 
 /**
+ * A generic class for classes
  * 
- * @author Matthew Meehan A generic class for classes
+ * @author Real Standard Studios - Matthew Meehan 
  */
 public abstract class Class {
 	/**
@@ -77,6 +78,9 @@ public abstract class Class {
 		return name.getValue();
 	}
 	
+	/**
+	 * @return the name as a StringProperty
+	 */
 	public StringProperty getNameProperty() {
 		return name;
 	}
@@ -159,6 +163,9 @@ public abstract class Class {
 		return skillRanksPerLevel;
 	}
 	
+	/**
+	 * @return a string of integers
+	 */
 	public String getSkillRanksToString() {
 		return Integer.toString(skillRanksPerLevel);
 	}
@@ -170,6 +177,9 @@ public abstract class Class {
 		return classSkills;
 	}
 	
+	/**
+	 * @returns a string of skills thr class uses
+	 */
 	public String getClassSkillsToString() {
 		String str = "";
 		for (String s : classSkills) {
@@ -192,6 +202,9 @@ public abstract class Class {
 		return weaponProficiencies;
 	}
 	
+	/**
+	 * @returns a string of the weapon proficiencies that the class uses
+	 */
 	public String getWeaponProfsToString() {
 		String s = "";
 		for (String	w : weaponProficiencies) {
@@ -207,6 +220,9 @@ public abstract class Class {
 		return armorProficiencies;
 	}
 	
+	/**
+	 * @returns a string of the armour proficiencies that the class uses
+	 */
 	public String getArmorProfsToString() {
 		String s = "";
 		for (String	a : armorProficiencies) {
@@ -215,6 +231,9 @@ public abstract class Class {
 		return s;
 	}
 
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Class() {
 	}
 

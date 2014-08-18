@@ -10,9 +10,9 @@ import pathfinder.data.Skills.Skill;
 
 
 /**
- * 
- * @author Matthew
  * The Fighter Class http://paizo.com/pathfinderRPG/prd/classes/fighter.html#_fighter
+ * 
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Fighter extends Class {
 	
@@ -25,6 +25,9 @@ public class Fighter extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Fighter() {
 	}
 

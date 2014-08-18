@@ -5,6 +5,7 @@ package pathfinder.data.Effects;
 
 /**
  * An {@link Effect} that gives a bonus to a SaveAttribute
+ * 
  * @author Real Standard Studios - Matthew Meehan
  */
 public class SaveAttributeEffect extends Effect {

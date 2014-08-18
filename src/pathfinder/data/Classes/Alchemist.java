@@ -8,10 +8,15 @@ import pathfinder.data.Classes.Objects.Feature;
 import pathfinder.data.Classes.Objects.SpellLevelTableRow;
 import pathfinder.data.Spells.Spell;
 
+/**
+ * The Alchemist Class http://paizo.com/pathfinderRPG/prd/advanced/baseClasses/alchemist.html
+ * 
+ * @author Real Standard Studios - Ian Rasen
+ */
 public class Alchemist extends Class {
 
     /**
-	 * An array of a HashMaps containing spells, an index of the array equals a
+	 * An array of HashMaps containing spells, an index of the array equals a
 	 * level
 	 */
 	private HashMap<String, Spell> spells;
@@ -32,6 +37,9 @@ public class Alchemist extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * An empty constructor for Kryo
+	 */
 	public Alchemist() {
 	}
     

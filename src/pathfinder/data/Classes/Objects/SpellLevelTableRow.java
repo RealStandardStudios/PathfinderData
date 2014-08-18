@@ -7,9 +7,10 @@ import pathfinder.data.Attributes.SaveAttribute;
 import pathfinder.data.Spells.Spell;
 
 /**
- * @author Matthew Meehan 
- * @description The table of benefits gained each level from a
- *         specific spell casting class
+ * The table of benefits gained each level from a
+ * specific spell casting class
+ * 
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class SpellLevelTableRow extends LevelTableRow {
 

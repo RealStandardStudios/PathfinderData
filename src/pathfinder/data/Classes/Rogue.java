@@ -9,9 +9,9 @@ import pathfinder.data.Items.WeaponType;
 import pathfinder.data.Skills.Skill;
 
 /**
+ * The Rogue Class http://paizo.com/pathfinderRPG/prd/classes/rogue.html#_rogue
  * 
- * @author Matthew
- * @description The Rouge Class http://paizo.com/pathfinderRPG/prd/classes/rogue.html#_rogue
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Rogue extends Class {
 	private LevelTableRow[] levelTable;
@@ -23,6 +23,9 @@ public class Rogue extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Rogue() {
 	}
 

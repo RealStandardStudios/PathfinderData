@@ -12,11 +12,9 @@ import pathfinder.data.Skills.Skill;
 import pathfinder.data.Spells.Spell;
 
 /**
+ * The Sorcerer Class http://paizo.com/pathfinderRPG/prd/classes/sorcerer.html#_sorcerer
  * 
- * @author Matthew
- * @description The Sorcerer Class
- *              http://paizo.com/pathfinderRPG/prd/classes/sorcerer
- *              .html#_sorcerer
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Sorcerer extends Class {
 	/**
@@ -41,6 +39,9 @@ public class Sorcerer extends Class {
 		return levelTable;
 	}
 
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Sorcerer() {
 	}
 

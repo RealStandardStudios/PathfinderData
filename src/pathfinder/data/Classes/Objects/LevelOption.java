@@ -1,9 +1,10 @@
 package pathfinder.data.Classes.Objects;
 
 /**
+ * Indicates whether the level has a feat or ability
+ * score increase
  * 
- * @author Matthew Meehan Indicates whether the level has a feat or ability
- *         score increase
+ * @author Real Standard Studios - Matthew Meehan 
  */
 public enum LevelOption {
 	LevelOne(1, true, false), LevelTwo(2, false, false), LevelThree(3, true,
@@ -42,12 +43,11 @@ public enum LevelOption {
 	}
 
 	/**
-	 * @param The
-	 *            level of this option
-	 * @param Whether
-	 *            a feat is gained this level
-	 * @param Whether
-	 *            there is an Ability Score increase this level
+	 * @param The level of this option
+	 *            
+	 * @param Whether a feat is gained this level
+	 *            
+	 * @param Whether there is an Ability Score increase this level   
 	 */
 	private LevelOption(int level, boolean feat, boolean abilityScore) {
 		this.level = level;

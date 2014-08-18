@@ -1,9 +1,10 @@
 package pathfinder.data.Classes.Objects;
 
 /**
- * @author Matthew Meehan
- * @description A static class that is used to check if an experience value
- *              reaches the threshold needed to level up
+ * A static class that is used to check if an experience value
+ * reaches the threshold needed to level up
+ * 
+ * @author Real Standard Studios - Matthew Meehan 
  */
 public class AdvancmentTable {
 	public static LevelOption IsLeveled(int expValue, int track) {

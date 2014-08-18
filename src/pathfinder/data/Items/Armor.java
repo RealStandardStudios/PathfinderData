@@ -1,5 +1,10 @@
 package pathfinder.data.Items;
 
+/**
+ * An {@link Item} that is considered Armour
+ * 
+ * @author Real Standard Studios - Joshua Boyd
+ */
 public class Armor extends Item {
 	private ArmorType armorType;
 	private int armorBonus;
@@ -9,30 +14,51 @@ public class Armor extends Item {
 	private int speed30feet;
 	private int speed20feet;
 
+	/**
+	 * @param armorType
+	 */
 	public void setArmorType(ArmorType armorType) {
 		this.armorType = armorType;
 	}
 
+	/**
+	 * @param armorBonus
+	 */
 	public void setArmorBonus(int armorBonus) {
 		this.armorBonus = armorBonus;
 	}
 
+	/**
+	 * @param maxDexBonus
+	 */
 	public void setMaxDexBonus(int maxDexBonus) {
 		this.maxDexBonus = maxDexBonus;
 	}
 
+	/**
+	 * @param armorCheckPenalty
+	 */
 	public void setArmorCheckPenalty(int armorCheckPenalty) {
 		this.armorCheckPenalty = armorCheckPenalty;
 	}
 
+	/**
+	 * @param arcaneSpellFailiure
+	 */
 	public void setArcaneSpellFailiure(int arcaneSpellFailiure) {
 		this.arcaneSpellFailiure = arcaneSpellFailiure;
 	}
 
+	/**
+	 * @param speed30feet
+	 */
 	public void setSpeed30feet(int speed30feet) {
 		this.speed30feet = speed30feet;
 	}
 
+	/**
+	 * @param speed20feet
+	 */
 	public void setSpeed20feet(int speed20feet) {
 		this.speed20feet = speed20feet;
 	}
@@ -86,7 +112,9 @@ public class Armor extends Item {
 		return speed20feet;
 	}
 
-
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Armor() {
 	}
 

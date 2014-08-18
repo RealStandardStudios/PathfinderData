@@ -4,7 +4,8 @@
 package pathfinder.data.Effects;
 
 /**
- * An {@link Effect} that gives a bonus Attack rolls made to confirm CriticalHits
+ * An {@link Effect} that gives a bonus to Attack rolls made to confirm Critical Hits
+ * 
  * @author Real Standard Studios - Matthew Meehan
  */
 public class CritBonusEffect extends Effect {

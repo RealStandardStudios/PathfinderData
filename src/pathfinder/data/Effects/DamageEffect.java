@@ -1,5 +1,10 @@
 package pathfinder.data.Effects;
 
+/**
+ * An {@link Effect} that gives a boost to damage
+ * 
+ * @author Real Standard Studios - Matthew Meehan
+ */
 public class DamageEffect extends Effect {
 	/**
 	 * The default constructor for Kryo

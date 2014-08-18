@@ -7,6 +7,7 @@ import pathfinder.data.Effects.Effect;
 
 /**
  * An {@link Effect} that occurs with a specific Action
+ * 
  * @author Real Standard Studios - Matthew Meehan
  */
 public class ActionEffect extends Effect {

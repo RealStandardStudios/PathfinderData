@@ -10,9 +10,9 @@ import pathfinder.data.Skills.Skill;
 
 
 /**
+ * The Ninja Class http://paizo.com/pathfinderRPG/prd/ultimateCombat/classes/ninja.html
  * 
- * @author Matthew
- * @description The Ninja Class http://paizo.com/pathfinderRPG/prd/ultimateCombat/classes/ninja.html
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Ninja extends Class {
 	
@@ -25,6 +25,9 @@ public class Ninja extends Class {
 		return levelTable;
 	}
 	
+	/**
+	 * an empty constructor for Kryo
+	 */
 	public Ninja() {
 	}
 
