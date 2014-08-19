@@ -23,6 +23,10 @@ public class Barbarian extends Class {
 		return levelTable;
 	}
 	
+	public void SetLevelTable(LevelTableRow[] levelTable) {
+		this.levelTable = levelTable;
+	}
+	
 	/**
 	 * An empty constructor for Kryo
 	 */

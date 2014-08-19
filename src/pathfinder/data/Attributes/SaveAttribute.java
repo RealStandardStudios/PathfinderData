@@ -13,6 +13,7 @@ public class SaveAttribute {
 	private int magicMod;
 	private int miscMod;
 	private Ability abilityScore;
+	private AbilityName abilityName;
 
 	/**
 	 * @return the attributeName
@@ -86,6 +87,14 @@ public class SaveAttribute {
 		this.miscMod = miscMod;
 	}
 
+	public AbilityName getAbilityName() {
+		return abilityName;
+	}
+
+	public void setAbilityName(AbilityName abilityName) {
+		this.abilityName = abilityName;
+	}
+
 	/**
 	 * Empty constructor for Kryo
 	 */
@@ -107,6 +116,17 @@ public class SaveAttribute {
 		this.miscMod = miscMod;
 		this.abilityScore = pAbility;
 		this.setTotal();
+	}
+	
+	/**
+	 * Constructor for SaveAttribute
+	 * 
+	 * @param pAbility the {@link AbilityName} relevant to the Save Attribute 
+	 * @param baseValue the base value of the Save Attribute
+	 */
+	public SaveAttribute(String name, AbilityName pAbility, int baseValue) {
+		this.attributeName = name;
+		this.abilityName = pAbility;
 	}
 
 }

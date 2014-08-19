@@ -5,6 +5,7 @@ import java.util.HashMap;
 import pathfinder.data.DiceType;
 import pathfinder.data.Character.Alignment;
 import pathfinder.data.Classes.Objects.Feature;
+import pathfinder.data.Classes.Objects.LevelTableRow;
 import pathfinder.data.Classes.Objects.SpellLevelTableRow;
 import pathfinder.data.Spells.Spell;
 
@@ -35,6 +36,11 @@ public class Alchemist extends Class {
 	 */
 	public SpellLevelTableRow[] getLevelTable() {
 		return levelTable;
+	}
+	
+	@Override
+	public void SetLevelTable(LevelTableRow[] levelTable) {
+		this.levelTable = (SpellLevelTableRow[]) levelTable;
 	}
 	
 	/**

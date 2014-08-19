@@ -6,5 +6,14 @@ package pathfinder.data.Attributes;
  * @author Real Standard Studios - Matthew Meehan
  */
 public enum AbilityName {
-	Strength, Dexterity, Wisdom, Constitution, Intelligence, Charisma;
+	Strength("Strength"), Dexterity("Dexterity"), Wisdom("Wisdom"), Constitution("Constitution"), Intelligence("Intelligence"), Charisma("Charisma");
+	private String abilityName;
+	
+	private AbilityName(String abilityName) {
+		this.abilityName = abilityName;
+	}
+	
+	public String toString() {
+		return this.abilityName;
+	}
 }

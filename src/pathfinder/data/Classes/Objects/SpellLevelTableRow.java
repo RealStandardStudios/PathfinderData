@@ -39,7 +39,7 @@ public class SpellLevelTableRow extends LevelTableRow {
 	 */
 	public SpellLevelTableRow(int[] baseAttackBonus,
 			SaveAttribute fortitudeSave, SaveAttribute reflexSave,
-			SaveAttribute willSave, Feature[] specialFeatures,
+			SaveAttribute willSave, String[] specialFeatures,
 			Spell[] spellsPerDay) {
 		super(baseAttackBonus, fortitudeSave, reflexSave, willSave,
 				specialFeatures);

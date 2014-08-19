@@ -13,7 +13,8 @@ public class LevelTableRow {
 	private SaveAttribute fortitudeSave;
 	private SaveAttribute reflexSave;
 	private SaveAttribute willSave;
-	private Feature[] specialFeatures;
+	//private Feature[] specialFeatures;
+	private String[] special;
 
 	/**
 	 * @return the baseAttackBonus
@@ -43,12 +44,12 @@ public class LevelTableRow {
 		return willSave;
 	}
 
-	/**
-	 * @return the specialFeatures
-	 */
-	public Feature[] getSpecialFeatures() {
-		return specialFeatures;
-	}
+//	/**
+//	 * @return the specialFeatures
+//	 */
+//	public Feature[] getSpecialFeatures() {
+//		return specialFeatures;
+//	}
 
 	/**
 	 * the empty Constructor for Kryo
@@ -65,13 +66,13 @@ public class LevelTableRow {
 	 */
 	public LevelTableRow(int[] baseAttackBonus, SaveAttribute fortitudeSave,
 			SaveAttribute reflexSave, SaveAttribute willSave,
-			Feature[] specialFeatures) {
+			String[] specialFeatures) {
 		super();
 		this.baseAttackBonus = baseAttackBonus;
 		this.fortitudeSave = fortitudeSave;
 		this.reflexSave = reflexSave;
 		this.willSave = willSave;
-		this.specialFeatures = specialFeatures;
+		this.special = specialFeatures;
 	}
 
 }

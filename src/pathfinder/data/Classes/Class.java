@@ -5,9 +5,7 @@ import javafx.beans.property.StringProperty;
 import pathfinder.data.DiceType;
 import pathfinder.data.Character.Alignment;
 import pathfinder.data.Classes.Objects.Feature;
-import pathfinder.data.Items.ArmorType;
-import pathfinder.data.Items.WeaponType;
-import pathfinder.data.Skills.Skill;
+import pathfinder.data.Classes.Objects.LevelTableRow;
 
 /**
  * A generic class for classes
@@ -230,6 +228,8 @@ public abstract class Class {
 		}
 		return s;
 	}
+	
+	public abstract void SetLevelTable(LevelTableRow[] levelTable);
 
 	/**
 	 * an empty constructor for Kryo

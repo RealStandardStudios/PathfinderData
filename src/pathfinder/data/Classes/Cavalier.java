@@ -4,9 +4,6 @@ import pathfinder.data.DiceType;
 import pathfinder.data.Character.Alignment;
 import pathfinder.data.Classes.Objects.Feature;
 import pathfinder.data.Classes.Objects.LevelTableRow;
-import pathfinder.data.Items.ArmorType;
-import pathfinder.data.Items.WeaponType;
-import pathfinder.data.Skills.Skill;
 
 /**
  * The Cavalier Class http://paizo.com/pathfinderRPG/prd/advanced/baseClasses/cavalier.html
@@ -22,6 +19,11 @@ public class Cavalier extends Class {
 	 */
 	public LevelTableRow[] getLevelTable() {
 		return levelTable;
+	}
+	
+	@Override
+	public void SetLevelTable(LevelTableRow[] levelTable) {
+		this.levelTable = levelTable;
 	}
 	
 	/**
