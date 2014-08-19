@@ -5,15 +5,16 @@ import java.util.HashMap;
 import pathfinder.data.Attributes.AbilityName;
 
 /**
+ * The skill class
  * 
  * @Author Real Standard Studios - Matthew Meehan
- * @description The skill class
  */
 public class Skill {
 	private int rank;
 	private AbilityName attrToUse;
 	private String name;
 	private boolean trained = false;
+	
 	/**
 	 * this table is for when you get a bonus vs a certain event e.g- +2
 	 * perception bonus for identifying evil hats, the string key identifies
@@ -70,8 +71,6 @@ public class Skill {
 	 * @param Name
 	 * @param trained
 	 * @param situationalMod
-	 * 
-	 *            Constructor for Skill
 	 */
 	public Skill(int rank, AbilityName attrToUse, String name, boolean trained,
 			HashMap<String, Integer> situationalMod) {

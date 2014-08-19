@@ -9,10 +9,16 @@ public enum Ranges {
 	
 	private int value;
 	
+	/**
+	 * @param value
+	 */
 	private Ranges(int value) {
 		this.value = value;
 	}
 	
+	/**
+	 * @returns an int
+	 */
 	public int getValue() {
 		return value;
 	}
