@@ -1,6 +1,7 @@
 package pathfinder.data.Races.Traits;
 
 /**
+ * Represents a race's natural ability to use certain weapon types.
  *
  * @author Real Standard Studios - Joshua Boyd
  */

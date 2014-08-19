@@ -133,13 +133,11 @@ public class Weapon extends Item{
 	 */
 	public Weapon(String name, String cost, String dmgS, String dmgM, String critical, String range, String weight, String type, String special)
 	{
-		this.setName(name);
-		this.setCost(cost);
+		super(name, cost, weight);
 		this.setDmgS(dmgS);
 		this.setDmgM(dmgM);
 		this.setCritical(critical);
 		this.setRange(range);
-		this.setWeight(weight);
 		this.setType(type);
 		this.setSpecial(special);
 	}

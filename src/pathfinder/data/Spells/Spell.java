@@ -6,8 +6,9 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
+ * A data class for the varied Spells available
+ * 
  * @author Real Standard Studios - Matthew Meehan, Kenneth Cooper
- * @description A data class for the varied Spells available
  */
 
 public class Spell {
@@ -30,63 +31,105 @@ public class Spell {
     private String area;
     private String[] tablePicture;
     
-         
+    /**     
+     * @param school
+     */
     public void setSchool(String school) {
 		this.school = school;
 	}
 
+    /**
+     * @param castingTime
+     */
 	public void setCastingTime(String castingTime) {
 		this.castingTime = castingTime;
 	}
 
+	/**
+	 * @param range
+	 */
 	public void setRange(String range) {
 		this.range = range;
 	}
 
+	/**
+	 * @param effect
+	 */
 	public void setEffect(String effect) {
 		this.effect = effect;
 	}
 
+	/**
+	 * @param duration
+	 */
 	public void setDuration(String duration) {
 		this.duration = duration;
 	}
 
+	/**
+	 * @param savingThrow
+	 */
 	public void setSavingThrow(String savingThrow) {
 		this.savingThrow = savingThrow;
 	}
 
+	/**
+	 * @param spellResistance
+	 */
 	public void setSpellResistance(String spellResistance) {
 		this.spellResistance = spellResistance;
 	}
 
+	/**
+	 * @param description
+	 */
 	public void setDescription(String description) {
 		this.description = description;
 	}
 
+	/**
+	 * @param name
+	 */
 	public void setName(String name) {
 		this.name.setValue(name);
 	}
 
+	
 //	public void setClassName(String[] className) {
 //		this.className = className;
 //	}
 //
+	/**
+	 * @param spellLevels
+	 */
 	public void setSpellLevel(HashMap<String, Integer> spellLevels) {
 		this.spellLevel = spellLevels;
 	}
 
+	/**
+	 * @param components
+	 */
 	public void setComponents(String components) {
 		this.components = components;
 	}
 
+	/**
+	 * @param target
+	 */
 	public void setTarget(String target) {
 		this.target = target;
 	}
 
+	/**
+	 * @param area
+	 */
 	public void setArea(String area) {
 		this.area = area;
 	}
 
+	/**
+	 * @param tablePicture
+	 */
 	public void setTablePicture(String tablePicture) {
 		String[] parts = tablePicture.split(",");
 		this.tablePicture = parts;
@@ -113,12 +156,14 @@ public class Spell {
     public String getSchool() {
         return school;
     }
+    
     /**
      * @return the castingTime
      */
     public String getCastingTime() {
         return castingTime;
     }
+    
     /**
      * @return the range
      * @param level
@@ -126,78 +171,91 @@ public class Spell {
 //    public int getRange(int level) {
 //        return this.range+(this.rangePerLevel*level);
 //    }
+    
     /**
      * @return range
      */
     public String getRange() {
     	return this.range;
     }
+    
     /**
      * @return the rangePerLevel
      */
 //    public int getRangePerLevel() {
 //        return rangePerLevel;
 //    }
+    
     /**
      * @return the effect
      */
     public String getEffect() {
         return effect;
     }
+    
     /**
      * @return the duration
      */
     public String getDuration() {
         return duration;
     }
+    
     /**
      * @return the savingThrow
      */
     public String getSavingThrow() {
         return savingThrow;
     }
+    
     /**
      * @return the spellResistance
      */
     public String isSpellResistance() {
         return spellResistance;
     }
+    
     /**
      * @return the description
      */
     public String getDescription() {
         return description;
     }
+    
     /**
      * @return the Name
      */
     public String getName() {
         return name.getValue();
     }
+    
     /**
      * @return Name as a StringProperty
      */
     public StringProperty getNameProperty() {
     	return name;
     }
+    
     /**
      * @return components
      */
     public String getComponents() {
     	return components;
     }
+    
     /**
      * @return target
      */
     public String getTarget() {
     	return target;
     }
+    
     /**
      * @return area
      */
     public String getArea() {
     	return area;
     }
+    
     /**
      * @return an array of tablePicture
      */
@@ -215,6 +273,9 @@ public class Spell {
     	return tablePictures;
     }
     
+    /**
+     * @returns a String array made up of image locations.
+     */
     public String[] getTablePictures() {
     	return tablePicture;
     }
@@ -240,8 +301,6 @@ public class Spell {
      * @param description
      * @param Name
      * @param tablePicture
-     * 
-     * Constructor for Spell
      */
     public Spell(String name, String school, HashMap<String,Integer> spellLevel, String castingTime, String components, String range,
                     String target, String effect, String area, String duration, String savingThrow,

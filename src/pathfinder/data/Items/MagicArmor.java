@@ -103,17 +103,14 @@ public class MagicArmor extends Armor
 	 * @param description
 	 * @param construction
 	 */
-	public MagicArmor(String baseArmor, String name, String slot,
+	public MagicArmor(Armor baseArmor, String name, String slot,
 			String strength, String caster, String price, String weight, String description, String construction)
 	{
-		//super(name, armorType, cost, armorBonus, maxDexBonus, armorCheckPenalty, arcaneSpellFailiure, speed30feet, speed20feet, weight) //Josh you will need all those things about the normal armor to do this
-		//Armor armor = new Armor();//Fix this when you know how to josh
-		this.setName(name);
+		super(name, baseArmor.getArmorType(), price, baseArmor.getArmorBonus(), baseArmor.getMaxDexBonus(),
+				baseArmor.getArmorCheckPenalty(), baseArmor.getArcaneSpellFailiure(), baseArmor.getSpeed30feet(), baseArmor.getSpeed20feet(), weight);
 		this.setSlot(slot);
 		this.setAuraStrength(strength);
 		this.setCasterLevel(caster);
-		this.setCost(price);
-		this.setWeight(weight);
 		this.setDescription(description);
 		this.setConstruction(construction);
 	}	
