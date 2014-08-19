@@ -353,9 +353,9 @@ public class Character {
 		int armorBonus=0, shieldBonus = 0;
 		for (Armor a : inventory.getArmorWorn()) {
 			if (a instanceof Shield)
-				shieldBonus += a.getArmorBonus();
+				shieldBonus += a.getArmorBonusInt();
 			else
-				armorBonus += a.getArmorBonus();
+				armorBonus += a.getArmorBonusInt();
 		}
 		this.armorClass = 10 + armorBonus + shieldBonus
 				+ this.getDexterity().getModifier()
