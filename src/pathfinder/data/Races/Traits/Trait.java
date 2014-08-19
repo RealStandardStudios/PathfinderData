@@ -4,14 +4,13 @@ import pathfinder.data.FeatPrerequisite;
 import pathfinder.data.Effects.Effect;
 
 /**
+ * A generic type for extending all the traits from
  * 
  * @author Real Standard Studios - Joshua Boyd, Matthew Meehan
- * A generic type for extending all the traits from
  */
 public abstract class Trait extends FeatPrerequisite {
 	private Effect effect;	
 	
-
 	/**
 	 * @return the effect
 	 */
