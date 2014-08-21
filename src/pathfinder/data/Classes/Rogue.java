@@ -1,5 +1,7 @@
 package pathfinder.data.Classes;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import pathfinder.data.DiceType;
 import pathfinder.data.Character.Alignment;
 import pathfinder.data.Classes.Objects.Feature;
@@ -11,17 +13,15 @@ import pathfinder.data.Classes.Objects.LevelTableRow;
  * @author Real Standard Studios - Matthew Meehan
  */
 public class Rogue extends Class {
-	private LevelTableRow[] levelTable;
+	private ObservableList<LevelTableRow> levelTable;
 
-	/**
-	 * @return the levelTable
-	 */
-	public LevelTableRow[] getLevelTable() {
-		return levelTable;
+	@Override
+	public ObservableList<LevelTableRow> getLeveltableRow() {
+		return this.levelTable;
 	}
 	
 	@Override
-	public void SetLevelTable(LevelTableRow[] levelTable) {
+	public void SetLevelTable(ObservableList<LevelTableRow> levelTable) {
 		this.levelTable = levelTable;
 	}
 	
@@ -54,6 +54,6 @@ public class Rogue extends Class {
 		super(name, description, role, level, requireAlignments, hitDice,
 				startingWealthD6, skillRanksPerLevel, classSkills, features,
 				weaponProficiencies, armorProficiencies);
-		this.levelTable = levelTable;
+		this.levelTable = FXCollections.observableArrayList(levelTable);
 	}	
 }
