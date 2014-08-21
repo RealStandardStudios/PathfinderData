@@ -6,7 +6,7 @@ package pathfinder.data.Items;
  * @author Real Standard Studios - Joshua Boyd
  */
 public class Armor extends Item {
-	private String  armorType;
+	private String armorType;
 	private String armorBonus;
 	private String maxDexBonus;
 	private String armorCheckPenalty;
