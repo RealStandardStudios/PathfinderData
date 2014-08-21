@@ -2,6 +2,8 @@ package pathfinder.data.Classes;
 
 import java.util.HashMap;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import pathfinder.data.DiceType;
 import pathfinder.data.Character.Alignment;
 import pathfinder.data.Classes.Objects.Feature;
@@ -20,7 +22,7 @@ public class Paladin extends Class {
 	 */
 	private HashMap<String,Spell> spells;
 	
-	private SpellLevelTableRow[] levelTable;
+	private ObservableList<LevelTableRow> levelTable;
 
 	/**
 	 * @return the spells
@@ -29,16 +31,14 @@ public class Paladin extends Class {
 		return spells;
 	}
 
-	/**
-	 * @return the levelTable
-	 */
-	public SpellLevelTableRow[] getLevelTable() {
-		return levelTable;
+	@Override
+	public ObservableList<LevelTableRow> getLeveltableRow() {
+		return this.levelTable;
 	}
 	
 	@Override
-	public void SetLevelTable(LevelTableRow[] levelTable) {
-		this.levelTable = (SpellLevelTableRow[]) levelTable;
+	public void SetLevelTable(ObservableList<LevelTableRow> levelTable) {
+		this.levelTable = levelTable;
 	}
 	
 	/**
@@ -73,7 +73,7 @@ public class Paladin extends Class {
 				startingWealthD6, skillRanksPerLevel, classSkills, features,
 				weaponProficiencies, armorProficiencies);
 		this.spells = spellLevel;
-		this.levelTable = levelTable;
+		this.levelTable = FXCollections.observableArrayList(levelTable);
 	}
 	
 	

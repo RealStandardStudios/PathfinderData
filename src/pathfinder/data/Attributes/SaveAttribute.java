@@ -1,5 +1,8 @@
 package pathfinder.data.Attributes;
 
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
+
 /**
  * The SaveAttribute class handles Fortitude, Reflex and Will saving throw
  * information
@@ -8,7 +11,7 @@ package pathfinder.data.Attributes;
  */
 public class SaveAttribute {
 	private String attributeName;
-	private int baseValue;
+	private ObjectProperty<Integer> baseValue;
 	private int total;
 	private int magicMod;
 	private int miscMod;
@@ -28,19 +31,23 @@ public class SaveAttribute {
 	public void setAttributeName(String attributeName) {
 		this.attributeName = attributeName;
 	}
+	
+	public ObjectProperty<Integer> getBaseValueProperty() {
+		return this.baseValue;
+	}
 
 	/**
 	 * @return the baseValue
 	 */
 	public int getBaseValue() {
-		return baseValue;
+		return baseValue.get();
 	}
 
 	/**
 	 * @param baseValue the baseValue to set
 	 */
 	public void setBaseValue(int baseValue) {
-		this.baseValue = baseValue;
+		this.baseValue.set(baseValue);
 	}
 
 	/**
@@ -111,7 +118,7 @@ public class SaveAttribute {
 	 */
 	public SaveAttribute(Ability pAbility, int baseValue, int magicMod,
 			int miscMod) {
-		this.baseValue = baseValue;
+		this.baseValue = new SimpleObjectProperty<Integer>(baseValue);
 		this.magicMod = magicMod;
 		this.miscMod = miscMod;
 		this.abilityScore = pAbility;

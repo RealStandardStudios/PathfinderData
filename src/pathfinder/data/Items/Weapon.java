@@ -6,14 +6,29 @@ package pathfinder.data.Items;
  * @author Real Standard Studios - Joshua Boyd
  */
 public class Weapon extends Item{
-	private WeaponType weaponType;
+	private String weaponType;
 	private String dmgS;
 	private String dmgM;
 	private String critical;
 	private String range;
-	private String type; //this revers to what damage type is is E.G Bashing, Percing or Slashing
+	private String weaponDmgType; //this revers to what damage weaponDmgType is is E.G Bashing, Percing or Slashing
 	private String special;
+	private String weaponClass;
 	
+	/**
+	 * @returns a String
+	 */
+	public String getWeaponClass() {
+		return weaponClass;
+	}
+
+	/**
+	 * @param weaponClass
+	 */
+	public void setWeaponClass(String weaponClass) {
+		this.weaponClass = weaponClass;
+	}
+
 	/**
 	 * @returns a String
 	 */
@@ -29,16 +44,16 @@ public class Weapon extends Item{
 	}
 
 	/**
-	 * @returns a WeaponType
+	 * @returns a String
 	 */
-	public WeaponType getWeaponType() {
+	public String getWeaponType() {
 		return weaponType;
 	}
 
 	/**
 	 * @param weaponType
 	 */
-	public void setWeaponType(WeaponType weaponType) {
+	public void setWeaponType(String weaponType) {
 		this.weaponType = weaponType;
 	}
 
@@ -101,15 +116,15 @@ public class Weapon extends Item{
 	/**
 	 * @returns a String
 	 */
-	public String getType() {
-		return type;
+	public String getWeaponDmgType() {
+		return weaponDmgType;
 	}
 
 	/**
-	 * @param type
+	 * @param weaponDmgType
 	 */
-	public void setType(String type) {
-		this.type = type;
+	public void setWeaponDmgType(String weaponDmgType) {
+		this.weaponDmgType = weaponDmgType;
 	}
 	
 	/**
@@ -128,17 +143,20 @@ public class Weapon extends Item{
 	 * @param critical
 	 * @param range
 	 * @param weight
-	 * @param type
+	 * @param weaponDmgType
 	 * @param special
 	 */
-	public Weapon(String name, String cost, String dmgS, String dmgM, String critical, String range, String weight, String type, String special)
+	public Weapon(String name, String weaponType, String weaponClass, String cost, String dmgS,
+					String dmgM, String critical, String range, String weight, String weaponDmgType, String special)
 	{
 		super(name, cost, weight);
+		this.setWeaponType(weaponType);
+		this.setWeaponClass(weaponClass);
 		this.setDmgS(dmgS);
 		this.setDmgM(dmgM);
 		this.setCritical(critical);
 		this.setRange(range);
-		this.setType(type);
+		this.setWeaponDmgType(weaponDmgType);
 		this.setSpecial(special);
 	}
 	

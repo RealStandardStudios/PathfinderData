@@ -1,5 +1,7 @@
 package pathfinder.data.Classes;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import pathfinder.data.DiceType;
 import pathfinder.data.Character.Alignment;
 import pathfinder.data.Classes.Objects.Feature;
@@ -11,7 +13,7 @@ import pathfinder.data.Classes.Objects.LevelTableRow;
  * @author Real Standard Studios - Matthew Meehan
  */
 public class Monk extends Class {
-	private LevelTableRow[] levelTable;
+	private ObservableList<LevelTableRow> levelTable;
 	
 	private int[] flurryOfBlowsBAB;
 	
@@ -23,11 +25,14 @@ public class Monk extends Class {
 	
 	private int[] fastMovement;
 
-	/**
-	 * @return the levelTable
-	 */
-	public LevelTableRow[] getLevelTable() {
-		return levelTable;
+	@Override
+	public ObservableList<LevelTableRow> getLeveltableRow() {
+		return this.levelTable;
+	}
+	
+	@Override
+	public void SetLevelTable(ObservableList<LevelTableRow> levelTable) {
+		this.levelTable = levelTable;
 	}
 
 	/**
@@ -64,11 +69,7 @@ public class Monk extends Class {
 	public int[] getFastMovement() {
 		return fastMovement;
 	}
-	
-	@Override
-	public void SetLevelTable(LevelTableRow[] levelTable) {
-		this.levelTable = levelTable;
-	}
+
 	
 	/**
 	 * an empty constructor for Kryo
@@ -106,7 +107,7 @@ public class Monk extends Class {
 		super(name, description, role, level, requireAlignments, hitDice,
 				startingWealthD6, skillRanksPerLevel, classSkills, features,
 				weaponProficiencies, armorProficiencies);
-		this.levelTable = levelTable;
+		this.levelTable = FXCollections.observableArrayList(levelTable);
 		this.flurryOfBlowsBAB = flurryOfBlowsBAB;
 		this.unarmedDamageMultiplier = unarmedDamageMultiplier;
 		this.unarmedDamage = unarmedDamage;
