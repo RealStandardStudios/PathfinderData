@@ -2,6 +2,8 @@ package pathfinder.data.Races;
 
 import java.util.ArrayList;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import pathfinder.data.Effects.AbilityEffect;
 import pathfinder.data.Items.Weapon;
 import pathfinder.data.Races.Objects.Language;
@@ -14,12 +16,12 @@ import pathfinder.data.Races.Traits.Trait;
  * 
  * @author Real Standard Studios - Matthew Meehan
  */
-public abstract class Race {
+public class Race {
 	
 	/**
 	 * The Name of the Race
 	 */
-	private String name;
+	private StringProperty name;
 	
 	/**
 	 * The description of the Race
@@ -90,12 +92,16 @@ public abstract class Race {
 	 * indicates whether the race's speed is effected by armor or encumberance
 	 */
 	private boolean speedLoss;
+	
+	public StringProperty getNameProperty() {
+		return name;
+	}
 
 	/**
 	 * @return the Name
 	 */
 	public String getName() {
-		return name;
+		return name.get();
 	}
 
 	/**
@@ -104,7 +110,7 @@ public abstract class Race {
 	 * @param Name
 	 */
 	public void setName(String name) {
-		this.name = name;
+		this.name.set(name);
 	}
 
 	/**
@@ -335,6 +341,7 @@ public abstract class Race {
 	 * @description The empty Constructor for Kryo
 	 */
 	public Race() {
+		name = new SimpleStringProperty();
 	}
 
 	/**
@@ -351,7 +358,7 @@ public abstract class Race {
 			Weapon[] weapons, ArrayList<AbilityEffect> racialModifiers,
 			boolean speedLoss, VisionType[] visionTypes) {
 		super();
-		this.name = name;
+		this.name = new SimpleStringProperty(name);
 		this.size = size;
 		this.speed = speed;
 		this.languages = languages;
@@ -360,5 +367,4 @@ public abstract class Race {
 		this.speedLoss = speedLoss;
 		this.visionTypes = visionTypes;
 	}
-
 }
