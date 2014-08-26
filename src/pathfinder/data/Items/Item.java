@@ -3,28 +3,35 @@
  */
 package pathfinder.data.Items;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 /**
  * The base class for all items
  * 
  * @author Real Standard Studios - Joshua Boyd
  */
 public abstract class Item {
-	private String name;
+	private StringProperty name;
 	private String cost;
 	private String weight;
+	
+	public StringProperty getNameProperty() {
+		return this.name;
+	}
 	
 	/**
 	 * @returns a String
 	 */
 	public String getName() {
-		return name;
+		return name.getValue();
 	}
 	
 	/**
 	 * @param name
 	 */
 	public void setName(String name) {
-		this.name = name;
+		this.name.set(name);
 	}
 	
 	/**
@@ -69,7 +76,7 @@ public abstract class Item {
 	 * @param weight The Weight of the item
 	 */
 	public Item(String name, String cost, String weight) {
-		this.name = name;
+		this.name = new SimpleStringProperty(name);
 		this.cost = cost;
 		this.weight = weight;
 	}
