@@ -6,27 +6,27 @@ package pathfinder.data.Items;
  * @author Real Standard Studios - Joshua Boyd
  */
 public class Weapon extends Item{
-	private String weaponType;
+	private String wieldStyle;
 	private String dmgS;
 	private String dmgM;
 	private String critical;
 	private String range;
 	private String weaponDmgType; //this revers to what damage weaponDmgType is is E.G Bashing, Percing or Slashing
 	private String special;
-	private String weaponClass;
+	private String weaponType;
 	
 	/**
 	 * @returns a String
 	 */
-	public String getWeaponClass() {
-		return weaponClass;
+	public String getWeaponType() {
+		return weaponType;
 	}
 
 	/**
-	 * @param weaponClass
+	 * @param weaponType
 	 */
-	public void setWeaponClass(String weaponClass) {
-		this.weaponClass = weaponClass;
+	public void setWeaponType(String weaponType) {
+		this.weaponType = weaponType;
 	}
 
 	/**
@@ -46,15 +46,15 @@ public class Weapon extends Item{
 	/**
 	 * @returns a String
 	 */
-	public String getWeaponType() {
-		return weaponType;
+	public String getWieldStyle() {
+		return wieldStyle;
 	}
 
 	/**
-	 * @param weaponType
+	 * @param wieldStyle
 	 */
-	public void setWeaponType(String weaponType) {
-		this.weaponType = weaponType;
+	public void setWieldStyle(String wieldStyle) {
+		this.wieldStyle = wieldStyle;
 	}
 
 	/**
@@ -146,12 +146,12 @@ public class Weapon extends Item{
 	 * @param weaponDmgType
 	 * @param special
 	 */
-	public Weapon(String name, String weaponType, String weaponClass, String cost, String dmgS,
+	public Weapon(String name, String wieldStyle, String weaponType, String cost, String dmgS,
 					String dmgM, String critical, String range, String weight, String weaponDmgType, String special)
 	{
 		super(name, cost, weight);
+		this.setWieldStyle(wieldStyle);
 		this.setWeaponType(weaponType);
-		this.setWeaponClass(weaponClass);
 		this.setDmgS(dmgS);
 		this.setDmgM(dmgM);
 		this.setCritical(critical);

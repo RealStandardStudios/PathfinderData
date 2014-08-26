@@ -91,7 +91,7 @@ public class MagicWeapon extends Weapon{
 			String cl, String price, String weight, String description, 
 			String construction) 
 	{ 
-		super(name, weapon.getWeaponType(), weapon.getWeaponClass(), price, weapon.getDmgS(), weapon.getDmgM(), weapon.getCritical(),
+		super(name, weapon.getWieldStyle(), weapon.getWeaponType(), price, weapon.getDmgS(), weapon.getDmgM(), weapon.getCritical(),
 				weapon.getRange(), weight, weapon.getWeaponDmgType(), weapon.getSpecial());
 		
 		this.setAuraStrength(auraStr);
