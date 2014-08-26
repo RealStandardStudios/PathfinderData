@@ -41,6 +41,7 @@ public class LevelTableRow {
 	}
 	
 	public StringProperty getBABProperty() {
+		
 		String output = Integer.toString(baseAttackBonus[0]);
 		
 		for (int i = 1; i < baseAttackBonus.length; i++) {
