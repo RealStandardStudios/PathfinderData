@@ -39,9 +39,9 @@ public class SaveAttribute {
 	/**
 	 * @return the baseValue
 	 */
-	public int getBaseValue() {
-		return baseValue.get();
-	}
+//	public int getBaseValue() {
+//		return baseValue.get();
+//	}
 
 	/**
 	 * @param baseValue the baseValue to set

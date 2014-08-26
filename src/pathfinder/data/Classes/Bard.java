@@ -1,11 +1,15 @@
 package pathfinder.data.Classes;
 
+import java.util.HashMap;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import pathfinder.data.DiceType;
 import pathfinder.data.Character.Alignment;
 import pathfinder.data.Classes.Objects.Feature;
 import pathfinder.data.Classes.Objects.LevelTableRow;
+import pathfinder.data.Classes.Objects.SpellLevelTableRow;
+import pathfinder.data.Spells.Spell;
 
 
 /**
@@ -15,6 +19,19 @@ import pathfinder.data.Classes.Objects.LevelTableRow;
  */
 public class Bard extends Class {
 
+	/**
+	 * An array of a HashMaps containing spells, an index of the array equals a
+	 * level
+	 */
+	private HashMap<String, Spell> spells;
+	
+	/**
+	 * @return the spells
+	 */
+	public HashMap<String, Spell> getSpells() {
+		return spells;
+	}
+	
 	private ObservableList<LevelTableRow> levelTable;
 
 	@Override
@@ -51,7 +68,8 @@ public class Bard extends Class {
 			Alignment[] requireAlignments, DiceType hitDice,
 			int startingWealthD6, int skillRanksPerLevel, String[] classSkills,
 			Feature[] features, String[] weaponProficiencies,
-			String[] armorProficiencies, LevelTableRow[] levelTable) {
+			String[] armorProficiencies, HashMap<String, Spell> spells,
+			SpellLevelTableRow[] levelTable) {
 		super(name, description, role, level, requireAlignments, hitDice,
 				startingWealthD6, skillRanksPerLevel, classSkills, features,
 				weaponProficiencies, armorProficiencies);

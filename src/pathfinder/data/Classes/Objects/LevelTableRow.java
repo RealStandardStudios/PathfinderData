@@ -98,6 +98,7 @@ public class LevelTableRow {
 	}
 
 	/**
+	 * @param levelNum
 	 * @param baseAttackBonus
 	 * @param fortitudeSave
 	 * @param reflexSave
