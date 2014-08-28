@@ -5,7 +5,7 @@ package pathfinder.data.Items;
  * 
  * @author Real Standard Studios - Joshua Boyd
  */
-public class Staves extends Item{
+public class MagicStaves extends Item{
 	
 	private String auraStrength;
 	private String casterLevel;
@@ -71,7 +71,7 @@ public class Staves extends Item{
 	/**
 	 * a constructor for Kryo
 	 */
-	public Staves()
+	public MagicStaves()
 	{
 		
 	}
@@ -85,7 +85,7 @@ public class Staves extends Item{
 	 * @param description
 	 * @param construction
 	 */
-	public Staves(String name, String aura, String cl, String price, String weight,
+	public MagicStaves(String name, String aura, String cl, String price, String weight,
 			String description ,String construction)
 	{
 		super(name, price, weight);
