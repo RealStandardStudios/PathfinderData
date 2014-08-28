@@ -5,7 +5,7 @@ package pathfinder.data.Items;
  * 
  * @author Real Standard Studios - Joahua Boyd
  */
-public class Rods extends Item {
+public class MagicRod extends Item {
 	private String auraStrength;
 	private String casterLevel;
 	private String description;
@@ -70,7 +70,7 @@ public class Rods extends Item {
 	/**
 	 * a constructor for Kryo
 	 */
-	public Rods()
+	public MagicRod()
 	{
 		
 	}
@@ -84,7 +84,7 @@ public class Rods extends Item {
 	 * @param description
 	 * @param construction
 	 */
-	public Rods(String name, String aura, String cl, String price, String weight,
+	public MagicRod(String name, String aura, String cl, String price, String weight,
 			String description, String construction)
 	{
 		super(name, price, weight);
