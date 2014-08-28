@@ -215,6 +215,15 @@ public class Race {
 	public AbilityEffect[] getRacialModifiers() {
 		return racialModifiers;
 	}
+	
+	public String getRacialModifierString() {
+		String output = racialModifiers[0].getValue()+" "+racialModifiers[0].getAbilityName().name();
+		for (int i = 1; i < racialModifiers.length; i++) {
+			output+=", "+racialModifiers[i].getValue()+" "+racialModifiers[i].getAbilityName().name();
+		}
+		
+		return output;
+	}
 
 	/**
 	 * the racialModifiers to set
@@ -366,5 +375,37 @@ public class Race {
 		this.racialModifiers = (AbilityEffect[]) racialModifiers.toArray();
 		this.speedLoss = speedLoss;
 		this.visionTypes = visionTypes;
+	}
+
+	public String getVisionString() {
+		String output = visionTypes[0].getName();
+		for (int i = 1; i < visionTypes.length; i++) {
+			output+=", "+visionTypes[i].getName();
+		}
+		return output;
+	}
+
+	public String getTraitsString() {
+		String output = racialTraits.get(0).Name.get();
+		for (int i = 1; i < racialTraits.size(); i++) {
+			output+=", "+racialTraits.get(i).Name.get();
+		}
+		return output;
+	}
+	
+	public String getWeaponsString() {
+		String output = weaponFamiliarity[0].getName();
+		for (int i = 1; i < weaponFamiliarity.length; i++) {
+			output+=", "+weaponFamiliarity[i].getName();
+		}
+		return output;
+	}
+
+	public String getLanguagesString() {
+		String output = languages[0].name();
+		for (int i = 1; i < languages.length; i++) {
+			output+=", "+languages[i].name();
+		}
+		return output;
 	}
 }

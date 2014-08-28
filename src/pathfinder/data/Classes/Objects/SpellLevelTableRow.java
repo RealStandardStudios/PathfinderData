@@ -6,7 +6,6 @@ package pathfinder.data.Classes.Objects;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import pathfinder.data.Attributes.SaveAttribute;
-import pathfinder.data.Spells.Spell;
 
 /**
  * The table of benefits gained each level from a

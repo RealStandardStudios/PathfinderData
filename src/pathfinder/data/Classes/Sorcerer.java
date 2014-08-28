@@ -9,9 +9,6 @@ import pathfinder.data.Character.Alignment;
 import pathfinder.data.Classes.Objects.Feature;
 import pathfinder.data.Classes.Objects.LevelTableRow;
 import pathfinder.data.Classes.Objects.SpellLevelTableRow;
-import pathfinder.data.Items.ArmorType;
-import pathfinder.data.Items.WeaponType;
-import pathfinder.data.Skills.Skill;
 import pathfinder.data.Spells.Spell;
 
 /**
