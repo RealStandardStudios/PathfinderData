@@ -7,7 +7,6 @@ import pathfinder.data.DiceType;
 import pathfinder.data.Character.Alignment;
 import pathfinder.data.Classes.Objects.Feature;
 import pathfinder.data.Classes.Objects.LevelTableRow;
-import pathfinder.data.Classes.Objects.SpellLevelTableRow;
 
 /**
  * A generic class for classes
