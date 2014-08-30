@@ -132,6 +132,7 @@ public class SaveAttribute {
 	 * @param baseValue the base value of the Save Attribute
 	 */
 	public SaveAttribute(String name, AbilityName pAbility, int baseValue) {
+		this.baseValue = new SimpleObjectProperty<Integer>(baseValue);
 		this.attributeName = name;
 		this.abilityName = pAbility;
 	}
