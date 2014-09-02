@@ -1,4 +1,4 @@
-/**
+	/**
  * 
  */
 package pathfinder.data.Classes.Objects;
@@ -15,39 +15,45 @@ import pathfinder.data.Attributes.SaveAttribute;
  */
 public class SpellLevelTableRow extends LevelTableRow {
 
-	//private Spell[] spellsPerDay;
-	private ObjectProperty<Integer> spellsPerDay;
-	//private Spell[] spellsKnown;
-	private ObjectProperty<Integer> spellsKnown;
+	private ObjectProperty<Integer>[] spellsPerDay;
+	private int[] spellsKnown;
 
 	/**
 	 * @return the spellsPerDay
 	 */
-//	public Spell[] getSpellsPerDay() {
-//		return spellsPerDay;
-//	}
-	public ObjectProperty<Integer> getSpellsPerDayProperty() {
-		return this.spellsPerDay;
+
+	public ObjectProperty<Integer>[] getSpellsPerDay() {
+		return spellsPerDay;
 	}
 	
-	public void setSpellsPerDay(int spellsPerDay) {
-		this.spellsPerDay.set(spellsPerDay);
+	public void setSpellsPerDay(ObjectProperty<Integer>[] spellsPerDay) {
+		this.spellsPerDay = spellsPerDay;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public void setSpellsPerDay(int[] spellsPerDay) {
+		this.spellsPerDay = new ObjectProperty[10];
+		for (int i=0;i<spellsPerDay.length;i++) {
+			this.spellsPerDay[i] = new SimpleObjectProperty<Integer>(spellsPerDay[i]);
+		}
 	}
 	
 	/**
 	 * @return the spellsKnown
 	 */
-//	public Spell[] getSpellsKnown() {
-//		return spellsKnown;
-//	}
-	public ObjectProperty<Integer> getSpellsKnownProperty() {
-		return this.spellsKnown;
+	
+	public int[] getSpellsKnown() {
+		return spellsKnown;
 	}
 	
-	public void setSpellsKnown(int spellsKnown) {
-		this.spellsKnown.set(spellsKnown);
+	public void setSpellsKnown(int[] spellsKnown) {
+		this.spellsKnown = spellsKnown;
 	}
-
+	
+	public ObjectProperty<Integer> getSpellsKnownProperty() {
+		return new SimpleObjectProperty<Integer>();
+	}
+	
 	/**
 	 * The empty constructor for Kryo
 	 */
@@ -67,16 +73,10 @@ public class SpellLevelTableRow extends LevelTableRow {
 	public SpellLevelTableRow(int levelNum, int[] baseAttackBonus,
 			SaveAttribute fortitudeSave, SaveAttribute reflexSave,
 			SaveAttribute willSave, String[] specialFeatures,
-			int spellsPerDay, int spellsKnown) {
+			int[] spellsPerDay, int[] spellsKnown) {
 		super(levelNum, baseAttackBonus, fortitudeSave, reflexSave, willSave,
 				specialFeatures);
-/* Changed Constructor to reflect addition of spellsKnown and Properties:
- * Was Spell[] spellsPerDay
- * Now int spellsPerDay and int spellsKnown   */
-//		this.spellsPerDay = spellsPerDay;
-//		this.spellsKnown = spellsKnown;
-		this.spellsPerDay = new SimpleObjectProperty<Integer>(spellsPerDay);
-		this.spellsKnown = new SimpleObjectProperty<Integer>(spellsKnown);
+		this.setSpellsPerDay(spellsPerDay);
+		this.spellsKnown = spellsKnown;
 	}
-
 }
