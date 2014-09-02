@@ -9,7 +9,6 @@ import pathfinder.data.Spells.Spell;
  * @Author Real Standard Studios - Joshua Boyd, Matthew Meehan
  */
 public class SpellTrait extends Trait {
-	// which spell they have
 	private Spell spell;
 	
 	// how many times they can cast it per day.
@@ -20,13 +19,67 @@ public class SpellTrait extends Trait {
 	
 	// tells you what needs to be modified
 	private String conditionModifier;
+	
+	/**
+	 * gets which spell they have
+	 * @return the spell
+	 */
+	public Spell getSpell() {
+		return spell;
+	}
 
 	/**
-	 * 
+	 * sets which spell they have
+	 * @param spell the spell to set
 	 */
+	public void setSpell(Spell spell) {
+		this.spell = spell;
+	}
+
+	/**
+	 * @return the amount
+	 */
+	public int getAmount() {
+		return amount;
+	}
+
+	/**
+	 * @param amount the amount to set
+	 */
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+
+	/**
+	 * @return the spellEdit
+	 */
+	public boolean isSpellEdit() {
+		return spellEdit;
+	}
+
+	/**
+	 * @param spellEdit the spellEdit to set
+	 */
+	public void setSpellEdit(boolean spellEdit) {
+		this.spellEdit = spellEdit;
+	}
+
+	/**
+	 * @return the conditionModifier
+	 */
+	public String getConditionModifier() {
+		return conditionModifier;
+	}
+
+	/**
+	 * @param conditionModifier the conditionModifier to set
+	 */
+	public void setConditionModifier(String conditionModifier) {
+		this.conditionModifier = conditionModifier;
+	}
+
 	public SpellTrait() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
