@@ -17,61 +17,31 @@ import pathfinder.data.Attributes.SaveAttribute;
  */
 public class SpellLevelTableRow extends LevelTableRow {
 
-	private int[] spellsPerDay;
-	private int[] spellsKnown;
+	private StringProperty[] spellsPerDay;
+	private StringProperty[] spellsKnown;
 
 	/**
 	 * @return the spellsPerDay
 	 */
 	
-	public int[] getSPD() {
+	public StringProperty[] getSPD() {
 		return spellsPerDay;
 	}
 	
-	public void setSPD(int[] spd) {
+	public void setSPD(StringProperty[] spd) {
 		this.spellsPerDay = spd;
 	}
-	
-	public StringProperty[] getSPDProperty() {
-		 StringProperty[] pallet = new StringProperty[spellsPerDay.length];
-		 for (int i = 0; i < spellsPerDay.length; i++) {
-			StringProperty wgbox = new SimpleStringProperty(Integer.toString(spellsPerDay[i]));
-			pallet[i] = wgbox;
-		}
-		return pallet;
-		
-		//new array of wirlygigboxes
-		//for each thing in the int array
-		//put the int in the box through the pipe
-		//put the box in the big box
-		//end for
-		//give the controller the big box
-	}
-	
-	/*
-	@SuppressWarnings("unchecked")
-	public void setSpellsPerDay(int[] spellsPerDay) {
-		this.spellsPerDay = new ObjectProperty[10];
-		for (int i=0;i<spellsPerDay.length;i++) {
-			this.spellsPerDay[i] = new SimpleObjectProperty<Integer>(spellsPerDay[i]);
-		}
-	}
-	*/
 	
 	/**
 	 * @return the spellsKnown
 	 */
 	
-	public int[] getSpellsKnown() {
+	public StringProperty[] getSpellsKnown() {
 		return spellsKnown;
 	}
 	
-	public void setSpellsKnown(int[] spellsKnown) {
+	public void setSpellsKnown(StringProperty[] spellsKnown) {
 		this.spellsKnown = spellsKnown;
-	}
-	
-	public ObjectProperty<Integer> getSpellsKnownProperty() {
-		return new SimpleObjectProperty<Integer>();
 	}
 	
 	/**
@@ -93,7 +63,7 @@ public class SpellLevelTableRow extends LevelTableRow {
 	public SpellLevelTableRow(int levelNum, int[] baseAttackBonus,
 			SaveAttribute fortitudeSave, SaveAttribute reflexSave,
 			SaveAttribute willSave, String[] specialFeatures,
-			int[] spellsPerDay, int[] spellsKnown) {
+			StringProperty[] spellsPerDay, StringProperty[] spellsKnown) {
 		super(levelNum, baseAttackBonus, fortitudeSave, reflexSave, willSave,
 				specialFeatures);
 		this.spellsPerDay = spellsPerDay;
