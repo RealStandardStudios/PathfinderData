@@ -77,11 +77,10 @@ public class SkillEffect extends Effect {
 	 * @param bonusVs What the bonus is Against/to
 	 */
 	public SkillEffect(int val, String name, String skillName,
-			String bonusType, String bonusVs) {
+			String bonusType) {
 		super(val, name);
 		this.skillName = skillName;
 		this.bonusType = bonusType;
-		this.bonusVs = bonusVs;
 	}
 
 }

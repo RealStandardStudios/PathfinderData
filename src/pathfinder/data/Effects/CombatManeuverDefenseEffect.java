@@ -10,6 +10,8 @@ package pathfinder.data.Effects;
  */
 public class CombatManeuverDefenseEffect extends Effect {
 	private String bonusType;
+	
+	private String bonusVs;
 
 	/**
 	 * @return the bonusType
@@ -26,6 +28,20 @@ public class CombatManeuverDefenseEffect extends Effect {
 	}
 
 	/**
+	 * @return the bonusVs
+	 */
+	public String getBonusVs() {
+		return bonusVs;
+	}
+
+	/**
+	 * @param bonusVs the bonusVs to set
+	 */
+	public void setBonusVs(String bonusVs) {
+		this.bonusVs = bonusVs;
+	}
+
+	/**
 	 * Default Constructor for Kryo
 	 */
 	public CombatManeuverDefenseEffect() {
@@ -34,12 +50,14 @@ public class CombatManeuverDefenseEffect extends Effect {
 
 	/**
 	 * @param bonusType The type of bonus for the CMD
+	 * @param bonusVs What the bonus is for/vs
 	 * @param val The Value of the {@link Effect}
 	 * @param Name The Name of the {@link Effect}
 	 */
-	public CombatManeuverDefenseEffect(String bonusType, int val, String name) {
+	public CombatManeuverDefenseEffect(String bonusType, String bonusVs, int val, String name) {
 		super(val, name);
 		this.bonusType = bonusType;
+		this.bonusVs = bonusVs;
 	}
 	
 }
