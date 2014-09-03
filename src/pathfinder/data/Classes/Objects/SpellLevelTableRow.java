@@ -5,6 +5,8 @@ package pathfinder.data.Classes.Objects;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import pathfinder.data.Attributes.SaveAttribute;
 
 /**
@@ -15,21 +17,38 @@ import pathfinder.data.Attributes.SaveAttribute;
  */
 public class SpellLevelTableRow extends LevelTableRow {
 
-	private ObjectProperty<Integer>[] spellsPerDay;
+	private int[] spellsPerDay;
 	private int[] spellsKnown;
 
 	/**
 	 * @return the spellsPerDay
 	 */
-
-	public ObjectProperty<Integer>[] getSpellsPerDay() {
+	
+	public int[] getSPD() {
 		return spellsPerDay;
 	}
 	
-	public void setSpellsPerDay(ObjectProperty<Integer>[] spellsPerDay) {
-		this.spellsPerDay = spellsPerDay;
+	public void setSPD(int[] spd) {
+		this.spellsPerDay = spd;
 	}
 	
+	public StringProperty[] getSPDProperty() {
+		 StringProperty[] pallet = new StringProperty[spellsPerDay.length];
+		 for (int i = 0; i < spellsPerDay.length; i++) {
+			StringProperty wgbox = new SimpleStringProperty(Integer.toString(spellsPerDay[i]));
+			pallet[i] = wgbox;
+		}
+		return pallet;
+		
+		//new array of wirlygigboxes
+		//for each thing in the int array
+		//put the int in the box through the pipe
+		//put the box in the big box
+		//end for
+		//give the controller the big box
+	}
+	
+	/*
 	@SuppressWarnings("unchecked")
 	public void setSpellsPerDay(int[] spellsPerDay) {
 		this.spellsPerDay = new ObjectProperty[10];
@@ -37,6 +56,7 @@ public class SpellLevelTableRow extends LevelTableRow {
 			this.spellsPerDay[i] = new SimpleObjectProperty<Integer>(spellsPerDay[i]);
 		}
 	}
+	*/
 	
 	/**
 	 * @return the spellsKnown
@@ -76,7 +96,7 @@ public class SpellLevelTableRow extends LevelTableRow {
 			int[] spellsPerDay, int[] spellsKnown) {
 		super(levelNum, baseAttackBonus, fortitudeSave, reflexSave, willSave,
 				specialFeatures);
-		this.setSpellsPerDay(spellsPerDay);
+		this.spellsPerDay = spellsPerDay;
 		this.spellsKnown = spellsKnown;
 	}
 }
