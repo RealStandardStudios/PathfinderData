@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import pathfinder.data.Effects.AbilityEffect;
-import pathfinder.data.Items.Weapon;
-import pathfinder.data.Races.Objects.Language;
 import pathfinder.data.Races.Objects.Size;
 import pathfinder.data.Races.Objects.VisionType;
 import pathfinder.data.Races.Traits.Trait;
@@ -81,12 +79,12 @@ public class Race {
 	/**
 	 * An array of the Weapons the race can use
 	 */
-	private Weapon[] weaponFamiliarity;
+	private String[] weaponFamiliarity;
 	
 	/**
 	 * An array of the languages the race can speak
 	 */
-	private Language[] languages;
+	private String[] languages;
 	
 	/**
 	 * indicates whether the race's speed is effected by armor or encumberance
@@ -301,7 +299,7 @@ public class Race {
 	/**
 	 * @return the weaponFamiliarity
 	 */
-	public Weapon[] getWeaponFamiliarity() {
+	public String[] getWeaponFamiliarity() {
 		return weaponFamiliarity;
 	}
 
@@ -310,14 +308,14 @@ public class Race {
 	 * 
 	 * @param weaponFamiliarity
 	 */
-	public void setWeaponFamiliarity(Weapon[] weaponFamiliarity) {
+	public void setWeaponFamiliarity(String[] weaponFamiliarity) {
 		this.weaponFamiliarity = weaponFamiliarity;
 	}
 
 	/**
 	 * @return the languages
 	 */
-	public Language[] getLanguages() {
+	public String[] getLanguages() {
 		return languages;
 	}
 
@@ -326,7 +324,7 @@ public class Race {
 	 * 
 	 * @param languages
 	 */
-	public void setLanguages(Language[] languages) {
+	public void setLanguages(String[] languages) {
 		this.languages = languages;
 	}
 
@@ -363,8 +361,8 @@ public class Race {
 	 * @param speedLoss
 	 * @param visionTypes
 	 */
-	public Race(String name, Size size, int speed, Language[] languages,
-			Weapon[] weapons, ArrayList<AbilityEffect> racialModifiers,
+	public Race(String name, Size size, int speed, String[] languages,
+			String[] weapons, ArrayList<AbilityEffect> racialModifiers,
 			boolean speedLoss, VisionType[] visionTypes) {
 		super();
 		this.name = new SimpleStringProperty(name);
@@ -394,17 +392,17 @@ public class Race {
 	}
 	
 	public String getWeaponsString() {
-		String output = weaponFamiliarity[0].getName();
+		String output = weaponFamiliarity[0];
 		for (int i = 1; i < weaponFamiliarity.length; i++) {
-			output+=", "+weaponFamiliarity[i].getName();
+			output+=", "+weaponFamiliarity[i];
 		}
 		return output;
 	}
 
 	public String getLanguagesString() {
-		String output = languages[0].name();
+		String output = languages[0];
 		for (int i = 1; i < languages.length; i++) {
-			output+=", "+languages[i].name();
+			output+=", "+languages[i];
 		}
 		return output;
 	}

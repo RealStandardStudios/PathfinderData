@@ -1,7 +1,6 @@
 package pathfinder.data.Races.Traits;
 
 import pathfinder.data.Effects.Effect;
-import pathfinder.data.Spells.Spell;
 
 /**
  * A {@link Trait} that gives the user a new spell
@@ -9,7 +8,7 @@ import pathfinder.data.Spells.Spell;
  * @Author Real Standard Studios - Joshua Boyd, Matthew Meehan
  */
 public class SpellTrait extends Trait {
-	private Spell spell;
+	private String spell;
 	
 	// how many times they can cast it per day.
 	private int amount;
@@ -24,7 +23,7 @@ public class SpellTrait extends Trait {
 	 * gets which spell they have
 	 * @return the spell
 	 */
-	public Spell getSpell() {
+	public String getSpell() {
 		return spell;
 	}
 
@@ -32,7 +31,7 @@ public class SpellTrait extends Trait {
 	 * sets which spell they have
 	 * @param spell the spell to set
 	 */
-	public void setSpell(Spell spell) {
+	public void setSpell(String spell) {
 		this.spell = spell;
 	}
 
@@ -89,7 +88,7 @@ public class SpellTrait extends Trait {
 	 * @param amount the number of times the spell can be cast per day
 	 * @param Spell the spell gained
 	 */
-	public SpellTrait(String name, Effect effect, Spell spell, int amount) {
+	public SpellTrait(String name, Effect effect, String spell, int amount) {
 		super(name, effect);
 		this.spell = spell;
 		this.amount = amount;
