@@ -215,7 +215,9 @@ public class Race {
 	}
 	
 	public String getRacialModifierString() {
-		String output = racialModifiers[0].getValue()+" "+racialModifiers[0].getAbilityName().name();
+		String output = racialModifiers[0].getValue()+" ";
+		if(racialModifiers[0].getAbilityName()!=null) output+=racialModifiers[0].getAbilityName().name();
+		else output+="Any";
 		for (int i = 1; i < racialModifiers.length; i++) {
 			output+=", "+racialModifiers[i].getValue()+" "+racialModifiers[i].getAbilityName().name();
 		}

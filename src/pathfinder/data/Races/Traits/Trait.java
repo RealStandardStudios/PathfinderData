@@ -1,5 +1,6 @@
 package pathfinder.data.Races.Traits;
 
+import javafx.beans.property.SimpleStringProperty;
 import pathfinder.data.FeatPrerequisite;
 import pathfinder.data.Effects.Effect;
 
@@ -38,6 +39,7 @@ public abstract class Trait extends FeatPrerequisite {
 	public Trait(String name, Effect effect) {
 		this.Name.set(name);
 		this.effect = effect;
+		this.Description = new SimpleStringProperty("Racial trait for " + effect.getName());
 	}
 	
 	
