@@ -1,4 +1,4 @@
-package pathfinder.data.Races.Objects;
+package pathfinder.data;
 
 /**
  * A class that determines the different levels of alternate vision of races

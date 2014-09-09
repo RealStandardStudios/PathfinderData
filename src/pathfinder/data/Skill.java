@@ -1,4 +1,4 @@
-package pathfinder.data.Skills;
+package pathfinder.data;
 
 import java.util.HashMap;
 

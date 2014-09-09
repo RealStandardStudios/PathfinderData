@@ -1,7 +1,7 @@
 	/**
  * 
  */
-package pathfinder.data.Classes.Objects;
+package pathfinder.data.Classes.Objects.LevelTable;
 
 import javafx.beans.property.StringProperty;
 import pathfinder.data.Attributes.SaveAttribute;

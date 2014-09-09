@@ -1,10 +1,9 @@
-package pathfinder.data.Feats;
+package pathfinder.data;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import pathfinder.data.FeatPrerequisite;
 import pathfinder.data.Effects.Effect;
 import pathfinder.data.Effects.NonValued.MiscEffect;
 

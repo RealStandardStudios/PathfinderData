@@ -1,4 +1,4 @@
-package pathfinder.data.Classes.Objects;
+package pathfinder.data.Classes.Objects.LevelTable;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;

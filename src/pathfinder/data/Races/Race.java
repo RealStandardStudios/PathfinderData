@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import pathfinder.data.Size;
+import pathfinder.data.VisionType;
 import pathfinder.data.Effects.AbilityEffect;
-import pathfinder.data.Races.Objects.Size;
-import pathfinder.data.Races.Objects.VisionType;
 import pathfinder.data.Races.Traits.Trait;
 
 /**

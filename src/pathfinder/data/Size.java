@@ -1,4 +1,4 @@
-package pathfinder.data.Races.Objects;
+package pathfinder.data;
 
 /**
  * An enumerator for the different sizes of creatures

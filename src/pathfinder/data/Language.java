@@ -1,4 +1,4 @@
-package pathfinder.data.Races.Objects;
+package pathfinder.data;
 
 /**
  * An enumerator for all the available languages in Pathfinder

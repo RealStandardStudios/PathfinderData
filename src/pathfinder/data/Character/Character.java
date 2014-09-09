@@ -2,17 +2,17 @@ package pathfinder.data.Character;
 
 import java.util.ArrayList;
 
+import pathfinder.data.Feat;
+import pathfinder.data.Skill;
 import pathfinder.data.Attributes.Ability;
 import pathfinder.data.Attributes.SaveAttribute;
 import pathfinder.data.Classes.Class;
 import pathfinder.data.Classes.Objects.AdvancmentTable;
 import pathfinder.data.Classes.Objects.LevelOption;
 import pathfinder.data.Effects.Effect;
-import pathfinder.data.Feats.Feat;
 import pathfinder.data.Items.Armor;
 import pathfinder.data.Items.Shield;
 import pathfinder.data.Races.Race;
-import pathfinder.data.Skills.Skill;
 
 /**
  * A class that represents the character as a whole, emulates the data from a 
