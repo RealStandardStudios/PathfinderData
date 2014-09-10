@@ -3,6 +3,8 @@
  */
 package pathfinder.data.Classes.Objects.LevelTable;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import pathfinder.data.Attributes.SaveAttribute;
 
 /**
@@ -11,9 +13,53 @@ import pathfinder.data.Attributes.SaveAttribute;
  */
 public class MonkLevelTableRow extends LevelTableRow {
 	int[] flurryOfBlows;
-	String unarmedDamage;
-	int acBonus;
-	int fastMovement;
+	StringProperty unarmedDamage;
+	StringProperty acBonus;
+	StringProperty fastMovement;
+
+	
+	
+	/**
+	 * @return the unarmedDamage
+	 */
+	public StringProperty getUnarmedDamageProperty() {
+		return unarmedDamage;
+	}
+
+	/**
+	 * @param unarmedDamage the unarmedDamage to set
+	 */
+	public void setUnarmedDamage(String unarmedDamage) {
+		this.unarmedDamage.set(unarmedDamage);
+	}
+
+	/**
+	 * @return the acBonus
+	 */
+	public StringProperty getAcBonusProperty() {
+		return acBonus;
+	}
+
+	/**
+	 * @param acBonus the acBonus to set
+	 */
+	public void setAcBonus(String acBonus) {
+		this.acBonus.set(acBonus);
+	}
+
+	/**
+	 * @return the fastMovement
+	 */
+	public StringProperty getFastMovementProperty() {
+		return fastMovement;
+	}
+
+	/**
+	 * @param fastMovement the fastMovement to set
+	 */
+	public void setFastMovement(String fastMovement) {
+		this.fastMovement.set(fastMovement);
+	}
 
 	/**
 	 * 
@@ -33,13 +79,21 @@ public class MonkLevelTableRow extends LevelTableRow {
 	public MonkLevelTableRow(int levelNum, int[] baseAttackBonus,
 			SaveAttribute fortitudeSave, SaveAttribute reflexSave,
 			SaveAttribute willSave, String[] specialFeatures, 
-			int[] flurryOfBlows, String unarmedDamage, int acBonus, int fastMovement) {
+			int[] flurryOfBlows, String unarmedDamage, String acBonus, String fastMovement) {
 		super(levelNum, baseAttackBonus, fortitudeSave, reflexSave, willSave,
 				specialFeatures);
-		this.acBonus = acBonus;
-		this.fastMovement = fastMovement;
+		this.acBonus = new SimpleStringProperty(acBonus);
+		this.fastMovement = new SimpleStringProperty(fastMovement);
 		this.flurryOfBlows = flurryOfBlows;
-		this.fastMovement = fastMovement;
+		this.unarmedDamage = new SimpleStringProperty(unarmedDamage);
+	}
+
+	public StringProperty getFlurryOfBlowsString() {
+		String output = Integer.toString(flurryOfBlows[0]);
+		for (int i = 1; i < flurryOfBlows.length; i++) {
+			output += "/" + Integer.toString(flurryOfBlows[i]);
+		}
+		return new SimpleStringProperty(output);
 	}
 
 }
