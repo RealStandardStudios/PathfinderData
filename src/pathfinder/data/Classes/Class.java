@@ -1,7 +1,10 @@
 package pathfinder.data.Classes;
 
+import java.util.ArrayList;
+
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import pathfinder.data.DiceType;
 import pathfinder.data.Character.Alignment;
@@ -64,7 +67,7 @@ public abstract class Class {
 	 * A list of the Features the class has, Features is a generic type, I might
 	 * remove this later
 	 */
-	private Feature[] features;
+	private ObservableList<Feature> features;
 
 	private String[] weaponProficiencies;
 
@@ -190,7 +193,7 @@ public abstract class Class {
 	/**
 	 * @return the features
 	 */
-	public Feature[] getFeatures() {
+	public ObservableList<Feature> getFeatures() {
 		return features;
 	}
 
@@ -257,7 +260,7 @@ public abstract class Class {
 	public Class(String name, String description, String role, int level,
 			Alignment[] requireAlignments, DiceType hitDice,
 			int startingWealthD6, int skillRanksPerLevel, String[] classSkills,
-			Feature[] features, String[] weaponProficiencies,
+			ArrayList<Feature> features, String[] weaponProficiencies,
 			String[] armorProficiencies) {
 		this.name = new SimpleStringProperty(name);
 		this.description = description;
@@ -268,7 +271,7 @@ public abstract class Class {
 		this.startingWealthD6 = startingWealthD6;
 		this.skillRanksPerLevel = skillRanksPerLevel;
 		this.classSkills = classSkills;
-		this.features = features;
+		this.features = FXCollections.observableArrayList(features);
 		this.weaponProficiencies = weaponProficiencies;
 		this.armorProficiencies = armorProficiencies;
 	}

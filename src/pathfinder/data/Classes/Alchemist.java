@@ -1,5 +1,6 @@
 package pathfinder.data.Classes;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import javafx.collections.FXCollections;
@@ -66,7 +67,7 @@ public class Alchemist extends Class {
 	public Alchemist(String name, String description, String role, int level,
 			Alignment[] requireAlignments, DiceType hitDice,
 			int startingWealthD6, int skillRanksPerLevel, String[] classSkills,
-			Feature[] features, String[] weaponProficiencies,
+			ArrayList<Feature> features, String[] weaponProficiencies,
 			String[] armorProficiencies, HashMap<String,Spell> spells,SpellLevelTableRow[] levelTable) {
 		super(name, description, role, level, requireAlignments, hitDice,
 				startingWealthD6, skillRanksPerLevel, classSkills, features,

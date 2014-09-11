@@ -1,5 +1,7 @@
 package pathfinder.data.Classes;
 
+import java.util.ArrayList;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import pathfinder.data.DiceType;
@@ -100,7 +102,7 @@ public class Monk extends Class {
 	public Monk(String name, String description, String role, int level,
 			Alignment[] requireAlignments, DiceType hitDice,
 			int startingWealthD6, int skillRanksPerLevel, String[] classSkills,
-			Feature[] features, String[] weaponProficiencies,
+			ArrayList<Feature> features, String[] weaponProficiencies,
 			String[] armorProficiencies, LevelTableRow[] levelTable,
 			int[] flurryOfBlowsBAB, int[] unarmedDamageMultiplier,
 			DiceType[] unarmedDamage, int[] acBonus, int[] fastMovement) {

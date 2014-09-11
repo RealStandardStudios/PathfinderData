@@ -1,5 +1,7 @@
 package pathfinder.data.Classes;
 
+import java.util.ArrayList;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import pathfinder.data.DiceType;
@@ -19,12 +21,12 @@ public class Rogue extends Class {
 	public ObservableList<LevelTableRow> getLeveltableRow() {
 		return this.levelTable;
 	}
-	
+
 	@Override
 	public void SetLevelTable(ObservableList<LevelTableRow> levelTable) {
 		this.levelTable = levelTable;
 	}
-	
+
 	/**
 	 * an empty constructor for Kryo
 	 */
@@ -49,11 +51,11 @@ public class Rogue extends Class {
 	public Rogue(String name, String description, String role, int level,
 			Alignment[] requireAlignments, DiceType hitDice,
 			int startingWealthD6, int skillRanksPerLevel, String[] classSkills,
-			Feature[] features, String[] weaponProficiencies,
+			ArrayList<Feature> features, String[] weaponProficiencies,
 			String[] armorProficiencies, LevelTableRow[] levelTable) {
 		super(name, description, role, level, requireAlignments, hitDice,
 				startingWealthD6, skillRanksPerLevel, classSkills, features,
 				weaponProficiencies, armorProficiencies);
 		this.levelTable = FXCollections.observableArrayList(levelTable);
-	}	
+	}
 }

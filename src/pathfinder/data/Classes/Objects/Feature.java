@@ -9,7 +9,7 @@ import pathfinder.data.Effects.Effect;
  */
 public class Feature {
 	private String name;
-
+	private String type;
 	private String description;
 
 	private Effect effect;
@@ -43,6 +43,20 @@ public class Feature {
 	}
 
 	/**
+	 * @return the type
+	 */
+	public String getType() {
+		return type;
+	}
+
+	/**
+	 * @param type the type to set
+	 */
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	/**
 	 * an empty constructor for Kryo
 	 */
 	public Feature() {
@@ -52,8 +66,9 @@ public class Feature {
 	 * @param Name
 	 * @param description
 	 */
-	public Feature(String name, String description) {
+	public Feature(String name, String type, String description) {
 		this.name = name;
+		this.type = type;
 		this.description = description;
 	}
 }
