@@ -16,7 +16,7 @@ public class ActionToSwiftEffect extends ActionEffect {
 	 */
 	public ActionToSwiftEffect() {
 		super();
-		this.NameProperty().set("Action To Swift Effect");
+		this.getNameProperty().set("Action To Swift Effect");
 	}
 
 	/**

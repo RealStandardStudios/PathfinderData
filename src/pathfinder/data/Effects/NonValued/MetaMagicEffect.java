@@ -44,7 +44,7 @@ public class MetaMagicEffect extends Effect {
 	 */
 	public MetaMagicEffect() {
 		super();
-		this.NameProperty().set("Meta Magic Effect");
+		this.getNameProperty().set("Meta Magic Effect");
 	}
 
 	/**

@@ -16,7 +16,7 @@ public class ActionToMoveEffect extends ActionEffect {
 	 */
 	public ActionToMoveEffect() {
 		super();
-		this.NameProperty().set("Action to Move Effect");
+		this.getNameProperty().set("Action to Move Effect");
 	}
 
 	/**

@@ -13,7 +13,7 @@ public class ItemCreationEffect extends Effect {
 	 */
 	public ItemCreationEffect() {
 		super();
-		this.NameProperty().set("Item Creation Effect");
+		this.getNameProperty().set("Item Creation Effect");
 	}
 
 	/**

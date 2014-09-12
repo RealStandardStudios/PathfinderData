@@ -31,7 +31,7 @@ public class ArmorClassEffect extends Effect {
 	 */
 	public ArmorClassEffect() {
 		super();
-		this.NameProperty().set("Armor Class Effect");
+		this.getNameProperty().set("Armor Class Effect");
 	}
 
 	/**

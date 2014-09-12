@@ -32,7 +32,7 @@ public class OnCritEffect extends Effect {
 	 */
 	public OnCritEffect() {
 		super();
-		this.NameProperty().set("On Crit Effect");
+		this.getNameProperty().set("On Crit Effect");
 	}
 
 	/**

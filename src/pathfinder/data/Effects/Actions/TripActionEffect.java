@@ -30,7 +30,7 @@ public class TripActionEffect extends ActionEffect{
 	 */
 	public TripActionEffect() {
 		super();
-		this.NameProperty().set("Trip Action Effect");
+		this.getNameProperty().set("Trip Action Effect");
 	}
 	
 	/**

@@ -15,7 +15,7 @@ public class CombatManeuverBonusEffect extends Effect {
 	 */
 	public CombatManeuverBonusEffect() {
 		super();
-		this.NameProperty().set("Combat Maneuver Bonus Effect");
+		this.getNameProperty().set("Combat Maneuver Bonus Effect");
 	}
 
 	/**

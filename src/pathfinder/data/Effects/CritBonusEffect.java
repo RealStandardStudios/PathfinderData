@@ -15,7 +15,7 @@ public class CritBonusEffect extends Effect {
 	 */
 	public CritBonusEffect() {
 		super();
-		this.NameProperty().set("Crit Bonus Effect");
+		this.getNameProperty().set("Crit Bonus Effect");
 	}
 
 	/**

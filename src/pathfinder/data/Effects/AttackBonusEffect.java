@@ -42,7 +42,7 @@ public class AttackBonusEffect extends Effect{
 	 */
 	public AttackBonusEffect() { 
 		super();
-		this.NameProperty().set("Attack Bonus Effect");
+		this.getNameProperty().set("Attack Bonus Effect");
 	}
 	
 	/**

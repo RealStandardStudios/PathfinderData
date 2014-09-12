@@ -15,7 +15,7 @@ public abstract class Effect {
 	/**
 	 * @return a StringProperty
 	 */
-	public StringProperty NameProperty() {
+	public StringProperty getNameProperty() {
 		return name;
 	}
 

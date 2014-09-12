@@ -11,7 +11,7 @@ public class DamageEffect extends Effect {
 	 */
 	public DamageEffect() {
 		super();
-		this.NameProperty().set("Damage Effect");
+		this.getNameProperty().set("Damage Effect");
 	}
 
 	/**

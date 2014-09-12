@@ -1,5 +1,8 @@
 package pathfinder.data.Classes.Objects;
 
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import pathfinder.data.Effects.Effect;
 
 /**
@@ -8,16 +11,16 @@ import pathfinder.data.Effects.Effect;
  * @author Matthew Meehan
  */
 public class Feature {
-	private String name;
-	private String type;
-	private String description;
+	private StringProperty name;
+	private StringProperty type;
+	private StringProperty description;
 
-	private Effect effect;
+	private ObjectProperty<Effect> effect;
 
 	/**
 	 * @return an effect
 	 */
-	public Effect getEffect() {
+	public ObjectProperty<Effect> getEffectProperty() {
 		return effect;
 	}
 
@@ -25,27 +28,31 @@ public class Feature {
 	 * @param effect
 	 */
 	public void setEffect(Effect effect) {
-		this.effect = effect;
+		this.effect.set(effect);
 	}
 
 	/**
 	 * @return the description
 	 */
-	public String getDescription() {
+	public StringProperty getDescriptionProperty() {
 		return description;
+	}
+	
+	public void setDescription(String description) {
+		this.description.set(description);
 	}
 
 	/**
 	 * @return the Name
 	 */
-	public String getName() {
+	public StringProperty getNameProperty() {
 		return name;
 	}
 
 	/**
 	 * @return the type
 	 */
-	public String getType() {
+	public StringProperty getTypeProperty() {
 		return type;
 	}
 
@@ -53,7 +60,7 @@ public class Feature {
 	 * @param type the type to set
 	 */
 	public void setType(String type) {
-		this.type = type;
+		this.type.set(type);
 	}
 
 	/**
@@ -67,8 +74,8 @@ public class Feature {
 	 * @param description
 	 */
 	public Feature(String name, String type, String description) {
-		this.name = name;
-		this.type = type;
-		this.description = description;
+		this.name = new SimpleStringProperty(name);
+		this.type = new SimpleStringProperty(type);
+		this.description = new SimpleStringProperty(description);
 	}
 }

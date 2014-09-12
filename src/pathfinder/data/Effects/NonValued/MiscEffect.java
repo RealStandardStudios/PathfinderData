@@ -32,7 +32,7 @@ public class MiscEffect extends Effect {
 	 */
 	public MiscEffect() {
 		super();
-		this.NameProperty().set("Misc Effect");
+		this.getNameProperty().set("Misc Effect");
 		this.effect = "";
 	}
 

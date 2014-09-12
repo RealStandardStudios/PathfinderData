@@ -11,7 +11,7 @@ public class DamageMultiplierEffect extends Effect {
 	 */
 	public DamageMultiplierEffect() {
 		super();
-		this.NameProperty().set("Damage Multipluer Effect");
+		this.getNameProperty().set("Damage Multipluer Effect");
 	}
 
 	/**

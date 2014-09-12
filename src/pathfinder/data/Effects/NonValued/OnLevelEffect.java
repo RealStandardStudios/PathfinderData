@@ -29,7 +29,7 @@ public class OnLevelEffect extends Effect {
 
 	public OnLevelEffect() {
 		super();
-		this.NameProperty().set("On Level effect");
+		this.getNameProperty().set("On Level effect");
 	}
 
 	/**

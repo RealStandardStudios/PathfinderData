@@ -15,7 +15,7 @@ public class InitiativeEffect extends Effect {
 	 */
 	public InitiativeEffect() {
 		super();
-		this.NameProperty().set("Initiative Effect");
+		this.getNameProperty().set("Initiative Effect");
 	}
 
 	/**
