@@ -41,7 +41,7 @@ public class Bard extends Class {
 	}
 	
 	@Override
-	public void SetLevelTable(ObservableList<LevelTableRow> levelTable) {
+	public void setLevelTable(ObservableList<LevelTableRow> levelTable) {
 		this.levelTable = levelTable;
 	}	
 	/**

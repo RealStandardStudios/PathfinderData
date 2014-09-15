@@ -235,7 +235,84 @@ public abstract class Class {
 	
 	public abstract ObservableList<LevelTableRow> getLeveltableRow();
 	
-	public abstract void SetLevelTable(ObservableList<LevelTableRow> levelTable);
+	public abstract void setLevelTable(ObservableList<LevelTableRow> levelTable);
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name.set(name);
+	}
+
+	/**
+	 * @param description the description to set
+	 */
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	/**
+	 * @param role the role to set
+	 */
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	/**
+	 * @param requireAlignments the requireAlignments to set
+	 */
+	public void setRequireAlignments(Alignment[] requireAlignments) {
+		this.requireAlignments = requireAlignments;
+	}
+
+	/**
+	 * @param hitDice the hitDice to set
+	 */
+	public void setHitDice(DiceType hitDice) {
+		this.hitDice = hitDice;
+	}
+
+	/**
+	 * @param startingWealthD6 the startingWealthD6 to set
+	 */
+	public void setStartingWealthD6(int startingWealthD6) {
+		this.startingWealthD6 = startingWealthD6;
+	}
+
+	/**
+	 * @param skillRanksPerLevel the skillRanksPerLevel to set
+	 */
+	public void setSkillRanksPerLevel(int skillRanksPerLevel) {
+		this.skillRanksPerLevel = skillRanksPerLevel;
+	}
+
+	/**
+	 * @param classSkills the classSkills to set
+	 */
+	public void setClassSkills(String[] classSkills) {
+		this.classSkills = classSkills;
+	}
+
+	/**
+	 * @param features the features to set
+	 */
+	public void setFeatures(ObservableList<Feature> features) {
+		this.features = features;
+	}
+
+	/**
+	 * @param weaponProficiencies the weaponProficiencies to set
+	 */
+	public void setWeaponProficiencies(String[] weaponProficiencies) {
+		this.weaponProficiencies = weaponProficiencies;
+	}
+
+	/**
+	 * @param armorProficiencies the armorProficiencies to set
+	 */
+	public void setArmorProficiencies(String[] armorProficiencies) {
+		this.armorProficiencies = armorProficiencies;
+	}
 
 	/**
 	 * an empty constructor for Kryo
