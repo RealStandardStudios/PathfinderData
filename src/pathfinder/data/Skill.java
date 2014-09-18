@@ -13,7 +13,7 @@ public class Skill {
 	private int rank;
 	private AbilityName attrToUse;
 	private String name;
-	private boolean trained = false;
+	private boolean classSkill = false;
 	
 	/**
 	 * this table is for when you get a bonus vs a certain event e.g- +2
@@ -48,8 +48,8 @@ public class Skill {
 	/**
 	 * @return the trained
 	 */
-	public boolean isTrained() {
-		return trained;
+	public boolean isClassSkill() {
+		return classSkill;
 	}
 
 	/**
@@ -69,15 +69,15 @@ public class Skill {
 	 * @param rank
 	 * @param attrToUse
 	 * @param Name
-	 * @param trained
+	 * @param classSkill
 	 * @param situationalMod
 	 */
-	public Skill(int rank, AbilityName attrToUse, String name, boolean trained,
+	public Skill(int rank, AbilityName attrToUse, String name, boolean classSkill,
 			HashMap<String, Integer> situationalMod) {
 		this.rank = rank;
 		this.attrToUse = attrToUse;
 		this.name = name;
-		this.trained = trained;
+		this.classSkill = classSkill;
 		this.situationalMod = situationalMod;
 	}
 }

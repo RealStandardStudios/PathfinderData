@@ -3,6 +3,8 @@
  */
 package pathfinder.data.Effects;
 
+import pathfinder.data.Skill;
+
 /**
  * An {@link Effect} that adds a bonus to a {@link Skill}
  * 

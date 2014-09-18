@@ -1,6 +1,5 @@
 package pathfinder.data.Items;
 
-import pathfinder.data.Items.Armor;
 
 /**
  * An {@link Armor} that is considered magical.

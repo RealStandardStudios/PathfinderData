@@ -34,8 +34,28 @@ public class Ability {
 	 * @return an int that represents an ability modifier
 	 */
 	public int getModifier() {
-		return (this.value - 10) / 2;
+		if(((value -10 )/ 2.0) < 0.0)
+		{
+			return (int) (((value -10 )/ 2.0) - 0.5); 
+		}
+		else
+		{
+			return (this.value - 10) / 2;
+		}
+		
 	}
+	
+	public void increaseValue()
+	{
+		value++;
+	}
+	//called from getAbility to increase the ability by 1
+	
+	public void decreaseValue()
+	{
+		value--;
+	}
+	//called from getAbility to decrease the ability by 1
 
 	/**
 	 * Base constructor for Kryo

@@ -1,6 +1,5 @@
 package pathfinder.data.Items;
 
-import pathfinder.data.Items.Weapon;
 
 /**
  * An {@link Weapon} that is considered magical.
