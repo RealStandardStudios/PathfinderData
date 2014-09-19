@@ -1,6 +1,7 @@
 package pathfinder.data.Classes.Objects;
 
 import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import pathfinder.data.Effects.Effect;
@@ -77,5 +78,6 @@ public class Feature {
 		this.name = new SimpleStringProperty(name);
 		this.type = new SimpleStringProperty(type);
 		this.description = new SimpleStringProperty(description);
+		this.effect = new SimpleObjectProperty<>();
 	}
 }
