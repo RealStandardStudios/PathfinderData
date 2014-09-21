@@ -13,9 +13,10 @@ import javafx.beans.property.StringProperty;
  */
 public abstract class Item {
 	private StringProperty name;
-	private String cost;
-	private String weight;
+	private StringProperty cost;
+	private StringProperty weight;
 	
+	//name
 	public StringProperty getNameProperty() {
 		return this.name;
 	}
@@ -34,32 +35,42 @@ public abstract class Item {
 		this.name.set(name);
 	}
 	
+	//cost
+	public StringProperty getCostProperty() {
+		return this.cost;
+	}
+	
 	/**
 	 * @returns a String
 	 */
 	public String getCost() {
-		return cost;
+		return cost.getValue();
 	}
 	
 	/**
 	 * @param cost
 	 */
 	public void setCost(String cost) {
-		this.cost = cost;
+		this.cost.set(cost);
+	}
+	
+	//weight
+	public StringProperty getWeightProperty() {
+		return this.weight;
 	}
 	
 	/**
 	 * @returns a String
 	 */
 	public String getWeight() {
-		return weight;
+		return weight.getValue();
 	}
 	
 	/**
 	 * @param weight
 	 */
 	public void setWeight(String weight) {
-		this.weight = weight;
+		this.weight.set(weight);
 	}
 	
 	/**
@@ -77,8 +88,8 @@ public abstract class Item {
 	 */
 	public Item(String name, String cost, String weight) {
 		this.name = new SimpleStringProperty(name);
-		this.cost = cost;
-		this.weight = weight;
+		this.cost = new SimpleStringProperty(cost);
+		this.weight = new SimpleStringProperty(weight);
 	}
 	
 }
