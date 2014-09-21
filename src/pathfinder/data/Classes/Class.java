@@ -352,5 +352,7 @@ public abstract class Class {
 		this.weaponProficiencies = weaponProficiencies;
 		this.armorProficiencies = armorProficiencies;
 	}
-
+	public String toString() {
+		return this.name.get();
+	}
 }
