@@ -105,8 +105,8 @@ public class MagicArmor extends Armor
 	public MagicArmor(Armor baseArmor, String name, String slot,
 			String strength, String caster, String price, String weight, String description, String construction)
 	{
-		super(name, baseArmor.getArmorType(), price, baseArmor.getArmorBonus(), baseArmor.getMaxDexBonus(),
-				baseArmor.getArmorCheckPenalty(), baseArmor.getArcaneSpellFailiure(), baseArmor.getSpeed30feet(), baseArmor.getSpeed20feet(), weight);
+		super(name, baseArmor.ArmorType.get(), price, baseArmor.ArmorBonus.get(), baseArmor.MaxDexBonus.get(),
+				baseArmor.ArmorCheckPenalty.get(), baseArmor.ArcaneSpellFailure.get(), baseArmor.Speed30feet.get(), baseArmor.Speed20feet.get(), weight);
 		this.setSlot(slot);
 		this.setAuraStrength(strength);
 		this.setCasterLevel(caster);
