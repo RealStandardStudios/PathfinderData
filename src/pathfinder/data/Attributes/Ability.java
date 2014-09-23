@@ -1,5 +1,8 @@
 package pathfinder.data.Attributes;
 
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
+
 /**
  * Base class used for each of the 6 Ability Scores
  * 
@@ -33,14 +36,14 @@ public class Ability {
 	/**
 	 * @return an int that represents an ability modifier
 	 */
-	public int getModifier() {
+	public ObjectProperty<Integer> getModifier() {
 		if(((value -10 )/ 2.0) < 0.0)
 		{
-			return (int) (((value -10 )/ 2.0) - 0.5); 
+			return new SimpleObjectProperty<Integer>((int) (((value -10 )/ 2.0) - 0.5)); 
 		}
 		else
 		{
-			return (this.value - 10) / 2;
+			return new SimpleObjectProperty<Integer>((this.value - 10) / 2);
 		}
 		
 	}

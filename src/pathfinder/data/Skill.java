@@ -2,7 +2,11 @@ package pathfinder.data;
 
 import java.util.HashMap;
 
-import pathfinder.data.Attributes.AbilityName;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import pathfinder.data.Attributes.Ability;
 
 /**
  * The skill class
@@ -10,9 +14,9 @@ import pathfinder.data.Attributes.AbilityName;
  * @Author Real Standard Studios - Matthew Meehan
  */
 public class Skill {
-	private int rank;
-	private AbilityName attrToUse;
-	private String name;
+	public ObjectProperty<Integer> Rank;
+	public ObjectProperty<Ability> AttrToUse;
+	public StringProperty Name;
 	private boolean classSkill = false;
 	
 	/**
@@ -23,27 +27,6 @@ public class Skill {
 	 * the player if that criteria applies.
 	 */
 	private HashMap<String, Integer> situationalMod = new HashMap<String, Integer>();
-
-	/**
-	 * @return the rank
-	 */
-	public int getRank() {
-		return rank;
-	}
-
-	/**
-	 * @return the attrToUse
-	 */
-	public AbilityName getAttrToUse() {
-		return attrToUse;
-	}
-
-	/**
-	 * @return the Name
-	 */
-	public String getName() {
-		return name;
-	}
 
 	/**
 	 * @return the trained
@@ -66,17 +49,17 @@ public class Skill {
 	}
 
 	/**
-	 * @param rank
-	 * @param attrToUse
+	 * @param Rank
+	 * @param AttrToUse
 	 * @param Name
 	 * @param classSkill
 	 * @param situationalMod
 	 */
-	public Skill(int rank, AbilityName attrToUse, String name, boolean classSkill,
+	public Skill(int rank, Ability attrToUse, String name, boolean classSkill,
 			HashMap<String, Integer> situationalMod) {
-		this.rank = rank;
-		this.attrToUse = attrToUse;
-		this.name = name;
+		this.Rank = new SimpleObjectProperty<Integer>(rank);
+		this.AttrToUse = new SimpleObjectProperty<Ability>(attrToUse);
+		this.Name = new SimpleStringProperty(name);
 		this.classSkill = classSkill;
 		this.situationalMod = situationalMod;
 	}

@@ -62,7 +62,7 @@ public class SaveAttribute {
 	 * in total
 	 */
 	public void setTotal() {
-		this.total = this.abilityScore.getModifier() + this.magicMod
+		this.total = this.abilityScore.getModifier().get() + this.magicMod
 				+ this.miscMod;
 	}
 

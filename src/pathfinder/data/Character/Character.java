@@ -361,7 +361,7 @@ public class Character {
 				armorBonus += a.getArmorBonusInt();
 		}
 		this.armorClass = 10 + armorBonus + shieldBonus
-				+ this.getDexterity().getModifier()
+				+ this.getDexterity().getModifier().get()
 				+ this.race.getSize().getSizeModifier() + deflectionMod
 				+ miscMod;
 	}
