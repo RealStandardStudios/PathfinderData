@@ -45,17 +45,21 @@ public class Ability {
 		
 	}
 	
+	/**
+	 * called from getAbility to increase the ability by 1
+	 */
 	public void increaseValue()
 	{
 		value++;
 	}
-	//called from getAbility to increase the ability by 1
 	
+	/**
+	 * called from getAbility to decrease the ability by 1
+	 */
 	public void decreaseValue()
 	{
 		value--;
 	}
-	//called from getAbility to decrease the ability by 1
 
 	/**
 	 * Base constructor for Kryo

@@ -233,8 +233,14 @@ public abstract class Class {
 		return s;
 	}
 	
+	/**
+	 * An observable list for class levels
+	 */
 	public abstract ObservableList<LevelTableRow> getLeveltableRow();
 	
+	/**
+	 * sets the class level table
+	 */
 	public abstract void setLevelTable(ObservableList<LevelTableRow> levelTable);
 
 	/**

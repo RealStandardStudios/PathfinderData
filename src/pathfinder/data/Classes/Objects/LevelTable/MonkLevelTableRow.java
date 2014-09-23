@@ -17,8 +17,6 @@ public class MonkLevelTableRow extends LevelTableRow {
 	StringProperty acBonus;
 	StringProperty fastMovement;
 
-	
-	
 	/**
 	 * @return the unarmedDamage
 	 */
@@ -62,7 +60,7 @@ public class MonkLevelTableRow extends LevelTableRow {
 	}
 
 	/**
-	 * 
+	 * empty constructor for Kryo
 	 */
 	public MonkLevelTableRow() {
 		// TODO Auto-generated constructor stub

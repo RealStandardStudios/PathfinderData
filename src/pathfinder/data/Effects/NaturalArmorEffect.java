@@ -17,6 +17,10 @@ public class NaturalArmorEffect extends Effect {
 		super();
 	}
 
+	/**
+	 * @param val The Value of the {@link Effect}
+	 * @param name The Name of the {@link Effect}
+	 */
 	public NaturalArmorEffect(int val, String name) {
 		super(val, name);
 	}

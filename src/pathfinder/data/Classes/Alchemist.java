@@ -15,7 +15,7 @@ import pathfinder.data.Spells.Spell;
 /**
  * The Alchemist Class http://paizo.com/pathfinderRPG/prd/advanced/baseClasses/alchemist.html
  * 
- * @author Real Standard Studios - Ian Rasen
+ * @author Real Standard Studios - Ian Larsen
  */
 public class Alchemist extends Class {
 
@@ -34,11 +34,17 @@ public class Alchemist extends Class {
 		return spells;
 	}
 
+	/**
+	 * An observable list for class levels
+	 */
 	@Override
 	public ObservableList<LevelTableRow> getLeveltableRow() {
 		return this.levelTable;
 	}
 	
+	/**
+	 * sets the class level table
+	 */
 	@Override
 	public void setLevelTable(ObservableList<LevelTableRow> levelTable) {
 		this.levelTable = levelTable;

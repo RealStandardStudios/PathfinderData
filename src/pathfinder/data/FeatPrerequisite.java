@@ -4,7 +4,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
- * Filler class incase there is no physical class that can be a prerequisite
+ * Filler class in case there is no physical class that can be a prerequisite
  * 
  * @author Real Standard Studios - Matthew Meehan
  */

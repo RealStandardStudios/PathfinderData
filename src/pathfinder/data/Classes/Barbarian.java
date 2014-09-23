@@ -17,11 +17,17 @@ import pathfinder.data.Classes.Objects.LevelTable.LevelTableRow;
 public class Barbarian extends Class {
 	private ObservableList<LevelTableRow> levelTable;
 
+	/**
+	 * An observable list for class levels
+	 */
 	@Override
 	public ObservableList<LevelTableRow> getLeveltableRow() {
 		return this.levelTable;
 	}
 	
+	/**
+	 * sets the class level table
+	 */
 	@Override
 	public void setLevelTable(ObservableList<LevelTableRow> levelTable) {
 		this.levelTable = levelTable;

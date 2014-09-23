@@ -9,7 +9,7 @@ import pathfinder.data.Effects.Effect;
 /**
  * The generic class for Features
  * 
- * @author Matthew Meehan
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Feature {
 	private StringProperty name;

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package pathfinder.data.Races.Traits;
 
 import pathfinder.data.Effects.Effect;

@@ -41,7 +41,7 @@ public class Character {
 
 	/**
 	 * get and set for this will need to take into account all of the 
-         * relevant bonus
+     * relevant bonus
 	 */
 	private int armorClass;
 	
