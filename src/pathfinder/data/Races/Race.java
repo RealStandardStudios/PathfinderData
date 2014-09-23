@@ -428,4 +428,8 @@ public class Race {
 		}
 		return output;
 	}
+	
+	public String toString() {
+		return this.name.get();
+	}
 }
