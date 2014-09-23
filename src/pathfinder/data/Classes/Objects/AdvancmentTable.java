@@ -9,7 +9,7 @@ package pathfinder.data.Classes.Objects;
 public class AdvancmentTable {
 	public static LevelOption IsLeveled(int expValue, int track) {
 
-		// set to level one by default incase the track is wrong some how
+		// set to level one by default in case the track is wrong some how
 		LevelOption result = LevelOption.LevelOne;
 		// Slow track
 		if (track == 0) {

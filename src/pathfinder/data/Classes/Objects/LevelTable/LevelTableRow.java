@@ -21,10 +21,20 @@ public class LevelTableRow {
 	//private Feature[] specialFeatures;
 	private String[] special;
 
+	/**
+	 * turns an int into a property fro displaying
+	 * 
+	 * @returns an ObjectProperty
+	 */
 	public ObjectProperty<Integer> getLevelNumProperty() {
 		return this.levelNum;
 	}
 	
+	/**
+	 * sets the Level Number
+	 * 
+	 * @param levelNum
+	 */
 	public void setLevelNum(int levelNum) {
 		this.levelNum.set(levelNum);
 	}

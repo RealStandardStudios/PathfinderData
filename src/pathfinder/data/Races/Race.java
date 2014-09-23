@@ -377,6 +377,11 @@ public class Race {
 		this.visionTypes = visionTypes;
 	}
 
+	/**
+	 * Gets all the vision types of a race.
+	 * 
+	 * @returns a String
+	 */
 	public String getVisionString() {
 		String output = visionTypes[0].getName();
 		for (int i = 1; i < visionTypes.length; i++) {
@@ -385,6 +390,11 @@ public class Race {
 		return output;
 	}
 
+	/**
+	 * Gets all the racial Traits
+	 * 
+	 * @returns a String
+	 */
 	public String getTraitsString() {
 		String output = racialTraits.get(0).Name.get();
 		for (int i = 1; i < racialTraits.size(); i++) {
@@ -393,6 +403,11 @@ public class Race {
 		return output;
 	}
 	
+	/**
+	 * Gets all the Weapon Familiarities of a Race
+	 * 
+	 * @returns a String
+	 */
 	public String getWeaponsString() {
 		String output = weaponFamiliarity[0];
 		for (int i = 1; i < weaponFamiliarity.length; i++) {
@@ -401,6 +416,11 @@ public class Race {
 		return output;
 	}
 
+	/**
+	 * Gets all the Languages available to a race
+	 * 
+	 * @returns a String
+	 */
 	public String getLanguagesString() {
 		String output = languages[0];
 		for (int i = 1; i < languages.length; i++) {

@@ -1,6 +1,3 @@
-	/**
- * 
- */
 package pathfinder.data.Classes.Objects.LevelTable;
 
 import javafx.beans.property.StringProperty;
@@ -18,25 +15,37 @@ public class SpellLevelTableRow extends LevelTableRow {
 	private StringProperty[] spellsKnown;
 
 	/**
-	 * @return the spellsPerDay
+	 * gets Spells Per Day
+	 * 
+	 * @returns a StringProperty array
 	 */
-	
 	public StringProperty[] getSPD() {
 		return spellsPerDay;
 	}
 	
+	/**
+	 * sets Spells Per Day
+	 * 
+	 * @param spd
+	 */
 	public void setSPD(StringProperty[] spd) {
 		this.spellsPerDay = spd;
 	}
 	
 	/**
-	 * @return the spellsKnown
+	 * gets Spells Known
+	 * 
+	 * @returns a StringProperty array
 	 */
-	
 	public StringProperty[] getSpellsKnown() {
 		return spellsKnown;
 	}
 	
+	/**
+	 * sets Spells Known
+	 * 
+	 * @param spellsKnown
+	 */
 	public void setSpellsKnown(StringProperty[] spellsKnown) {
 		this.spellsKnown = spellsKnown;
 	}

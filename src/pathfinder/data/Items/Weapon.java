@@ -14,7 +14,7 @@ public class Weapon extends Item{
 	public StringProperty DmgM;
 	public StringProperty Critical;
 	public StringProperty Range;
-	public StringProperty WeaponDmgType; //this revers to what damage weaponDmgType is is E.G Bashing, Percing or Slashing
+	public StringProperty WeaponDmgType; //this reverts to what damage weaponDmgType is is E.G Bashing, Percing or Slashing
 	public StringProperty Special;
 	public StringProperty WeaponType;
 	

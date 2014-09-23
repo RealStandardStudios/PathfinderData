@@ -77,6 +77,9 @@ public class SpellTrait extends Trait {
 		this.conditionModifier = conditionModifier;
 	}
 
+	/**
+	 * A constructor for Kryo
+	 */
 	public SpellTrait() {
 		super();
 	}

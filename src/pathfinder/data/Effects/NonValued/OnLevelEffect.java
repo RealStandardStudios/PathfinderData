@@ -27,6 +27,9 @@ public class OnLevelEffect extends Effect {
 		this.effect = effect;
 	}
 
+	/**
+	 * Constructor for Kryo
+	 */
 	public OnLevelEffect() {
 		super();
 		this.getNameProperty().set("On Level effect");

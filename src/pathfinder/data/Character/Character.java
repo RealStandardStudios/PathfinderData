@@ -40,8 +40,8 @@ public class Character {
 	private ArrayList<Effect> effects;
 
 	/**
-	 * get and set for this will need to take into account all of the relevant
-	 * bonus
+	 * get and set for this will need to take into account all of the 
+     * relevant bonus
 	 */
 	private int armorClass;
 
