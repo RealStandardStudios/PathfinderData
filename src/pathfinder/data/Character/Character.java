@@ -1,10 +1,12 @@
 package pathfinder.data.Character;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import pathfinder.data.Feat;
 import pathfinder.data.Skill;
 import pathfinder.data.Attributes.Ability;
+import pathfinder.data.Attributes.AbilityName;
 import pathfinder.data.Attributes.SaveAttribute;
 import pathfinder.data.Classes.Class;
 import pathfinder.data.Classes.Objects.AdvancmentTable;
@@ -32,6 +34,7 @@ public class Character {
 	private Feat[] feats;
 	private Inventory inventory;
 	private Alignment alignment;
+	private HashMap<String, String> fluff;
 
 	/**
 	 * The effects that have been applied to the character through Class
@@ -94,6 +97,25 @@ public class Character {
 	 */
 	public void setLevel(int level) {
 		this.level = level;
+		try {
+			setFortitude(new SaveAttribute("Fortitude", AbilityName.Constitution, 0));
+			setReflex(new SaveAttribute("Reflex", AbilityName.Dexterity, 0));
+			setWill(new SaveAttribute("Will", AbilityName.Wisdom, 0));
+			getFortitude().getBaseValueProperty().set(this.getClasses()[0].getLeveltableRow().get(level).getFortSave().getBaseValueProperty().get());
+			getReflex().getBaseValueProperty().set(this.getClasses()[0].getLeveltableRow().get(level).getRefSave().getBaseValueProperty().get());
+			getWill().getBaseValueProperty().set(this.getClasses()[0].getLeveltableRow().get(level).getWillSave().getBaseValueProperty().get());
+		}
+		catch(Exception e) {
+			//e.printStackTrace();
+		}
+	}
+	
+	public int[] getBaB() {
+		return getClasses()[0].getLeveltableRow().get(level).getBAB();
+	}
+	
+	public String getBabString() {
+		return getClasses()[0].getLeveltableRow().get(level).getBABProperty().get();
 	}
 
 	/**
@@ -509,6 +531,8 @@ public class Character {
 	 */
 	public Character() {
 		this.effects = new ArrayList<>();
+		this.fluff = new HashMap<String, String>();
+		this.setLevel(1);
 	}
 
 	/**
@@ -526,4 +550,14 @@ public class Character {
 		this.alignment = alignment;
 	}
 
+	/**
+	 * @param fluff the fluff to set
+	 */
+	public void setFluff(HashMap<String, String> fluff) {
+		this.fluff = fluff;
+	}
+	
+	public HashMap<String,String> getFluff() {
+		return this.fluff;
+	}
 }
