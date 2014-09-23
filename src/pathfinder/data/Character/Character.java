@@ -15,7 +15,7 @@ import pathfinder.data.Items.Shield;
 import pathfinder.data.Races.Race;
 
 /**
- * A class that represents the character as a whole, emulates the data from a 
+ * A class that represents the character as a whole, emulates the data from a
  * character sheet
  * 
  * @author Real Standard Studios - Matthew Meehan
@@ -31,26 +31,26 @@ public class Character {
 	private Skill[] skills;
 	private Feat[] feats;
 	private Inventory inventory;
-    private Alignment alignment;
-    
-    /**
-     * The effects that have been applied to the character through
-     * Class features, Feats or racial traits
-     */
-    private ArrayList<Effect> effects;
+	private Alignment alignment;
 
 	/**
-	 * get and set for this will need to take into account all of the 
-         * relevant bonus
+	 * The effects that have been applied to the character through Class
+	 * features, Feats or racial traits
+	 */
+	private ArrayList<Effect> effects;
+
+	/**
+	 * get and set for this will need to take into account all of the relevant
+	 * bonus
 	 */
 	private int armorClass;
-	
+
 	/**
 	 * int between 0 and 2; 0 is slow track, 1 is medium track, 2 is fast track
 	 */
 	private int experienceTrack;
 	private int experienceValue;
-	
+
 	/**
 	 * @return the inventory
 	 */
@@ -293,7 +293,8 @@ public class Character {
 	}
 
 	/**
-	 * @param classes the classes to set        
+	 * @param classes
+	 *            the classes to set
 	 */
 	public void setClasses(Class[] classes) {
 		this.classes = classes;
@@ -307,7 +308,8 @@ public class Character {
 	}
 
 	/**
-	 * @param skills the skills to set
+	 * @param skills
+	 *            the skills to set
 	 */
 	public void setSkills(Skill[] skills) {
 		this.skills = skills;
@@ -321,7 +323,8 @@ public class Character {
 	}
 
 	/**
-	 * @param feats the feats to set
+	 * @param feats
+	 *            the feats to set
 	 */
 	public void setFeats(Feat[] feats) {
 		this.feats = feats;
@@ -346,11 +349,11 @@ public class Character {
 	/**
 	 * sets armorClass with all of the components to add together
 	 * 
-     * @param deflectionMod
-     * @param miscMod
+	 * @param deflectionMod
+	 * @param miscMod
 	 */
 	public void setArmorClass(int deflectionMod, int miscMod) {
-		int armorBonus=0, shieldBonus = 0;
+		int armorBonus = 0, shieldBonus = 0;
 		for (Armor a : inventory.getArmorWorn()) {
 			if (a instanceof Shield)
 				shieldBonus += a.getArmorBonusInt();
@@ -359,8 +362,7 @@ public class Character {
 		}
 		this.armorClass = 10 + armorBonus + shieldBonus
 				+ this.getDexterity().getModifier()
-				+ this.race.getSize().getSizeModifier() 
-				+ deflectionMod
+				+ this.race.getSize().getSizeModifier() + deflectionMod
 				+ miscMod;
 	}
 
@@ -372,7 +374,8 @@ public class Character {
 	}
 
 	/**
-	 * @param experienceTrack the experienceTrack to set
+	 * @param experienceTrack
+	 *            the experienceTrack to set
 	 */
 	public void setExperienceTrack(int experienceTrack) {
 		this.experienceTrack = experienceTrack;
@@ -386,7 +389,8 @@ public class Character {
 	}
 
 	/**
-	 * @param experienceValue the experienceValue to set
+	 * @param experienceValue
+	 *            the experienceValue to set
 	 * @description every time experience is updated, check to see if leveled
 	 */
 	public void setExp(int experienceValue) {
@@ -439,8 +443,9 @@ public class Character {
 		return resistances[4];
 	}
 
-	/** 
-	 * @param resistances the resistances to set
+	/**
+	 * @param resistances
+	 *            the resistances to set
 	 */
 	public void setResistances(Resistance[] resistances) {
 		this.resistances = resistances;
@@ -491,24 +496,34 @@ public class Character {
 		this.resistances[4] = electricReisistance;
 	}
 
+	public ArrayList<Effect> getEffects() {
+		return effects;
+	}
+
+	public void setEffects(ArrayList<Effect> effects) {
+		this.effects = effects;
+	}
+
 	/**
 	 * The empty constructor for Kryo
 	 */
 	public Character() {
+		this.effects = new ArrayList<>();
 	}
 
-        /**
-         * @return the alignment
-         */
-        public Alignment getAlignment() {
-            return alignment;
-        }
+	/**
+	 * @return the alignment
+	 */
+	public Alignment getAlignment() {
+		return alignment;
+	}
 
-        /**
-        * @param alignment the alignment to set
-        */
-        public void setAlignment(Alignment alignment) {
-            this.alignment = alignment;
-        }
+	/**
+	 * @param alignment
+	 *            the alignment to set
+	 */
+	public void setAlignment(Alignment alignment) {
+		this.alignment = alignment;
+	}
 
 }
