@@ -10,7 +10,9 @@ import pathfinder.data.Attributes.AbilityName;
 import pathfinder.data.Attributes.SaveAttribute;
 import pathfinder.data.Classes.Class;
 import pathfinder.data.Classes.Objects.AdvancmentTable;
+import pathfinder.data.Classes.Objects.Feature;
 import pathfinder.data.Classes.Objects.LevelOption;
+import pathfinder.data.Effects.AbilityEffect;
 import pathfinder.data.Effects.Effect;
 import pathfinder.data.Items.Armor;
 import pathfinder.data.Items.Shield;
@@ -131,6 +133,9 @@ public class Character {
 	 */
 	public void setRace(Race race) {
 		this.race = race;
+		for (AbilityEffect effect : race.getRacialModifiers()) {
+			this.effects.add(effect);
+		}
 	}
 
 	/**
@@ -320,6 +325,11 @@ public class Character {
 	 */
 	public void setClasses(Class[] classes) {
 		this.classes = classes;
+		for (Class c : classes) {
+			for (Feature f : c.getFeatures()) {
+				if(f.getEffectProperty().get()!=null)effects.add(f.getEffectProperty().get());
+			}
+		}
 	}
 
 	/**
@@ -532,7 +542,6 @@ public class Character {
 	public Character() {
 		this.effects = new ArrayList<>();
 		this.fluff = new HashMap<String, String>();
-		this.setLevel(1);
 	}
 
 	/**
