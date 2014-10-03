@@ -17,6 +17,7 @@ import pathfinder.data.Effects.Effect;
 import pathfinder.data.Items.Armor;
 import pathfinder.data.Items.Shield;
 import pathfinder.data.Races.Race;
+import pathfinder.data.Races.Traits.Trait;
 
 /**
  * A class that represents the character as a whole, emulates the data from a
@@ -135,6 +136,9 @@ public class Character {
 		this.race = race;
 		for (AbilityEffect effect : race.getRacialModifiers()) {
 			this.effects.add(effect);
+		}
+		for (Trait trait : this.race.getRacialTraits()) {
+			this.effects.add(trait.getEffect());
 		}
 	}
 
