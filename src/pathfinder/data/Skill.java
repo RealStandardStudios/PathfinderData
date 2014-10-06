@@ -16,6 +16,7 @@ import pathfinder.data.Attributes.Ability;
 public class Skill {
 	public ObjectProperty<Integer> Rank;
 	public ObjectProperty<Ability> AttrToUse;
+	public ObjectProperty<Integer> RacialMod;
 	public StringProperty Name;
 	private boolean classSkill = false;
 	
@@ -41,6 +42,15 @@ public class Skill {
 	public HashMap<String, Integer> getSituationalMod() {
 		return situationalMod;
 	}
+	
+	public ObjectProperty<Integer> getTotal() {
+		int total = this.AttrToUse.get().getModifier().get();
+		if (Rank.get()!=0 && classSkill)
+			total+=3;
+		total += Rank.get();
+		total += RacialMod.get();
+		return new SimpleObjectProperty<Integer>(total);
+	}
 
 	/**
 	 * Empty constructor for Kryo
@@ -55,12 +65,13 @@ public class Skill {
 	 * @param classSkill
 	 * @param situationalMod
 	 */
-	public Skill(int rank, Ability attrToUse, String name, boolean classSkill,
+	public Skill(int racialMod, int rank, Ability attrToUse, String name, boolean classSkill,
 			HashMap<String, Integer> situationalMod) {
 		this.Rank = new SimpleObjectProperty<Integer>(rank);
 		this.AttrToUse = new SimpleObjectProperty<Ability>(attrToUse);
 		this.Name = new SimpleStringProperty(name);
 		this.classSkill = classSkill;
 		this.situationalMod = situationalMod;
+		this.RacialMod = new SimpleObjectProperty<Integer>(racialMod);
 	}
 }
