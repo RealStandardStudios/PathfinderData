@@ -52,6 +52,7 @@ public abstract class Effect {
 	 */
 	public Effect() {
 		this.name = new SimpleStringProperty();
+		this.value = 0;
 	}
 	
 	/**

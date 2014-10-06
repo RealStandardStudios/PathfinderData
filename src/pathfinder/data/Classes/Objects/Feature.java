@@ -5,6 +5,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import pathfinder.data.Effects.Effect;
+import pathfinder.data.Effects.NonValued.MiscEffect;
 
 /**
  * The generic class for Features
@@ -78,6 +79,6 @@ public class Feature {
 		this.name = new SimpleStringProperty(name);
 		this.type = new SimpleStringProperty(type);
 		this.description = new SimpleStringProperty(description);
-		this.effect = new SimpleObjectProperty<>();
+		this.effect = new SimpleObjectProperty<Effect>(new MiscEffect());
 	}
 }
