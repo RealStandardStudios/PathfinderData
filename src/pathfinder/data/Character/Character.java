@@ -329,11 +329,11 @@ public class Character {
 	 */
 	public void setClasses(Class[] classes) {
 		this.classes = classes;
-		for (Class c : classes) {
-			for (Feature f : c.getFeatures()) {
-				if(f.getEffectProperty().get()!=null)effects.add(f.getEffectProperty().get());
-			}
-		}
+//		for (Class c : classes) {
+//			for (Feature f : c.getFeatures()) {
+//				if(f.getEffectProperty().get()!=null)effects.add(f.getEffectProperty().get());
+//			}
+//		}
 	}
 
 	/**

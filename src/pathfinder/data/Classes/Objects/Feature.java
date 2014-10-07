@@ -1,11 +1,7 @@
 package pathfinder.data.Classes.Objects;
 
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import pathfinder.data.Effects.Effect;
-import pathfinder.data.Effects.NonValued.MiscEffect;
 
 /**
  * The generic class for Features
@@ -17,21 +13,21 @@ public class Feature {
 	private StringProperty type;
 	private StringProperty description;
 
-	private ObjectProperty<Effect> effect;
+//	private ObjectProperty<Effect> effect;
 
-	/**
-	 * @return an effect
-	 */
-	public ObjectProperty<Effect> getEffectProperty() {
-		return effect;
-	}
-
-	/**
-	 * @param effect
-	 */
-	public void setEffect(Effect effect) {
-		this.effect.set(effect);
-	}
+//	/**
+//	 * @return an effect
+//	 */
+//	public ObjectProperty<Effect> getEffectProperty() {
+//		return effect;
+//	}
+//
+//	/**
+//	 * @param effect
+//	 */
+//	public void setEffect(Effect effect) {
+//		this.effect.set(effect);
+//	}
 
 	/**
 	 * @return the description
@@ -79,6 +75,6 @@ public class Feature {
 		this.name = new SimpleStringProperty(name);
 		this.type = new SimpleStringProperty(type);
 		this.description = new SimpleStringProperty(description);
-		this.effect = new SimpleObjectProperty<Effect>(new MiscEffect());
+//		this.effect = new SimpleObjectProperty<Effect>(new MiscEffect());
 	}
 }
