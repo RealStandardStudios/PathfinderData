@@ -4,7 +4,6 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import pathfinder.data.Attributes.SaveAttribute;
 
 /**
  * A row of the table of benefits gained each level from
@@ -15,9 +14,9 @@ import pathfinder.data.Attributes.SaveAttribute;
 public class LevelTableRow {
 	private ObjectProperty<Integer> levelNum;
 	private int[] baseAttackBonus;
-	private SaveAttribute fortitudeSave;
-	private SaveAttribute reflexSave;
-	private SaveAttribute willSave;
+	private ObjectProperty<Integer> fortitudeSave;
+	private ObjectProperty<Integer> reflexSave;
+	private ObjectProperty<Integer> willSave;
 	//private Feature[] specialFeatures;
 	private String[] special;
 
@@ -63,21 +62,33 @@ public class LevelTableRow {
 	/**
 	 * @return the fortitudeSave
 	 */
-	public SaveAttribute getFortSave() {
+	public int getFort() {
+		return fortitudeSave.get();
+	}
+	
+	public ObjectProperty<Integer> getFortProp() {
 		return fortitudeSave;
 	}
 
 	/**
 	 * @return the reflexSave
 	 */
-	public SaveAttribute getRefSave() {
+	public int getRef() {
+		return reflexSave.get();
+	}
+	
+	public ObjectProperty<Integer> getRefProp() {
 		return reflexSave;
 	}
 
 	/**
 	 * @return the willSave
 	 */
-	public SaveAttribute getWillSave() {
+	public int getWill() {
+		return willSave.get();
+	}
+	
+	public ObjectProperty<Integer> getWillProp() {
 		return willSave;
 	}
 
@@ -115,15 +126,15 @@ public class LevelTableRow {
 	 * @param willSave
 	 * @param specialFeatures
 	 */
-	public LevelTableRow(int levelNum, int[] baseAttackBonus, SaveAttribute fortitudeSave,
-			SaveAttribute reflexSave, SaveAttribute willSave,
+	public LevelTableRow(int levelNum, int[] baseAttackBonus, int fortitudeSave,
+			int reflexSave, int willSave,
 			String[] specialFeatures) {
 		super();
 		this.levelNum = new SimpleObjectProperty<Integer>(levelNum);
 		this.baseAttackBonus = baseAttackBonus;
-		this.fortitudeSave = fortitudeSave;
-		this.reflexSave = reflexSave;
-		this.willSave = willSave;
+		this.fortitudeSave = new SimpleObjectProperty<Integer>(fortitudeSave);
+		this.reflexSave = new SimpleObjectProperty<Integer>(reflexSave);
+		this.willSave = new SimpleObjectProperty<Integer>(willSave);
 		this.special = specialFeatures;
 	}
 

@@ -10,27 +10,27 @@ import javafx.beans.property.SimpleObjectProperty;
  * @author Real Standard Studios - Matthew Meehan
  */
 public class SaveAttribute {
-	private String attributeName;
+	private String name;
 	private ObjectProperty<Integer> baseValue;
 	private int total;
 	private int magicMod;
 	private int miscMod;
 	private Ability abilityScore;
-	private AbilityName abilityName;
+//	private AbilityName abilityName;
 
 	/**
-	 * @return the attributeName
+	 * @return the name
 	 */
-	public String getAttributeName() {
-		return attributeName;
+	public String getName() {
+		return name;
 	}
 
-	/**
-	 * @param attributeName the attributeName to set
-	 */
-	public void setAttributeName(String attributeName) {
-		this.attributeName = attributeName;
-	}
+//	/**
+//	 * @param name the name to set
+//	 */
+//	public void setAttributeName(String name) {
+//		this.name = name;
+//	}
 	
 	public ObjectProperty<Integer> getBaseValueProperty() {
 		return this.baseValue;
@@ -94,13 +94,13 @@ public class SaveAttribute {
 		this.miscMod = miscMod;
 	}
 
-	public AbilityName getAbilityName() {
-		return abilityName;
-	}
-
-	public void setAbilityName(AbilityName abilityName) {
-		this.abilityName = abilityName;
-	}
+//	public AbilityName getAbilityName() {
+//		return abilityName;
+//	}
+//
+//	public void setAbilityName(AbilityName abilityName) {
+//		this.abilityName = abilityName;
+//	}
 
 	/**
 	 * Empty constructor for Kryo
@@ -116,25 +116,12 @@ public class SaveAttribute {
 	 * @param magicMod the magical modifier of the Save Attribute
 	 * @param miscMod the Misc. modifier for the Save Attribute
 	 */
-	public SaveAttribute(Ability pAbility, int baseValue, int magicMod,
+	public SaveAttribute(String name, Ability pAbility, int baseValue,
 			int miscMod) {
 		this.baseValue = new SimpleObjectProperty<Integer>(baseValue);
-		this.magicMod = magicMod;
+		this.name = name;
 		this.miscMod = miscMod;
 		this.abilityScore = pAbility;
 		this.setTotal();
 	}
-	
-	/**
-	 * Constructor for SaveAttribute
-	 * 
-	 * @param pAbility the {@link AbilityName} relevant to the Save Attribute 
-	 * @param baseValue the base value of the Save Attribute
-	 */
-	public SaveAttribute(String name, AbilityName pAbility, int baseValue) {
-		this.baseValue = new SimpleObjectProperty<Integer>(baseValue);
-		this.attributeName = name;
-		this.abilityName = pAbility;
-	}
-
 }

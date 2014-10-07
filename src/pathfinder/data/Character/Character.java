@@ -10,7 +10,6 @@ import pathfinder.data.Attributes.AbilityName;
 import pathfinder.data.Attributes.SaveAttribute;
 import pathfinder.data.Classes.Class;
 import pathfinder.data.Classes.Objects.AdvancmentTable;
-import pathfinder.data.Classes.Objects.Feature;
 import pathfinder.data.Classes.Objects.LevelOption;
 import pathfinder.data.Effects.AbilityEffect;
 import pathfinder.data.Effects.Effect;
@@ -46,8 +45,8 @@ public class Character {
 	private ArrayList<Effect> effects;
 
 	/**
-	 * get and set for this will need to take into account all of the 
-     * relevant bonus
+	 * get and set for this will need to take into account all of the relevant
+	 * bonus
 	 */
 	private int armorClass;
 
@@ -101,24 +100,21 @@ public class Character {
 	public void setLevel(int level) {
 		this.level = level;
 		try {
-			setFortitude(new SaveAttribute("Fortitude", AbilityName.Constitution, 0));
-			setReflex(new SaveAttribute("Reflex", AbilityName.Dexterity, 0));
-			setWill(new SaveAttribute("Will", AbilityName.Wisdom, 0));
-			getFortitude().getBaseValueProperty().set(this.getClasses()[0].getLeveltableRow().get(level).getFortSave().getBaseValueProperty().get());
-			getReflex().getBaseValueProperty().set(this.getClasses()[0].getLeveltableRow().get(level).getRefSave().getBaseValueProperty().get());
-			getWill().getBaseValueProperty().set(this.getClasses()[0].getLeveltableRow().get(level).getWillSave().getBaseValueProperty().get());
-		}
-		catch(Exception e) {
-			//e.printStackTrace();
+			setFortitude(new SaveAttribute("Fortitude", getConstitution(), this.getClasses()[0].getLeveltableRow().get(level).getFort(), 0));
+			setReflex(new SaveAttribute("Reflex", getDexterity(), this.getClasses()[0].getLeveltableRow().get(level).getRef(), 0));
+			setWill(new SaveAttribute("Will", getWisdom(), this.getClasses()[0].getLeveltableRow().get(level).getWill(), 0));
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
-	
+
 	public int[] getBaB() {
 		return getClasses()[0].getLeveltableRow().get(level).getBAB();
 	}
-	
+
 	public String getBabString() {
-		return getClasses()[0].getLeveltableRow().get(level).getBABProperty().get();
+		return getClasses()[0].getLeveltableRow().get(level).getBABProperty()
+				.get();
 	}
 
 	/**
@@ -134,12 +130,6 @@ public class Character {
 	 */
 	public void setRace(Race race) {
 		this.race = race;
-		for (AbilityEffect effect : race.getRacialModifiers()) {
-			this.effects.add(effect);
-		}
-		for (Trait trait : this.race.getRacialTraits()) {
-			this.effects.add(trait.getEffect());
-		}
 	}
 
 	/**
@@ -329,11 +319,11 @@ public class Character {
 	 */
 	public void setClasses(Class[] classes) {
 		this.classes = classes;
-//		for (Class c : classes) {
-//			for (Feature f : c.getFeatures()) {
-//				if(f.getEffectProperty().get()!=null)effects.add(f.getEffectProperty().get());
-//			}
-//		}
+		// for (Class c : classes) {
+		// for (Feature f : c.getFeatures()) {
+		// if(f.getEffectProperty().get()!=null)effects.add(f.getEffectProperty().get());
+		// }
+		// }
 	}
 
 	/**
@@ -564,13 +554,14 @@ public class Character {
 	}
 
 	/**
-	 * @param fluff the fluff to set
+	 * @param fluff
+	 *            the fluff to set
 	 */
 	public void setFluff(HashMap<String, String> fluff) {
 		this.fluff = fluff;
 	}
-	
-	public HashMap<String,String> getFluff() {
+
+	public HashMap<String, String> getFluff() {
 		return this.fluff;
 	}
 }

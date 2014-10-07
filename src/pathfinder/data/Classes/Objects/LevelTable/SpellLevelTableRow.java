@@ -67,8 +67,8 @@ public class SpellLevelTableRow extends LevelTableRow {
 	 * @param spellsKnown
 	 */
 	public SpellLevelTableRow(int levelNum, int[] baseAttackBonus,
-			SaveAttribute fortitudeSave, SaveAttribute reflexSave,
-			SaveAttribute willSave, String[] specialFeatures,
+			int fortitudeSave, int reflexSave,
+			int willSave, String[] specialFeatures,
 			StringProperty[] spellsPerDay, StringProperty[] spellsKnown) {
 		super(levelNum, baseAttackBonus, fortitudeSave, reflexSave, willSave,
 				specialFeatures);

@@ -75,8 +75,8 @@ public class MonkLevelTableRow extends LevelTableRow {
 	 * @param specialFeatures
 	 */
 	public MonkLevelTableRow(int levelNum, int[] baseAttackBonus,
-			SaveAttribute fortitudeSave, SaveAttribute reflexSave,
-			SaveAttribute willSave, String[] specialFeatures, 
+			int fortitudeSave, int reflexSave,
+			int willSave, String[] specialFeatures, 
 			int[] flurryOfBlows, String unarmedDamage, String acBonus, String fastMovement) {
 		super(levelNum, baseAttackBonus, fortitudeSave, reflexSave, willSave,
 				specialFeatures);
