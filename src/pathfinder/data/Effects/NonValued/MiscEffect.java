@@ -33,7 +33,6 @@ public class MiscEffect extends Effect {
 	public MiscEffect() {
 		super();
 		this.getNameProperty().set("Misc Effect");
-		this.effect = "";
 	}
 
 	/**
@@ -45,5 +44,8 @@ public class MiscEffect extends Effect {
 		this.effect = effect;
 	}
 	
+	public String toString() {
+		return this.getName() + " " + this.getEffect();
+	}
 	
 }

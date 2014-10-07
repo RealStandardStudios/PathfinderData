@@ -86,10 +86,13 @@ public class Feat extends FeatPrerequisite{
 	 */
 	public Feat() {
 		this.Name.set("-");
-		this.prerequisite = new SimpleObjectProperty<FeatPrerequisite>();
+		FeatPrerequisite pre = new FeatPrerequisite();
+		pre.Name.set("-");
+		pre.Description.set("-");
+		this.prerequisite = new SimpleObjectProperty<FeatPrerequisite>(pre);
 		this.benefit = new SimpleStringProperty("-");
 		this.Description.set("-");
-		this.effect = new SimpleObjectProperty<Effect>(new MiscEffect("-", "-"));
+		this.effect = new SimpleObjectProperty<Effect>(new MiscEffect(this.Name.get()+" Effect", this.Description.get()));
 	}
 
 	/**
@@ -104,6 +107,8 @@ public class Feat extends FeatPrerequisite{
 		this.benefit = new SimpleStringProperty(benefit);
 		this.Description.set(benefit);
 		this.effect = new SimpleObjectProperty<Effect>(effect);
+		if(this.effect.get()==null)
+			this.effect.set(new MiscEffect(this.getName(), "-"));
 	}
 	
 	/**
