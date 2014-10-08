@@ -1,9 +1,10 @@
 package pathfinder.data.Character;
 
-import java.util.List;
-
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import pathfinder.data.Items.Armor;
 import pathfinder.data.Items.Consumables;
+import pathfinder.data.Items.Goods;
 import pathfinder.data.Items.Weapon;
 
 /**
@@ -14,71 +15,107 @@ import pathfinder.data.Items.Weapon;
  */
 public class Inventory {
 
-	private List<Armor> armor;
-	private List<Weapon> weapons;
-	private List<Consumables> consumables;
+	private ObservableList<Armor> armor;
+	private ObservableList<Weapon> weapons;
+	private ObservableList<Consumables> consumables;
+	private ObservableList<Goods> goods;
 
-	private List<Armor> armorWorn;
-	private List<Weapon> weaponEquipped;
+	private ObservableList<Armor> armorWorn;
+	private ObservableList<Weapon> weaponEquipped;
+	
+	public double characterGold = 0;
 
 	/**
 	 * @return the armor
 	 */
-	public List<Armor> getArmor() {
+	public ObservableList<Armor> getArmor() {
 		return armor;
+	}
+	
+	/**
+	 * @return the goods
+	 */
+	public ObservableList<Goods> getGoods() {
+		return goods;
 	}
 
 	/**
 	 * @return the weapons
 	 */
-	public List<Weapon> getWeapons() {
+	public ObservableList<Weapon> getWeapons() {
 		return weapons;
 	}
 
 	/**
 	 * @return the consumables
 	 */
-	public List<Consumables> getConsumables() {
+	public ObservableList<Consumables> getConsumables() {
 		return consumables;
 	}
 
 	/**
 	 * @return the armorWorn
 	 */
-	public List<Armor> getArmorWorn() {
+	public ObservableList<Armor> getArmorWorn() {
 		return armorWorn;
 	}
 
 	/**
 	 * @return the weaponEquipped
 	 */
-	public List<Weapon> getWeaponEquipped() {
+	public ObservableList<Weapon> getWeaponEquipped() {
 		return weaponEquipped;
+	}
+
+	public double getCharacterGold() {
+		return characterGold;
+	}
+
+	public void setCharacterGold(double characterGold) {
+		this.characterGold = characterGold;
+	}
+
+	public void setArmor(ObservableList<Armor> armor) {
+		this.armor = armor;
+	}
+
+	public void setWeapons(ObservableList<Weapon> weapons) {
+		this.weapons = weapons;
+	}
+
+	public void setConsumables(ObservableList<Consumables> consumables) {
+		this.consumables = consumables;
+	}
+
+	public void setGoods(ObservableList<Goods> goods) {
+		this.goods = goods;
+	}
+
+	public void setArmorWorn(ObservableList<Armor> armorWorn) {
+		this.armorWorn = armorWorn;
+	}
+
+	public void setWeaponEquipped(ObservableList<Weapon> weaponEquipped) {
+		this.weaponEquipped = weaponEquipped;
 	}
 
 	/**
 	 * empty constructor for Kryo
 	 */
-	public Inventory() {
+	public Inventory()
+	{
+		
 	}
-
-	/**
-	 * Constructor for Inventory
-	 * 
-	 * @param armor
-	 * @param weapons
-	 * @param consumables
-	 * @param armorWorn
-	 * @param weaponEquipped
-	 */
-	public Inventory(List<Armor> armor, List<Weapon> weapons,
-			List<Consumables> consumables, List<Armor> armorWorn,
-			List<Weapon> weaponEquipped) {
+	
+	public Inventory(ObservableList<Weapon> weapons, ObservableList<Armor> armor, ObservableList<Goods> goods, double money) {
 		super();
 		this.armor = armor;
 		this.weapons = weapons;
-		this.consumables = consumables;
-		this.armorWorn = armorWorn;
-		this.weaponEquipped = weaponEquipped;
+		this.goods = goods;
+		this.characterGold = money;
+		
+		consumables = FXCollections.observableArrayList();
+		armorWorn = FXCollections.observableArrayList();
+		weaponEquipped = FXCollections.observableArrayList();
 	}
 }
