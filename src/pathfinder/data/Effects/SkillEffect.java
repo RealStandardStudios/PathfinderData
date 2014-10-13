@@ -69,6 +69,8 @@ public class SkillEffect extends Effect {
 	public SkillEffect() {
 		super();
 		this.getNameProperty().set("Skill Effect");
+		this.bonusType = "";
+		this.bonusVs = "";
 	}
 
 	/**
@@ -83,6 +85,7 @@ public class SkillEffect extends Effect {
 		super(val, name);
 		this.skillName = skillName;
 		this.bonusType = bonusType;
+		this.bonusVs = "";
 	}
 
 }
