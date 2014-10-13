@@ -9,7 +9,6 @@ import javafx.beans.property.StringProperty;
  * @author Real Standard Studios - Joshua Boyd
  */
 public class Weapon extends Item{
-	public StringProperty WieldStyle;
 	public StringProperty DmgS;
 	public StringProperty DmgM;
 	public StringProperty Critical;
@@ -23,7 +22,7 @@ public class Weapon extends Item{
 	 */
 	public Weapon()
 	{
-		
+		this.setSlotType(SlotType.Melee);
 	}
 		
 	/**
@@ -41,7 +40,6 @@ public class Weapon extends Item{
 					String dmgM, String critical, String range, String weight, String weaponDmgType, String special)
 	{
 		super(name, cost, weight);
-		this.WieldStyle = new SimpleStringProperty(wieldStyle);
 		this.WeaponType = new SimpleStringProperty(weaponType);
 		this.DmgS = new SimpleStringProperty(dmgS);
 		this.DmgM = new SimpleStringProperty(dmgM);
@@ -49,6 +47,10 @@ public class Weapon extends Item{
 		this.Range = new SimpleStringProperty(range);
 		this.WeaponDmgType = new SimpleStringProperty(weaponDmgType);
 		this.Special = new SimpleStringProperty(special);
+		if(wieldStyle.toLowerCase().contains("range"))
+			this.setSlotType(SlotType.Ranged);
+		else
+			this.setSlotType(SlotType.Melee);
 	}
 	
 }

@@ -53,5 +53,6 @@ public class Armor extends Item {
 		this.ArcaneSpellFailure =  new SimpleStringProperty(arcaneSpellFailiure);
 		this.Speed30feet =  new SimpleStringProperty(speed30feet);
 		this.Speed20feet =  new SimpleStringProperty(speed20feet);
+		this.setSlotType(SlotType.Torso);
 	}
 }

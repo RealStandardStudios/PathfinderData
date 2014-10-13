@@ -73,7 +73,6 @@ public class MagicWeapon extends Weapon{
 	 */
 	public MagicWeapon()
 	{
-		
 	}
 	
 	/**
@@ -90,14 +89,13 @@ public class MagicWeapon extends Weapon{
 			String cl, String price, String weight, String description, 
 			String construction) 
 	{ 
-		super(name, weapon.WieldStyle.get(), weapon.WeaponType.get(), price, weapon.DmgS.get(), weapon.DmgM.get(), weapon.Critical.get(),
+		super(name, weapon.getSlotType().name(), weapon.WeaponType.get(), price, weapon.DmgS.get(), weapon.DmgM.get(), weapon.Critical.get(),
 				weapon.Range.get(), weight, weapon.WeaponDmgType.get(), weapon.Special.get());
 		
 		this.setAuraStrength(auraStr);
 		this.setCasterLevel(cl);
 		this.setDescription(description);
 		this.setConstruction(construction);
-		
 	}
 
 }
