@@ -37,3 +37,4 @@ public class Shield extends Armor {
 
 }
 		//DO WE EVEN NEED THIS CLASS????? ~Josh
+		//YES BECUASE INVENTORY STUFF ~Matthew

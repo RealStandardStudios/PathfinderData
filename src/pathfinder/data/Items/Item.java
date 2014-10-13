@@ -34,5 +34,4 @@ public abstract class Item {
 		this.Cost = new SimpleStringProperty(cost);
 		this.Weight = new SimpleStringProperty(weight);
 	}
-	
 }
