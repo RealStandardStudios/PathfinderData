@@ -8,5 +8,5 @@ package pathfinder.data.Items;
  *
  */
 public enum SlotType {
-	Head, Torso, Hands, Ring, Waist, Legs, Feet, Weapon, RangedWeapon, Shield, None
+	Head, Torso, Hands, Ring, Waist, Legs, Feet, Melee, Ranged, Shield, None
 }

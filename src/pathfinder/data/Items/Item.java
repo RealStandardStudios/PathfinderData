@@ -15,12 +15,13 @@ public abstract class Item {
 	public StringProperty Name;
 	public StringProperty Cost;
 	public StringProperty Weight;
+	private SlotType slotType;
 	
 	/**
 	 * The default constructor for Kyro
 	 */
 	public Item() {
-		
+		slotType = SlotType.None;
 	}
 	
 	/**
@@ -33,5 +34,14 @@ public abstract class Item {
 		this.Name = new SimpleStringProperty(name);
 		this.Cost = new SimpleStringProperty(cost);
 		this.Weight = new SimpleStringProperty(weight);
+		slotType = SlotType.None;
+	}
+
+	public SlotType getSlotType() {
+		return this.slotType;
+	}
+	
+	public void setSlotType(SlotType slotType) {
+		this.slotType = slotType;
 	}
 }
