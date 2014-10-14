@@ -9,8 +9,26 @@ import javafx.beans.property.SimpleObjectProperty;
  * @author Real Standard Studios - Matthew Meehan
  */
 public class Ability {
-	private int value;
+	private int totalValue;
 	private AbilityName abilityName;
+	private int baseValue;
+	private int racialBonus;
+	
+	public int getRacialBonus() {
+		return racialBonus;
+	}
+
+	public void setRacialBonus(int racialBonus) {
+		this.racialBonus = racialBonus;
+	}
+
+	public int getBaseValue() {
+		return baseValue;
+	}
+
+	public void setBaseValue(int baseValue) {
+		this.baseValue = baseValue;
+	}
 
 	/**
 	 * @return the abilityName
@@ -20,30 +38,34 @@ public class Ability {
 	}
 
 	/**
-	 * @return the value
+	 * @return the total value 
 	 */
-	public int getValue() {
-		return value;
+	public int getTotalValue() {
+		return totalValue;
+	}
+	/**
+	 * 
+	 * @param add the sent integer to the total
+	 */
+	public void setTotalValue(int addToTotal)
+	{
+		totalValue = totalValue + addToTotal;
 	}
 
 	/**
 	 * @param value the value to set 
 	 */
-	public void setValue(int value) {
-		this.value = value;
-	}
-
 	/**
 	 * @return an int that represents an ability modifier
 	 */
 	public ObjectProperty<Integer> getModifier() {
-		if(((value -10 )/ 2.0) < 0.0)
+		if(((totalValue -10 )/ 2.0) < 0.0)
 		{
-			return new SimpleObjectProperty<Integer>((int) (((value -10 )/ 2.0) - 0.5)); 
+			return new SimpleObjectProperty<Integer>((int) (((totalValue -10 )/ 2.0) - 0.5)); 
 		}
 		else
 		{
-			return new SimpleObjectProperty<Integer>((this.value - 10) / 2);
+			return new SimpleObjectProperty<Integer>((this.totalValue - 10) / 2);
 		}
 		
 	}
@@ -53,7 +75,8 @@ public class Ability {
 	 */
 	public void increaseValue()
 	{
-		value++;
+		baseValue++;
+		totalValue++;
 	}
 	
 	/**
@@ -61,7 +84,8 @@ public class Ability {
 	 */
 	public void decreaseValue()
 	{
-		value--;
+		baseValue--;
+		totalValue--;
 	}
 
 	/**
@@ -78,6 +102,7 @@ public class Ability {
 	 */
 	public Ability(AbilityName abilityName, int value) {
 		this.abilityName = abilityName;
-		this.value = value;
+		this.baseValue = value;
+		this.totalValue = value;
 	}
 }

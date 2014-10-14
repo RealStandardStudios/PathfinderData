@@ -114,8 +114,16 @@ public class Inventory {
 		this.goods = goods;
 		this.characterGold = money;
 		
-		consumables = FXCollections.observableArrayList();
-		armorWorn = FXCollections.observableArrayList();
-		weaponEquipped = FXCollections.observableArrayList();
+		try
+		{
+			consumables = FXCollections.observableArrayList();
+			armorWorn = FXCollections.observableArrayList();
+			weaponEquipped = FXCollections.observableArrayList();
+		}
+		catch(Exception e)
+		{
+			System.out.println("this dieded");
+		}
+	
 	}
 }

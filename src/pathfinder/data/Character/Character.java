@@ -131,6 +131,9 @@ public class Character {
 	 */
 	public void setRace(Race race) {
 		this.race = race;
+		for (Trait t : race.getRacialTraits()) {
+			effects.add(t.getEffect());
+		}
 	}
 
 	/**
