@@ -103,6 +103,7 @@ public class Character {
 			setFortitude(new SaveAttribute("Fortitude", getConstitution(), this.getClasses()[0].getLeveltableRow().get(level).getFort(), 0));
 			setReflex(new SaveAttribute("Reflex", getDexterity(), this.getClasses()[0].getLeveltableRow().get(level).getRef(), 0));
 			setWill(new SaveAttribute("Will", getWisdom(), this.getClasses()[0].getLeveltableRow().get(level).getWill(), 0));
+			getClasses()[0].setLevel(this.level);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

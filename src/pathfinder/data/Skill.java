@@ -32,8 +32,8 @@ public class Skill {
 	/**
 	 * @return the trained
 	 */
-	public boolean isClassSkill() {
-		return classSkill;
+	public ObjectProperty<Boolean> isClassSkill() {
+		return new SimpleObjectProperty<Boolean>(classSkill);
 	}
 
 	/**
