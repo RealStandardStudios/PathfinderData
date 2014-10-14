@@ -32,6 +32,11 @@ public class SaveAttribute {
 //		this.name = name;
 //	}
 	
+	public int getModifier()
+	{
+		return abilityScore.getModifier().get();
+	}
+	
 	public ObjectProperty<Integer> getBaseValueProperty() {
 		return this.baseValue;
 	}
