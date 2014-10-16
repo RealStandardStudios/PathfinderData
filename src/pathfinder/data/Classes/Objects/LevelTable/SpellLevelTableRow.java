@@ -1,7 +1,6 @@
 package pathfinder.data.Classes.Objects.LevelTable;
 
 import javafx.beans.property.StringProperty;
-import pathfinder.data.Attributes.SaveAttribute;
 
 /**
  * The table of benefits gained each level from a

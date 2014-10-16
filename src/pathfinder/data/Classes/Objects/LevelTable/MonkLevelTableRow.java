@@ -5,7 +5,6 @@ package pathfinder.data.Classes.Objects.LevelTable;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import pathfinder.data.Attributes.SaveAttribute;
 
 /**
  * The special Level Table row for the monk because it follows no leaders and doesn't do the other things
