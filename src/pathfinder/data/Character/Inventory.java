@@ -8,10 +8,10 @@ import pathfinder.data.Items.Goods;
 import pathfinder.data.Items.Weapon;
 
 /**
- * A data class that stores the information about the items the character 
- * has on them and equipped
- *         
- * @author Real Standard Studios - Matthew Meehan 
+ * A data class that stores the information about the items the character has on
+ * them and equipped
+ * 
+ * @author Real Standard Studios - Matthew Meehan
  */
 public class Inventory {
 
@@ -22,8 +22,8 @@ public class Inventory {
 
 	private ObservableList<Armor> armorWorn;
 	private ObservableList<Weapon> weaponEquipped;
-	
-	public double characterGold = 0;
+
+	private double characterGold = 0;
 
 	/**
 	 * @return the armor
@@ -31,7 +31,7 @@ public class Inventory {
 	public ObservableList<Armor> getArmor() {
 		return armor;
 	}
-	
+
 	/**
 	 * @return the goods
 	 */
@@ -102,28 +102,19 @@ public class Inventory {
 	/**
 	 * empty constructor for Kryo
 	 */
-	public Inventory()
-	{
-		
+	public Inventory() {
+
 	}
-	
+
 	public Inventory(ObservableList<Weapon> weapons, ObservableList<Armor> armor, ObservableList<Goods> goods, double money) {
 		super();
 		this.armor = armor;
 		this.weapons = weapons;
 		this.goods = goods;
 		this.characterGold = money;
-		
-		try
-		{
-			consumables = FXCollections.observableArrayList();
-			armorWorn = FXCollections.observableArrayList();
-			weaponEquipped = FXCollections.observableArrayList();
-		}
-		catch(Exception e)
-		{
-			System.out.println("this dieded");
-		}
-	
+
+		consumables = FXCollections.observableArrayList();
+		armorWorn = FXCollections.observableArrayList();
+		weaponEquipped = FXCollections.observableArrayList();
 	}
 }
