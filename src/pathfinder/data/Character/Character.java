@@ -35,6 +35,7 @@ public class Character {
 	private Inventory inventory;
 	private Alignment alignment;
 	private HashMap<String, String> fluff;
+	private String[] languages;
 
 	/**
 	 * The effects that have been applied to the character through Class
@@ -565,5 +566,21 @@ public class Character {
 
 	public HashMap<String, String> getFluff() {
 		return this.fluff;
+	}
+
+	public void setLanguages(String[] data) {
+		this.languages = data;
+	}
+	
+	public String[] getLanguages() {
+		return this.languages;
+	}
+	
+	public String getLanguagesString() {
+		String languages = this.languages[0];
+		for (int i = 1; i < this.languages.length; i++) {
+			languages+=", "+this.languages[i];
+		}
+		return languages;
 	}
 }
