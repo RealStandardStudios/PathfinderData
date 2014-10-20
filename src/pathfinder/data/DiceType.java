@@ -19,4 +19,9 @@ public enum DiceType {
 	public String toString() {
 		return Integer.toString(diceType);
 	}
+	
+	public int getHitDiceAsInt()
+	{
+		return diceType;
+	}
 }

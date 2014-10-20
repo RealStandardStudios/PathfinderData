@@ -2,6 +2,7 @@ package pathfinder.data.Character;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 
 import pathfinder.data.Feat;
 import pathfinder.data.Skill;
@@ -35,7 +36,48 @@ public class Character {
 	private Inventory inventory;
 	private Alignment alignment;
 	private HashMap<String, String> fluff;
+	private int maxHP;
+	private int currentHP;
+	private int nonLethalHP;
+	private int[] hpGainedPerLevel = new int[20];
 
+	
+	public void setMaxHP(int level,int hitDice, int conMod)
+	{
+		if (level == 1)
+		{
+			maxHP = hitDice + conMod;
+		}
+		else
+		{
+			Random rand = new Random();
+			int  n = rand.nextInt(hitDice) + 1;
+			maxHP += n + conMod;
+			hpGainedPerLevel[level] = n + conMod;
+		}
+	}
+	
+	public int getCurrentHP() {
+		return currentHP;
+	}
+
+	public void setCurrentHP(int currentHP) {
+		this.currentHP = currentHP;
+	}
+
+	public int getNonLethalHP() {
+		return nonLethalHP;
+	}
+
+	public void setNonLethalHP(int nonLethalHP) {
+		this.nonLethalHP = nonLethalHP;
+	}	
+	
+	public int getMaxHP()
+	{
+		return maxHP;
+	}
+	
 	/**
 	 * The effects that have been applied to the character through Class
 	 * features, Feats or racial traits
