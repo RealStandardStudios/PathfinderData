@@ -43,7 +43,7 @@ public class Character {
 	private int[] hpGainedPerLevel = new int[20];
 
 	
-	public void setMaxHP(int level,int hitDice, int conMod)
+	public void setMaxHP(int hitDice, int conMod)
 	{
 		if (level == 1)
 		{
@@ -57,7 +57,7 @@ public class Character {
 			hpGainedPerLevel[level] = n + conMod;
 		}
 	}
-	
+
 	public int getCurrentHP() {
 		return currentHP;
 	}
