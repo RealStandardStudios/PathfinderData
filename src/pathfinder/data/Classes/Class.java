@@ -2,6 +2,7 @@ package pathfinder.data.Classes;
 
 import java.util.ArrayList;
 
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
@@ -106,6 +107,10 @@ public abstract class Class {
 	 */
 	public int getLevel() {
 		return level;
+	}
+	
+	public SimpleObjectProperty<Integer> getLevelProp() {
+		return new SimpleObjectProperty<Integer>(this.level);
 	}
 
 	/**
